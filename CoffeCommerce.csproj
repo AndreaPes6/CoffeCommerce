@@ -67,17 +67,81 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BackOffice\HomeBO.aspx" />
+    <Content Include="ContentShop\Cart.aspx" />
+    <Content Include="ContentShop\DetailsShop.aspx" />
+    <Content Include="ContentShop\HomeShop.aspx" />
+    <Content Include="ContentShop\Login.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackOffice\HomeBO.aspx.cs">
+      <DependentUpon>HomeBO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\HomeBO.aspx.designer.cs">
+      <DependentUpon>HomeBO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentShop\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentShop\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentShop\DetailsShop.aspx.cs">
+      <DependentUpon>DetailsShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentShop\DetailsShop.aspx.designer.cs">
+      <DependentUpon>DetailsShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentShop\HomeShop.aspx.cs">
+      <DependentUpon>HomeShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentShop\HomeShop.aspx.designer.cs">
+      <DependentUpon>HomeShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentShop\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentShop\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\Template1.Master.cs">
+      <DependentUpon>Template1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Template1.Master.designer.cs">
+      <DependentUpon>Template1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TemplateBackBO.master.cs">
+      <DependentUpon>TemplateBackBO.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\TemplateBackBO.master.designer.cs">
+      <DependentUpon>TemplateBackBO.master</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TemplateShop.master.cs">
+      <DependentUpon>TemplateShop.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\TemplateShop.master.designer.cs">
+      <DependentUpon>TemplateShop.master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Templates\Template1.Master" />
+    <Content Include="Templates\TemplateShop.master" />
+    <Content Include="Templates\TemplateBackBO.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

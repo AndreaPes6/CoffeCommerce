@@ -1,0 +1,10 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Templates/Template1.Master" AutoEventWireup="true" CodeBehind="TemplateBackBO.master.cs" Inherits="CoffeCommerce.Templates.TemplateBackBO" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <header>Navbar</header>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <footer>Footer</footer>
+</asp:Content>
