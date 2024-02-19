@@ -4,7 +4,7 @@
     <!-- Contenuto della tua pagina principale -->
 
     <div>
-        <h2>Benvenuto nel nostro negozio online!</h2>
+        <h2>SEI NHEL BACKOFFICE</h2>
         <p>Qui puoi trovare una selezione dei migliori prodotti.</p>
     </div>
 

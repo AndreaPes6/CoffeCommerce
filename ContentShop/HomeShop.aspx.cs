@@ -25,7 +25,7 @@ namespace CoffeCommerce.ContentShop
                     while (dataReader.Read())
                     {
                         content += $@"<div class=""col"">
-                                       <div class=""c-card card h-100 d-flex flex-column justify-content-between border border-0"">
+                                       <div class=""c-card card h-100 d-flex flex-column justify-content-between"">
                                                                  <div class=""p-2 d-flex justify-content-center"">
                                               <img src=""{dataReader["FotoProduct"]}"" class=""card-img-top rounded"" alt=""{dataReader["Name"]}"" style=""width:150px; height:auto;"">
                                           
@@ -38,7 +38,7 @@ namespace CoffeCommerce.ContentShop
                                              <div class="" d-flex justify-content-around align-items-baseline p-3"">
                                                 
                                                <p class=""card-text me-2"">€{dataReader["Price"]}</p>
-                                               <a href=""DetailsShop.aspx?product={dataReader["ID"]}"" style=""font-size:0.7em;"" class=""btn btn-card rounded-pill"">Details</a>
+                                               <a href=""DetailsShop.aspx?product={dataReader["ID"]}""  class=""btn btn-card rounded-pill"">Details</a>
                                             </div>
                                                </div>
                                           
