@@ -1,6 +1,4 @@
 ﻿body {
-
-
 }
 
 
@@ -28,4 +26,40 @@
 
 /*HOME STYLE RAMO*/
 
+/* DETAILS PES */
 
+.product-image {
+    max-height: 400px;
+    border: 5px solid #521A25;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #521A25;
+    border-color: #521A25;
+}
+
+    .btn-primary:hover {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+.product-image-container {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+    .product-image-container:hover {
+        border-color: #666;
+    }
+
+.container img {
+    transition: transform 0.3s ease;
+}
+
+    .container img:hover {
+        transform: scale(1.01);
+    }
