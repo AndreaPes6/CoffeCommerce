@@ -81,6 +81,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackOffice\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\DetailsBO.aspx.cs">
+      <DependentUpon>DetailsBO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\DetailsBO.aspx.designer.cs">
+      <DependentUpon>DetailsBO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackOffice\HomeBO.aspx.cs">
       <DependentUpon>HomeBO.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
