@@ -54,6 +54,11 @@ namespace CoffeCommerce.ContentShop
                 conn.Close();
             }
         }
+        protected void BtnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registration.aspx");
+        }
+
 
     }
 }

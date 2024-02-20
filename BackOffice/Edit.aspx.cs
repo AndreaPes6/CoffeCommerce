@@ -45,7 +45,6 @@ namespace CoffeCommerce.BackOffice
                 }
             }
         }
-
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateExistingProduct();

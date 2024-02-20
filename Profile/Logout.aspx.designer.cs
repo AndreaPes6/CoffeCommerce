@@ -7,11 +7,20 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace CoffeCommerce.ContentShop
+namespace CoffeCommerce.Profile
 {
 
 
-    public partial class Cart
+    public partial class Logout
     {
+
+        /// <summary>
+        /// Controllo Button1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

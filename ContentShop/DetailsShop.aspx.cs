@@ -85,11 +85,9 @@ namespace CoffeCommerce.ContentShop
             if (Request.QueryString["product"] != null)
             {
                 string productId = Request.QueryString["product"];
-                string productName = "";
-                decimal productPrice = 0;
-                Product product = new Product(productId, productName, productPrice);
+                int quantity = Convert.ToInt32(Request.Form["quantity"]);
+                Product product = new Product(productId, quantity);
                 AddToCart(product);
-                Response.Redirect("Cart.aspx");
             }
         }
 
@@ -107,14 +105,12 @@ namespace CoffeCommerce.ContentShop
         public class Product
         {
             public string Id { get; set; }
-            public string Name { get; set; }
-            public decimal Price { get; set; }
+            public int Quantity { get; set; }
 
-            public Product(string id, string name, decimal price)
+            public Product(string id, int quantity)
             {
                 Id = id;
-                Name = name;
-                Price = price;
+                Quantity = quantity;
             }
         }
 
@@ -125,7 +121,6 @@ namespace CoffeCommerce.ContentShop
             {
                 Items = new List<Product>();
             }
-
             public void AddProduct(Product product)
             {
                 Items.Add(product);
