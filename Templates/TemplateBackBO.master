@@ -1,16 +1,20 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Templates/Template1.Master" AutoEventWireup="true" CodeBehind="TemplateBackBO.master.cs" Inherits="CoffeCommerce.Templates.TemplateBackBO" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header>
-        <div class="logo">
-            <img src="../Assets/Images/Logo.jpg" alt="Logo" />
-            <a href="../BackOffice/HomeBO.aspx">Home</a>
-            <ul class="nav-links">
-                <li><a href="../BackOffice/AddProduct.aspx">Add Products</a></li>
-            </ul>
-        </div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm" id="navbarNav">
+            <div class="logo">
+                <a class="navbar-brand" href="../BackOffice/HomeBO.aspx">
+                    <img src="../Assets/Images/Logo.jpg" alt="Logo"/>
+                </a>
+                <a class="nav-link active text-white" href="../BackOffice/HomeBO.aspx">Home</a>
+                <ul class="nav-links">
+                    <li><a class="nav-link active text-white" href="../BackOffice/AddProduct.aspx">Add Products</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="dropdown">
-<asp:Image ID="imgUserProfile" runat="server" CssClass="dropdown-toggle" Width="30" Height="30" data-bs-toggle="dropdown" aria-expanded="false" />
+            <asp:Image ID="imgUserProfile" runat="server" CssClass="dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false" />
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><a class="dropdown-item" href="../BackOffice/HomeBO.aspx">Setting </a></li>

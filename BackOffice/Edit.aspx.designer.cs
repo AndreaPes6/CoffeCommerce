@@ -33,22 +33,22 @@ namespace CoffeCommerce.BackOffice
         protected global::System.Web.UI.WebControls.TextBox txtProductName;
 
         /// <summary>
-        /// Controllo lblProductDescription.
+        /// Controllo lblProductCategory.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProductDescription;
+        protected global::System.Web.UI.WebControls.Label lblProductCategory;
 
         /// <summary>
-        /// Controllo txtProductDescription.
+        /// Controllo txtProductCategory.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductDescription;
+        protected global::System.Web.UI.WebControls.DropDownList txtProductCategory;
 
         /// <summary>
         /// Controllo lblProductPrice.
@@ -67,6 +67,24 @@ namespace CoffeCommerce.BackOffice
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProductPrice;
+
+        /// <summary>
+        /// Controllo lblProductDescription.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProductDescription;
+
+        /// <summary>
+        /// Controllo txtProductDescription.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProductDescription;
 
         /// <summary>
         /// Controllo lblProductImage.
