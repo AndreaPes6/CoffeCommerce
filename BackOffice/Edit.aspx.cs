@@ -24,7 +24,7 @@ namespace CoffeCommerce.BackOffice
         {//VISUALIZZARE I DATI GIA' ESISTENTI
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT [Name] AS ProductName, [Description] AS ProductDescription, [Price] AS ProductPrice, [FotoProduct] AS ProductImage, [IDCategory] AS ProductCategory FROM Products WHERE ID = @ProductID";
+                string query = "SELECT [Name] AS ProductName, [Description] AS ProductDescription, [Price] AS ProductPrice, [FotoProduct] AS ProductImage FROM Products WHERE ID = @ProductID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -40,7 +40,6 @@ namespace CoffeCommerce.BackOffice
                             txtProductDescription.Text = reader["ProductDescription"].ToString();
                             txtProductPrice.Text = reader["ProductPrice"].ToString();
                             txtProductImage.Text = reader["ProductImage"].ToString();
-                            txtProductCategory.Text = reader["ProductCategory"].ToString();
                         }
                     }
                 }
@@ -57,7 +56,7 @@ namespace CoffeCommerce.BackOffice
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE Products SET [Name] = @ProductName, [Description] = @ProductDescription, [Price] = @ProductPrice, [FotoProduct] = @ProductImage,[IDCategory] = ProductCategory  WHERE ID = @ProductID";
+                string query = "UPDATE Products SET [Name] = @ProductName, [Description] = @ProductDescription, [Price] = @ProductPrice, [FotoProduct] = @ProductImage WHERE ID = @ProductID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -65,7 +64,6 @@ namespace CoffeCommerce.BackOffice
                     command.Parameters.AddWithValue("@ProductDescription", txtProductDescription.Text);
                     command.Parameters.AddWithValue("@ProductPrice", Convert.ToDecimal(txtProductPrice.Text));
                     command.Parameters.AddWithValue("@ProductImage", txtProductImage.Text);
-                    command.Parameters.AddWithValue("@ProductCategory", txtProductCategory.Text);
                     command.Parameters.AddWithValue("@ProductID", productId);
 
                     connection.Open();
