@@ -1,5 +1,5 @@
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-/*
+
 namespace CoffeCommerce.ContentShop
 {
     public partial class Cart : System.Web.UI.Page
@@ -57,12 +57,14 @@ namespace CoffeCommerce.ContentShop
                             totale += Quantity * UnitPrice;
 
                         }
-                    } catch (Exception ex)
+                    }
+                    catch (Exception ex)
                     {
                         Response.Write(ex.ToString());
-                    } finally
+                    }
+                    finally
                     {
-                        if(DBConn.conn.State == ConnectionState.Open)
+                        if (DBConn.conn.State == ConnectionState.Open)
                         {
                             DBConn.conn.Close();
                         }
@@ -122,5 +124,5 @@ namespace CoffeCommerce.ContentShop
             }
         }
     }
-}*/
+}
 
