@@ -69,6 +69,24 @@ namespace CoffeCommerce.BackOffice
         protected global::System.Web.UI.WebControls.TextBox txtProductPrice;
 
         /// <summary>
+        /// Controllo lblProductImage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProductImage;
+
+        /// <summary>
+        /// Controllo txtProductImage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProductImage;
+
+        /// <summary>
         /// Controllo btnUpdate.
         /// </summary>
         /// <remarks>
