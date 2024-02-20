@@ -3,11 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Web.UI;
+using CoffeCommerce.ContentShop;
+
 
 namespace CoffeCommerce.ContentShop
 {
     public partial class DetailsShop : Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -31,36 +34,10 @@ namespace CoffeCommerce.ContentShop
 
                 if (dataReader.Read())
                 {
-                    string productPhoto = dataReader["FotoProduct"].ToString();
-                    string productName = dataReader["Name"].ToString();
-                    string productDescription = dataReader["Description"].ToString();
-                    string productPrice = dataReader["Price"].ToString();
-
-                    string productHtml = $@"
-                        <div class='container mt-5'>
-                            <div class='row'>
-                                <div class='col-md-6'>
-                                    <img src='{productPhoto}' class='img-fluid rounded product-image w-75 border- border-solid-black' alt='{productName}' onclick='zoomImage(this)' style='cursor: pointer;'>
-                                </div>
-                                <div class='col-md-6'>
-                                    <h2 class='fw-bold text-uppercase mb-4'>{productName}</h2>
-                                    <p class='fs-5 mb-4'>{productDescription}</p>
-                                    <p class='fw-bold fs-4 mb-4'>Price: €{productPrice}</p>
-                                    <div class='form-group mb-4'>
-                                        <label for='quantity' class='fw-bold'>Quantity:</label>
-                                        <select class='form-select form-select-lg' id='quantity'>
-                                            <option selected>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>";
-
-                    productDetails.InnerHtml = productHtml;
+                    imgProd.Src = dataReader["FotoProduct"].ToString();
+                    tltName.InnerText = dataReader["Name"].ToString();
+                    txtDescription.InnerText = dataReader["Description"].ToString();
+                    txtPrice.InnerText = $"Price: € {dataReader["Price"].ToString()}";                   
                 }
                 else
                 {
@@ -82,50 +59,51 @@ namespace CoffeCommerce.ContentShop
 
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
-            if (Request.QueryString["product"] != null)
+            string productId = Request.QueryString["product"];
+            if (!string.IsNullOrEmpty(productId))
             {
-                string productId = Request.QueryString["product"];
-                int quantity = Convert.ToInt32(Request.Form["quantity"]);
-                Product product = new Product(productId, quantity);
-                AddToCart(product);
+                if (int.TryParse(productId, out int ProdID))
+                {
+                    int quantity = int.Parse(dwdQuantity.SelectedValue);
+
+                    CartItem item = new CartItem(ProdID, quantity);
+
+                    List<CartItem> products;
+                    if (Session["Carrello"] == null)
+                    {
+                        // Se la sessione non esiste, crea una nuova lista
+                        products = new List<CartItem>();
+                    }
+                    else
+                    {
+                        // Se la sessione esiste, recupera la lista esistente
+                        products = (List<CartItem>)Session["Carrello"];
+                    }
+
+                    // Aggiungi il nuovo elemento alla lista
+                    products.Add(item);
+
+                    // Aggiorna la sessione con la lista aggiornata
+                    Session["Carrello"] = products;
+
+                    ScriptManager.RegisterStartupScript(this, GetType(), "addToCartItem", "alert('Articolo aggiunto con successo al carrello!');", true);
+                }
+                else
+                {
+                    Response.Write("<p class='text-danger'>Invalid product ID format</p>");
+                }
+            }
+            else
+            {
+                Response.Write("<p class='text-danger'>Product ID is null or empty</p>");
             }
         }
 
-        private void AddToCart(Product product)
-        {
-            Cart cart = Session["Cart"] as Cart;
-            if (cart == null)
-            {
-                cart = new Cart();
-                Session["Cart"] = cart;
-            }
-            cart.AddProduct(product);
-        }
 
-        public class Product
-        {
-            public string Id { get; set; }
-            public int Quantity { get; set; }
 
-            public Product(string id, int quantity)
-            {
-                Id = id;
-                Quantity = quantity;
-            }
-        }
 
-        public class Cart
-        {
-            public List<Product> Items { get; set; }
-            public Cart()
-            {
-                Items = new List<Product>();
-            }
-            public void AddProduct(Product product)
-            {
-                Items.Add(product);
-            }
-        }
+
+
 
     }
 }
