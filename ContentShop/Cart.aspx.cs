@@ -43,7 +43,6 @@
 //                int index = Convert.ToInt32(e.CommandArgument);
 
 
-
 //                // Rimuovi l'articolo dal carrello
 //                carrello.RemoveAt(index);
 
