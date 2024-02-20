@@ -14,7 +14,7 @@
             </div>
         </nav>
         <div class="dropdown">
-            <asp:Image ID="imgUserProfile" runat="server" CssClass="dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false" />
+            <asp:Image ID="imgUserProfile" runat="server" CssClass="dropdown-toggle rounded-circle" Width="30" Height="30" data-bs-toggle="dropdown" aria-expanded="false" />
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><a class="dropdown-item" href="../BackOffice/HomeBO.aspx">Setting </a></li>

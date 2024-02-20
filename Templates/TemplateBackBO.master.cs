@@ -28,7 +28,8 @@ namespace CoffeCommerce.Templates
 
         private int GetUserId()
         {
-            return 1; // Replace with your logic to obtain the current user's ID
+           int IDUser = int.Parse(Session["UserId"].ToString());
+            return IDUser;
         }
 
         private string GetUserProfileImageFromDatabase(int userId)
