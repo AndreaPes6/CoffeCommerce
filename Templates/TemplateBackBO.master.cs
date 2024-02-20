@@ -28,12 +28,12 @@ namespace CoffeCommerce.Templates
 
         private int GetUserId()
         {
-            return 1; // Replace with your logic to obtain the current user's ID
+            return 1;
         }
 
         private string GetUserProfileImageFromDatabase(int userId)
         {
-            string userProfileImageURL = "";
+            string userProfileImageURL = "imgUserProfile";
 
             try
             {
@@ -47,9 +47,11 @@ namespace CoffeCommerce.Templates
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.Read())
+                        if (reader.HasRows)
                         {
-                            userProfileImageURL = reader["FotoProfilo"].ToString();
+                            reader.Read();
+                            imgUserProfile.ImageUrl = reader["FotoProfilo"].ToString();
+
                         }
                     }
                 }
