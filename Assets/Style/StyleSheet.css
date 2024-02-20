@@ -32,8 +32,16 @@
 
 /*HOME STYLE RAMO*/
 
-/* DETAILS PES */
+/*ADD PRODUCT RAMO*/
 
+.img-coffe {
+    width:50%;
+    height:auto;
+}
+
+
+/*ADD PRODUCT RAMO*/
+/* DETAILS PES */
 /*Home style Marco navbar BO*/
 header {
     display: flex;

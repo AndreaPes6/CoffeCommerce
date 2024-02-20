@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Assets\Images\Logo.jpg" />
     <Content Include="Assets\Scripts\JavaScript.js" />
+    <Content Include="Assets\Images\AddProd.jpg" />
     <Content Include="Assets\Style\StyleSheet.css" />
     <Content Include="BackOffice\AddProduct.aspx" />
     <Content Include="BackOffice\DetailsBO.aspx" />
