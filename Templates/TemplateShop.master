@@ -16,7 +16,7 @@
                     <a class="nav-link active text-white" aria-current="page" href="../BackOffice/HomeBO.aspx">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Cart</a>
+                    <a class="nav-link text-white" href="Cart.aspx">Cart</a>
                 </li>
             </ul>
         </div>
