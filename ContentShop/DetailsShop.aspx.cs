@@ -40,7 +40,7 @@ namespace CoffeCommerce.ContentShop
                         <div class='container mt-5'>
                             <div class='row'>
                                 <div class='col-md-6'>
-                                    <img src='{productPhoto}' class='img-fluid rounded product-image' alt='{productName}' onclick='zoomImage(this)' style='cursor: pointer;'>
+                                    <img src='{productPhoto}' class='img-fluid rounded product-image w-75 border- border-solid-black' alt='{productName}' onclick='zoomImage(this)' style='cursor: pointer;'>
                                 </div>
                                 <div class='col-md-6'>
                                     <h2 class='fw-bold text-uppercase mb-4'>{productName}</h2>
@@ -56,7 +56,7 @@ namespace CoffeCommerce.ContentShop
                                             <option>5</option>
                                         </select>
                                     </div>
-                                    <button type='button' class='btn btn-primary btn-lg' onclick='addToCart()' style='background-color: #521A25; border-color: #521A25;'>Add to Cart</button>
+                                    <button type='button' class='btn btn-success btn-lg' onclick='addToCart()'>Add to Cart</button>
                                 </div>
                             </div>
                         </div>";
