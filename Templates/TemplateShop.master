@@ -23,7 +23,7 @@
 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Login</a>
+                <a class="nav-link text-white" href="../ContentShop/Login.aspx">Login</a>
             </li>
         </ul>
     </div>
