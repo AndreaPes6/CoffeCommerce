@@ -41,7 +41,8 @@ namespace CoffeCommerce.ContentShop
                 }
                 else
                 {
-                    Response.Write("Credenziali non valide");
+                    LblErrorMessage.Text = "<i class='bi bi-exclamation-triangle-fill'></i> Credenziali non valide";
+                    LblErrorMessage.Visible = true;
                 }
             }
             catch (Exception ex)
