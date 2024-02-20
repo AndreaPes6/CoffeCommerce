@@ -6,10 +6,14 @@
         <asp:Repeater ID="CartRepeater" runat="server">
             <ItemTemplate>
                 <div class="col-md-12">
+                    <div class='col-md-6'>
+                        <img src='<%# Eval("UrlImage") %>' class='img-fluid rounded product-image w-75 border- border-solid-black' alt='<%# Eval("Nome") %>'>
+                    </div>
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title"><%# Eval("Name") %></h4>
-                            <p class="card-text">Prezzo: <%# Eval("Price") %> €</p>
+                            <h4 class="card-title"><%# Eval("Nome") %></h4>
+                            <p class="card-text">Prezzo: <%# Eval("Prezzo") %> €</p>
+                            <p class="card-text">Quantità: <%# Eval("Quantità") %></p>
                             <asp:Button runat="server" ID="RemoveFromCartButton" Text="Rimuovi dal Carrello" CssClass="btn btn-danger" CommandName="RemoveFromCart" CommandArgument='<%# Container.ItemIndex %>' OnCommand="RemoveFromCartButton_Command" />
                         </div>
                     </div>
