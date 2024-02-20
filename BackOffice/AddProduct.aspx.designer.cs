@@ -42,13 +42,13 @@ namespace CoffeCommerce.BackOffice
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDescription;
 
         /// <summary>
-        /// Controllo DropDownList1.
+        /// Controllo dpwCategories.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList dpwCategories;
 
         /// <summary>
         /// Controllo imgUrl.
@@ -58,5 +58,14 @@ namespace CoffeCommerce.BackOffice
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText imgUrl;
+
+        /// <summary>
+        /// Controllo buttonAdd.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonAdd;
     }
 }
