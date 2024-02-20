@@ -75,7 +75,7 @@ namespace CoffeCommerce.BackOffice
             if (Request.QueryString["product"] != null)
             {
                 string productId = Request.QueryString["product"];
-                Response.Redirect($"EditProduct.aspx?product={productId}");
+                Response.Redirect($"Edit.aspx?product={productId}");
             }
         }
 

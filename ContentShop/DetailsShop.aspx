@@ -5,5 +5,6 @@
         <h1>Product Details</h1>
         <div id="productDetails" runat="server">
         </div>
+        <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" CssClass="btn btn-success btn-md mt-4" OnClick="btnAddToCart_Click" />
     </div>
 </asp:Content>

@@ -1,5 +1,6 @@
 ﻿using CoffeCommerce;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Web.UI;
 
@@ -14,7 +15,6 @@ namespace CoffeCommerce.ContentShop
                 if (Request.QueryString["product"] != null)
                 {
                     string productId = Request.QueryString["product"];
-
                     LoadProductDetails(productId);
                 }
             }
@@ -56,7 +56,6 @@ namespace CoffeCommerce.ContentShop
                                             <option>5</option>
                                         </select>
                                     </div>
-                                    <button type='button' class='btn btn-success btn-lg' onclick='addToCart()'>Add to Cart</button>
                                 </div>
                             </div>
                         </div>";
@@ -80,5 +79,58 @@ namespace CoffeCommerce.ContentShop
                 }
             }
         }
+
+        protected void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            if (Request.QueryString["product"] != null)
+            {
+                string productId = Request.QueryString["product"];
+                string productName = "";
+                decimal productPrice = 0;
+                Product product = new Product(productId, productName, productPrice);
+                AddToCart(product);
+                Response.Redirect("Cart.aspx");
+            }
+        }
+
+        private void AddToCart(Product product)
+        {
+            Cart cart = Session["Cart"] as Cart;
+            if (cart == null)
+            {
+                cart = new Cart();
+                Session["Cart"] = cart;
+            }
+            cart.AddProduct(product);
+        }
+
+        public class Product
+        {
+            public string Id { get; set; }
+            public string Name { get; set; }
+            public decimal Price { get; set; }
+
+            public Product(string id, string name, decimal price)
+            {
+                Id = id;
+                Name = name;
+                Price = price;
+            }
+        }
+
+        public class Cart
+        {
+            public List<Product> Items { get; set; }
+            public Cart()
+            {
+                Items = new List<Product>();
+            }
+
+            public void AddProduct(Product product)
+            {
+                Items.Add(product);
+            }
+        }
+
     }
 }
