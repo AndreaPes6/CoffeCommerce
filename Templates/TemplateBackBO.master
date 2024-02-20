@@ -4,10 +4,7 @@
     <header>
         <div class="logo">
             <img src="../Assets/Images/Logo.jpg" alt="Logo" />
-            <a href="../ContentShop/HomeShop.aspx">Home</a>
-            <ul class="nav-links">
-                <li><a href="../ContentShop/Cart.aspx">Cart</a></li>
-            </ul>
+            <a href="../BackOffice/HomeBO.aspx">Home</a>
             <ul class="nav-links">
                 <li><a href="../BackOffice/AddProduct.aspx">Add Products</a></li>
             </ul>
@@ -22,7 +19,6 @@
             </ul>
         </div>
     </header>
-    <header>Navbar BO</header>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
     <footer>Footer</footer>
