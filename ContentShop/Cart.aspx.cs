@@ -21,7 +21,7 @@ namespace CoffeCommerce.ContentShop
 
         private void PopolaCarrello()
         {
-            // Assicurati che il carrello sia stato inizializzato
+            /* Assicurati che il carrello sia stato inizializzato
             if (Session["Carrello"] != null)
             {
                 // Ottieni il carrello dalla sessione
@@ -38,7 +38,7 @@ namespace CoffeCommerce.ContentShop
                 // Se il carrello è vuoto, mostra un messaggio appropriato
                 emptyCartMessage.Visible = true;
                 totalAmountLabel.InnerText = "0.00";
-            }
+            }*/
         }
 
         // Evento per svuotare il carrello
@@ -57,7 +57,7 @@ namespace CoffeCommerce.ContentShop
                 // Ottieni l'indice dell'articolo da rimuovere
                 int index = Convert.ToInt32(e.CommandArgument);
 
-                List<Articolo> carrello = (List<Articolo>)Session["Carrello"];
+                /*List<Articolo> carrello = (List<Articolo>)Session["Carrello"];
 
                 // Rimuovi l'articolo dal carrello
                 carrello.RemoveAt(index);
@@ -65,7 +65,7 @@ namespace CoffeCommerce.ContentShop
                 Session["Carrello"] = carrello;
 
                 // Aggiorna il repeater e il totale del carrello
-                PopolaCarrello();
+                PopolaCarrello();*/
             }
         }
 
