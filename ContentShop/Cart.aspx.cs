@@ -1,6 +1,8 @@
 
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -8,15 +10,12 @@ using System.Web.UI.WebControls;
 /*
 namespace CoffeCommerce.ContentShop
 {
-
-   
-//    public partial class Cart : System.Web.UI.Page
-//    {
-//        protected void Page_Load(object sender, EventArgs e)
-//        {
-//            if (!IsPostBack)
-//            {
-               
+    public partial class Cart : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
 
                 PopolaCarrello();
             }
@@ -30,11 +29,50 @@ namespace CoffeCommerce.ContentShop
                 // Ottieni il carrello dalla sessione
                 List<CartItem> carrello = (List<CartItem>)Session["Carrello"];
 
-                CartRepeater.DataSource = carrello;
+                DataTable dt = new DataTable();
+                dt.Columns.Add("ID", typeof(int));
+                dt.Columns.Add("Nome", typeof(string));
+                dt.Columns.Add("Prezzo", typeof(decimal));
+                dt.Columns.Add("Quantità", typeof(int));
+                dt.Columns.Add("UrlImage", typeof(string));
+
+                decimal totale = 0;
+                foreach (var articolo in carrello)
+                {
+                    string ProductId = articolo.ProductID.ToString();
+                    decimal Quantity = articolo.Quantity;
+
+                    try
+                    {
+
+                        DBConn.conn.Open();
+                        SqlCommand cmd = new SqlCommand($"Select * from Products where ID={ProductId}", DBConn.conn);
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            dt.Rows.Add(reader["ID"], reader["Name"], reader["Price"], Quantity, reader["FotoProduct"]);
+
+                            decimal UnitPrice = decimal.Parse(reader["Price"].ToString());
+                            totale += Quantity * UnitPrice;
+
+                        }
+                    } catch (Exception ex)
+                    {
+                        Response.Write(ex.ToString());
+                    } finally
+                    {
+                        if(DBConn.conn.State == ConnectionState.Open)
+                        {
+                            DBConn.conn.Close();
+                        }
+                    }
+                }
+
+                totalAmountLabel.InnerText = totale.ToString("0.00");
+                CartRepeater.DataSource = dt;
                 CartRepeater.DataBind();
 
-                decimal totale = carrello.Sum(item => item.Prezzo);
-                totalAmountLabel.InnerText = totale.ToString("0.00");
             }
             else
             {
@@ -60,7 +98,7 @@ namespace CoffeCommerce.ContentShop
                 // Ottieni l'indice dell'articolo da rimuovere
                 int index = Convert.ToInt32(e.CommandArgument);
 
-                List<Articolo> carrello = (List<Articolo>)Session["Carrello"];
+                List<CartItem> carrello = (List<CartItem>)Session["Carrello"];
 
                 // Rimuovi l'articolo dal carrello
                 carrello.RemoveAt(index);
