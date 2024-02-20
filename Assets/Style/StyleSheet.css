@@ -48,6 +48,17 @@
     color: #521A25;
 }
 /*ADD PRODUCT RAMO*/
+
+/*HOME BACK OFFICE RAMO*/
+
+.details-link {
+    color: #521A25;
+}
+    .details-link:hover {
+        color: saddlebrown;
+    }
+
+
 /* DETAILS PES */
 /*Home style Marco navbar BO*/
 header {

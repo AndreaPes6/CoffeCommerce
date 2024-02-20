@@ -77,6 +77,7 @@ namespace CoffeCommerce.BackOffice
                 string productId = Request.QueryString["product"];
                 Response.Redirect($"Edit.aspx?product={productId}");
             }
+
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
