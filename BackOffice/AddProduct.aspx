@@ -2,9 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-lg my-5">
-            <div class="col">
-                <img src="../Assets/Images/AddProd.jpg" alt="imagine caffè" class="img-coffe" />
-            </div>
         <h2 class="fw-bold fw-light txt-lbladd">Add Products</h2>
         <div class="d-flex">
 
