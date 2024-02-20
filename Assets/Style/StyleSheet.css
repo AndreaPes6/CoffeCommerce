@@ -12,7 +12,7 @@
     font-size: 0.7em
 }
 
-    .btn-card:hover {
+.btn-card:hover {
         background-color: saddlebrown;
         color: white;
     }
@@ -40,7 +40,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #282828;
+    background-color: #0C141A;
 }
 
 .logo {
@@ -48,7 +48,7 @@ header {
     align-items: center;
 }
 
-    .logo img {
+.logo img {
         width: 40px;
         height: 40px;
         margin-right: 10px;
@@ -60,7 +60,7 @@ header {
     padding: 0;
 }
 
-    .nav-links li {
+.nav-links li {
         margin-right: 20px;
     }
 
@@ -70,7 +70,7 @@ header {
     position: relative;
 }
 
-    .profile-dropdown img {
+.profile-dropdown img {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -78,7 +78,7 @@ header {
         cursor: pointer;
     }
 
-    .profile-dropdown .dropdown-content {
+.profile-dropdown .dropdown-content {
         display: none;
         position: absolute;
         background-color: #f9f9f9;
@@ -88,23 +88,23 @@ header {
         right: 0;
     }
 
-        .profile-dropdown .dropdown-content a {
+.profile-dropdown .dropdown-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
 
-    .profile-dropdown:hover .dropdown-content {
+.profile-dropdown:hover .dropdown-content {
         display: block;
     }
 
-    .profile-dropdown .dropdown-content a:hover {
+.profile-dropdown .dropdown-content a:hover {
         background-color: #f1f1f1;
     }
 
 navbarNav {
-    background-color: #282828;
+    background-color: #0C141A;
 }
 
 .product-image {
@@ -118,7 +118,7 @@ navbarNav {
     border-color: #521A25;
 }
 
-    .btn-primary:hover {
+.btn-primary:hover {
         background-color: #6c757d;
         border-color: #6c757d;
     }
@@ -131,7 +131,7 @@ navbarNav {
     transition: border-color 0.3s;
 }
 
-    .product-image-container:hover {
+.product-image-container:hover {
         border-color: #666;
     }
 
@@ -139,6 +139,6 @@ navbarNav {
     transition: transform 0.3s ease;
 }
 
-    .container img:hover {
+.container img:hover {
         transform: scale(1.01);
     }
