@@ -5,11 +5,9 @@
         <h2>Add Products</h2>
         <div class="row row-col-2">
 
-
             <div class="col">
                 <img src="../Assets/Images/AddProd.jpg" alt="imagine caffè" class="img-coffe" />
             </div>
-
 
 
             <!-- form add product-->
