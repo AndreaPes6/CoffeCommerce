@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Templates/Template1.Master" AutoEventWireup="true" CodeBehind="TemplateBackBO.master.cs" Inherits="CoffeCommerce.Templates.TemplateBackBO" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< HEAD
     <header>
  <div class="logo">
             <img src="../Assets/Images/Logo.jpg" alt="Logo" />
@@ -18,6 +19,9 @@
     </ul>
 </div>
     </header>
+=======
+    <header>Navbar BO</header>
+>>>>>>> a307f16e6d4e93d9bceb3216bb80462e658122e3
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
     <footer>Footer</footer>

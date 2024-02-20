@@ -1,6 +1,9 @@
 ﻿body {
+<<<<<<< HEAD
     font-family: 'Arial', sans-serif;
     background-color: darkblue;
+=======
+>>>>>>> a307f16e6d4e93d9bceb3216bb80462e658122e3
 }
 
 /*HOME STYLE RAMO*/
@@ -8,12 +11,37 @@
 .btn-card {
     background-color: #521A25;
     color: white;
+<<<<<<< HEAD
     color: saddlebrown
+=======
+    font-size: 0.7em
+}
+
+    .btn-card:hover {
+        background-color: saddlebrown;
+        color: white;
+    }
+
+.c-card {
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+    .c-card:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+    }
+
+.dp-dw-cat{
+   width: 200px!important;
+    
+>>>>>>> a307f16e6d4e93d9bceb3216bb80462e658122e3
 }
 
 /*HOME STYLE RAMO*/
 
+/* DETAILS PES */
 
+<<<<<<< HEAD
 /*Home style Marco navbar BO*/
 header {
     display: flex;
@@ -83,3 +111,40 @@ header {
 navbarNav{
     background-color: #282828;
 }
+=======
+.product-image {
+    max-height: 400px;
+    border: 5px solid #521A25;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #521A25;
+    border-color: #521A25;
+}
+
+    .btn-primary:hover {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+.product-image-container {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+    .product-image-container:hover {
+        border-color: #666;
+    }
+
+.container img {
+    transition: transform 0.3s ease;
+}
+
+    .container img:hover {
+        transform: scale(1.01);
+    }
+>>>>>>> a307f16e6d4e93d9bceb3216bb80462e658122e3
