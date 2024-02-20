@@ -6,9 +6,11 @@ namespace CoffeCommerce.ContentShop
 {
     public partial class Registration : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void BtnBackToLogin_Click(object sender, EventArgs e)
         {
+            Response.Redirect("Login.aspx");
         }
+
 
         protected void BtnRegister_Click(object sender, EventArgs e)
         {
