@@ -79,6 +79,7 @@
     <Content Include="ContentShop\DetailsShop.aspx" />
     <Content Include="ContentShop\HomeShop.aspx" />
     <Content Include="ContentShop\Login.aspx" />
+    <Content Include="ContentShop\Registration.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -113,7 +114,6 @@
     </Compile>
     <Compile Include="ContentShop\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ContentShop\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
@@ -138,6 +138,13 @@
     </Compile>
     <Compile Include="ContentShop\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentShop\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentShop\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBConn.cs" />
     <Compile Include="Global.asax.cs">

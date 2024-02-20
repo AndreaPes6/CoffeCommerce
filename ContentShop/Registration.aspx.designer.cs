@@ -11,17 +11,26 @@ namespace CoffeCommerce.ContentShop
 {
 
 
-    public partial class Login
+    public partial class Registration
     {
 
         /// <summary>
-        /// Controllo TxtUsername.
+        /// Controllo TxtUserName.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUsername;
+        protected global::System.Web.UI.WebControls.TextBox TxtUserName;
+
+        /// <summary>
+        /// Controllo TxtEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
         /// Controllo TxtPassword.
@@ -33,13 +42,13 @@ namespace CoffeCommerce.ContentShop
         protected global::System.Web.UI.WebControls.TextBox TxtPassword;
 
         /// <summary>
-        /// Controllo BtnLogin.
+        /// Controllo TxtProfilePicture.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnLogin;
+        protected global::System.Web.UI.WebControls.TextBox TxtProfilePicture;
 
         /// <summary>
         /// Controllo BtnRegister.
