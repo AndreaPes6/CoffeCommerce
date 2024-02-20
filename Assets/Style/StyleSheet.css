@@ -8,7 +8,6 @@
 .btn-card {
     background-color: #521A25;
     color: white;
-    color: saddlebrown;
     font-size: 0.7em
 }
 
@@ -36,12 +35,20 @@
 /*ADD PRODUCT RAMO*/
 
 .img-coffe {
-    width:50%;
+    width:90%;
     height:auto;
+}
+
+.btn-add {
+    background-color: #521A25;
+    color: white;
+}
+
+.txt-lbladd {
+    color: #521A25;
 }
 /*ADD PRODUCT RAMO*/
 /* DETAILS PES */
-
 /*Home style Marco navbar BO*/
 header {
     display: flex;
