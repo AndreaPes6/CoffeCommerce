@@ -1,84 +1,84 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Web;
+//using System.Web.UI;
+//using System.Web.UI.WebControls;
 
-namespace CoffeCommerce.ContentShop
-{
+//namespace CoffeCommerce.ContentShop
+//{
    
-    public partial class Cart : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
+//    public partial class Cart : System.Web.UI.Page
+//    {
+//        protected void Page_Load(object sender, EventArgs e)
+//        {
+//            if (!IsPostBack)
+//            {
                
-                PopolaCarrello();
-            }
-        }
+//                PopolaCarrello();
+//            }
+//        }
 
-        private void PopolaCarrello()
-        {
-            // Assicurati che il carrello sia stato inizializzato
-            if (Session["Carrello"] != null)
-            {
-                // Ottieni il carrello dalla sessione
-                List<CartItem> carrello = (List<CartItem>)Session["Carrello"];
+//        private void PopolaCarrello()
+//        {
+//            // Assicurati che il carrello sia stato inizializzato
+//            if (Session["Carrello"] != null)
+//            {
+//                // Ottieni il carrello dalla sessione
+//                List<CartItem> carrello = (List<CartItem>)Session["Carrello"];
 
-                CartRepeater.DataSource = carrello;
-                CartRepeater.DataBind();
+//                CartRepeater.DataSource = carrello;
+//                CartRepeater.DataBind();
 
-                decimal totale = carrello.Sum(item => item.Prezzo);
-                totalAmountLabel.InnerText = totale.ToString("0.00");
-            }
-            else
-            {
-                // Se il carrello è vuoto, mostra un messaggio appropriato
-                emptyCartMessage.Visible = true;
-                totalAmountLabel.InnerText = "0.00";
-            }
-        }
+//                decimal totale = carrello.Sum(item => item.Prezzo);
+//                totalAmountLabel.InnerText = totale.ToString("0.00");
+//            }
+//            else
+//            {
+//                // Se il carrello è vuoto, mostra un messaggio appropriato
+//                emptyCartMessage.Visible = true;
+//                totalAmountLabel.InnerText = "0.00";
+//            }
+//        }
 
-        // Evento per svuotare il carrello
-        protected void EmptyCartButton_Click(object sender, EventArgs e)
-        {
-            Session.Remove("Carrello");
+//        // Evento per svuotare il carrello
+//        protected void EmptyCartButton_Click(object sender, EventArgs e)
+//        {
+//            Session.Remove("Carrello");
 
-            PopolaCarrello();
-        }
+//            PopolaCarrello();
+//        }
 
-        // Evento per rimuovere un articolo dal carrello
-        protected void RemoveFromCartButton_Command(object sender, CommandEventArgs e)
-        {
-            if (Session["Carrello"] != null)
-            {
-                // Ottieni l'indice dell'articolo da rimuovere
-                int index = Convert.ToInt32(e.CommandArgument);
+//        // Evento per rimuovere un articolo dal carrello
+//        protected void RemoveFromCartButton_Command(object sender, CommandEventArgs e)
+//        {
+//            if (Session["Carrello"] != null)
+//            {
+//                // Ottieni l'indice dell'articolo da rimuovere
+//                int index = Convert.ToInt32(e.CommandArgument);
 
-                List<Articolo> carrello = (List<Articolo>)Session["Carrello"];
+//                List<Articolo> carrello = (List<Articolo>)Session["Carrello"];
 
-                // Rimuovi l'articolo dal carrello
-                carrello.RemoveAt(index);
+//                // Rimuovi l'articolo dal carrello
+//                carrello.RemoveAt(index);
 
-                Session["Carrello"] = carrello;
+//                Session["Carrello"] = carrello;
 
-                // Aggiorna il repeater e il totale del carrello
-                PopolaCarrello();
-            }
-        }
+//                // Aggiorna il repeater e il totale del carrello
+//                PopolaCarrello();
+//            }
+//        }
 
-        public class CartItem
-        {
-            public int ProductID { get; set; }
-            public int Quantity { get; set; }
+//        public class CartItem
+//        {
+//            public int ProductID { get; set; }
+//            public int Quantity { get; set; }
 
-            public CartItem(int productID, int quantity)
-            {
-                ProductID = productID;
-                Quantity = quantity;
-            }
-        }
-    }
-}
+//            public CartItem(int productID, int quantity)
+//            {
+//                ProductID = productID;
+//                Quantity = quantity;
+//            }
+//        }
+//    }
+//}
