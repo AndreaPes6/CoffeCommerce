@@ -4,19 +4,17 @@
     <header>
         <div class="logo">
             <img src="../Assets/Images/Logo.jpg" alt="Logo" />
-            <a href="../BackOffice/HomeBO.aspx">Home</a>
+            <a href="../ContentShop/HomeShop.aspx">Home</a>
             <ul class="nav-links">
                 <li><a href="../BackOffice/AddProduct.aspx">Add Products</a></li>
             </ul>
         </div>
         <div class="dropdown">
-            <image class="dropdown-toggle" src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png" width="30" height="30" data-bs-toggle="dropdown" aria-expanded="false" />
-
-            <ul class="dropdown-menu text-center">
+<asp:Image ID="imgUserProfile" runat="server" CssClass="dropdown-toggle" Width="30" Height="30" data-bs-toggle="dropdown" aria-expanded="false" />
+            <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Setting </a></li>
-                <hr />
-                <li><a class="btn btn-danger rounded-pill" href="../Profile/Logout.aspx">Logout </a></li>
+                <li><a class="dropdown-item" href="../BackOffice/HomeBO.aspx">Setting </a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
             </ul>
         </div>
     </header>

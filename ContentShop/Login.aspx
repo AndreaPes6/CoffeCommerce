@@ -19,7 +19,9 @@
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
                             <asp:Button ID="BtnLogin" runat="server" Text="Login" CssClass="btn btn-card rounded-pill" OnClick="BtnLogin_Click" />
+                            <asp:Button ID="BtnRegister" runat="server" Text="Registrati" CssClass="btn btn-card rounded-pill ms-3" OnClick="BtnRegister_Click" />
                         </div>
+
                         <div class="mb-3 d-flex justify-content-center">
                             <asp:Label ID="LblErrorMessage" runat="server" CssClass="alert alert-danger" Visible="false"></asp:Label>
                         </div>
