@@ -31,5 +31,54 @@
     </header>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
-    <footer>Footer</footer>
+   <footer class="text-dark mt-5 profile-footer">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Informazioni</a>
+            </div>
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Accessibilitá</a>
+            </div>
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Centro assistenza</a>
+            </div>
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Privacy e condizioni</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Annunci pubblicitari</a>
+            </div>
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Pubblicitá</a>
+            </div>
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Servizi alle aziende</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Le Nostre Offerte</a>
+            </div>
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Altro</a>
+            </div>
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Prodotti in Promozione</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mb-1">
+                <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Altro</a>
+            </div>
+        </div>
+        <div class="row">
+            <p class="text-secondary col-md-2 mb-1">
+                Guerrieri Corporation &copy; 2024
+            </p>
+        </div>
+    </div>
+</footer>
 </asp:Content>
