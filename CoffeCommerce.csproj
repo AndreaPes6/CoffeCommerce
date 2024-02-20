@@ -113,7 +113,6 @@
     </Compile>
     <Compile Include="ContentShop\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ContentShop\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
