@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace CoffeCommerce.Templates
 {
@@ -34,15 +35,15 @@ namespace CoffeCommerce.Templates
         {
             string userProfileImageURL = "";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
+                DBConn.conn.Open();
+
                 string query = "SELECT FotoProfilo FROM [ECommerceBW].[dbo].[User] WHERE ID = @UserID";
 
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlCommand command = new SqlCommand(query, DBConn.conn))
                 {
                     command.Parameters.AddWithValue("@UserID", userId);
-
-                    connection.Open();
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -51,6 +52,17 @@ namespace CoffeCommerce.Templates
                             userProfileImageURL = reader["FotoProfilo"].ToString();
                         }
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+            finally
+            {
+                if (DBConn.conn.State == ConnectionState.Open)
+                {
+                    DBConn.conn.Close();
                 }
             }
 
