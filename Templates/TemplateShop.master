@@ -3,7 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header>Navbar</header>
+    <header>
+
+    </header>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
     <footer>Footer</footer>
