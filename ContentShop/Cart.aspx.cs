@@ -1,11 +1,7 @@
-
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace CoffeCommerce.ContentShop
@@ -16,7 +12,6 @@ namespace CoffeCommerce.ContentShop
         {
             if (!IsPostBack)
             {
-
                 PopolaCarrello();
             }
         }
@@ -37,44 +32,47 @@ namespace CoffeCommerce.ContentShop
                 dt.Columns.Add("UrlImage", typeof(string));
 
                 decimal totale = 0;
+
                 foreach (var articolo in carrello)
                 {
-                    string ProductId = articolo.ProductID.ToString();
-                    decimal Quantity = articolo.Quantity;
+                    string productId = articolo.ProductID.ToString();
+                    decimal quantity = articolo.Quantity;
 
                     try
                     {
-
                         DBConn.conn.Open();
-                        SqlCommand cmd = new SqlCommand($"Select * from Products where ID={ProductId}", DBConn.conn);
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.HasRows)
+
+                        using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Products WHERE ID = {productId}", DBConn.conn))
                         {
-                            reader.Read();
-                            dt.Rows.Add(reader["ID"], reader["Name"], reader["Price"], Quantity, reader["FotoProduct"]);
+                            SqlDataReader reader = cmd.ExecuteReader();
 
-                            decimal UnitPrice = decimal.Parse(reader["Price"].ToString());
-                            totale += Quantity * UnitPrice;
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                dt.Rows.Add(reader["ID"], reader["Name"], reader["Price"], quantity, reader["FotoProduct"]);
 
+                                decimal unitPrice = Convert.ToDecimal(reader["Price"]);
+                                totale += quantity * unitPrice;
+                            }
                         }
                     }
                     catch (Exception ex)
                     {
-                        Response.Write(ex.ToString());
+                        Response.Write($"<p class='text-danger'>Error: {ex.Message}</p>");
                     }
                     finally
                     {
-                        if (DBConn.conn.State == ConnectionState.Open)
+                        if (DBConn.conn.State == System.Data.ConnectionState.Open)
                         {
                             DBConn.conn.Close();
                         }
                     }
+
                 }
 
                 totalAmountLabel.InnerText = totale.ToString("0.00");
                 CartRepeater.DataSource = dt;
                 CartRepeater.DataBind();
-
             }
             else
             {
@@ -88,7 +86,6 @@ namespace CoffeCommerce.ContentShop
         protected void EmptyCartButton_Click(object sender, EventArgs e)
         {
             Session.Remove("Carrello");
-
             PopolaCarrello();
         }
 
@@ -112,17 +109,6 @@ namespace CoffeCommerce.ContentShop
             }
         }
 
-        public class CartItem
-        {
-            public int ProductID { get; set; }
-            public int Quantity { get; set; }
-
-            public CartItem(int productID, int quantity)
-            {
-                ProductID = productID;
-                Quantity = quantity;
-            }
-        }
+        
     }
 }
-

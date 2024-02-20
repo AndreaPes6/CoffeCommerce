@@ -7,7 +7,7 @@
             <ItemTemplate>
                 <div class="col-md-12">
                     <div class='col-md-6'>
-                        <img src='<%# Eval("UrlImage") %>' class='img-fluid rounded product-image w-75 border- border-solid-black' alt='<%# Eval("Nome") %>'>
+                        <img src='<%# Eval("UrlImage") %>' class='img-fluid rounded product-image w-25 h-auto border border-solid-black' alt='<%# Eval("Nome") %>'>
                     </div>
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
