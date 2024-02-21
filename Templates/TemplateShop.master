@@ -23,8 +23,22 @@
         </header>
 
         <div class="flex-grow-1">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <div class="row">
+
+                <div class="Col-2">
+                    
+                </div>
+
+                <div class="Col-8">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                </div>
+
+                <div class="Col-2">
+                    
+                </div>
+
+            </div>
         </div>
 
 
