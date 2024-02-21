@@ -94,6 +94,14 @@ header {
     cursor: pointer;
 }
 
+
+/* CART PAGE */
+
+.cart-page {
+    padding: 50px;
+    background-color: #eaeded;
+}
+
 /*footer shop*/
 .bg-footer {
     background-color: whitesmoke;
