@@ -22,7 +22,16 @@
             </ul>
         </div>
     </header>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
-    <footer>Footer</footer>
+    <div class="container h-100 w-100">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    <footer>
+        <div class="d-flex justify-content-center">
+            <p class="text-secondary">
+                Guerrieri Corporation &copy; 2024
+            </p>
+        </div>
+    </footer>
 </asp:Content>
