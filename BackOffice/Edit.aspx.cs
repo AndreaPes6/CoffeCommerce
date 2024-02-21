@@ -56,7 +56,7 @@ namespace CoffeCommerce.BackOffice
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE Products SET [Name] = @ProductName, [Description] = @ProductDescription, [Price] = @ProductPrice, [FotoProduct] = @ProductImage WHERE ID = @ProductID";
+                string query = "UPDATE Products SET [Name] = @ProductName, [Description] = @ProductDescription, [Price] = @ProductPrice, [FotoProduct] = @ProductImage, [IDCategory] = @IDCategory WHERE ID = @ProductID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -64,6 +64,7 @@ namespace CoffeCommerce.BackOffice
                     command.Parameters.AddWithValue("@ProductDescription", txtProductDescription.Text);
                     command.Parameters.AddWithValue("@ProductPrice", Convert.ToDecimal(txtProductPrice.Text));
                     command.Parameters.AddWithValue("@ProductImage", txtProductImage.Text);
+                    command.Parameters.AddWithValue("@IDCategory", Convert.ToInt32(txtIDCategory.SelectedValue));
                     command.Parameters.AddWithValue("@ProductID", productId);
 
                     connection.Open();
