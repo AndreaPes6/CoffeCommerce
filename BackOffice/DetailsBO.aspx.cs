@@ -37,7 +37,7 @@ namespace CoffeCommerce.BackOffice
                     string productHtml = $@"
                     <div class='container mt-5'>
                         <div class='row'>
-                            <div class='col-md-6'>
+                            <div class='col-md-4'>
                                 <img src='{productPhoto}' class='img-fluid rounded product-image w-75 border- border-solid-black' alt='{productName}' onclick='zoomImage(this)' style='cursor: pointer;'>
                             </div>
                             <div class='col-md-6'>
