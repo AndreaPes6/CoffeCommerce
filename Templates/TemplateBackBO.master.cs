@@ -1,30 +1,22 @@
-﻿using System;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
 
 namespace CoffeCommerce.Templates
 {
     public partial class TemplateBackBO : System.Web.UI.MasterPage
     {
-        private readonly string connectionString = ConfigurationManager.ConnectionStrings["DbEcommConnectionString"].ConnectionString;
+        private readonly string connectionString = "server=DESKTOP-5MD1NN4\\SQLEXPRESS; Initial Catalog=ECommerceBW; Integrated Security=true";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack && Session["UserId"] != null)
-            {
-                bool isAdmin = Convert.ToBoolean(Session["IsAdmin"]);
-                if (!isAdmin)
-                {
-                    Response.Redirect("../ContentShop/HomeShop.aspx");
-                }
-                else
-                {
-                    string userProfileImageURL = GetUserProfileImageURL();
-                    imgUserProfile.ImageUrl = userProfileImageURL;
-                }
-            }
+            string userProfileImageURL = GetUserProfileImageURL();
+            imgUserProfile.ImageUrl = userProfileImageURL;
         }
 
         private string GetUserProfileImageURL()
@@ -46,22 +38,21 @@ namespace CoffeCommerce.Templates
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                DBConn.conn.Open();
+
+                string query = "SELECT FotoProfilo FROM [ECommerceBW].[dbo].[User] WHERE ID = @UserID";
+
+                using (SqlCommand command = new SqlCommand(query, DBConn.conn))
                 {
-                    connection.Open();
-                    string query = "SELECT FotoProfilo FROM [User] WHERE ID = @UserID";
+                    command.Parameters.AddWithValue("@UserID", userId);
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        command.Parameters.AddWithValue("@UserID", userId);
-
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        if (reader.HasRows)
                         {
-                            if (reader.HasRows)
-                            {
-                                reader.Read();
-                                userProfileImageURL = reader["FotoProfilo"].ToString();
-                            }
+                            reader.Read();
+                            imgUserProfile.ImageUrl = reader["FotoProfilo"].ToString();
+
                         }
                     }
                 }
@@ -69,6 +60,13 @@ namespace CoffeCommerce.Templates
             catch (Exception ex)
             {
                 Response.Write(ex.Message);
+            }
+            finally
+            {
+                if (DBConn.conn.State == ConnectionState.Open)
+                {
+                    DBConn.conn.Close();
+                }
             }
 
             return userProfileImageURL;

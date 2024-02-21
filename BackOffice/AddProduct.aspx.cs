@@ -34,7 +34,7 @@ namespace CoffeCommerce.BackOffice
                     int IDCategory = int.Parse(dpwCategories.SelectedValue);
                     string urlImage = imgUrl.Value;
 
-                 
+
 
                     SqlCommand cmdInsert = new SqlCommand("INSERT INTO Products (Name, Description, Price, FotoProduct, IDCategory) " +
                                                           "VALUES (@Name, @Description, @Price, @UrlImage, @IDCategory)", DBConn.conn);

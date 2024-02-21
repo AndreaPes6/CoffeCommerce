@@ -33,22 +33,22 @@ namespace CoffeCommerce.BackOffice
         protected global::System.Web.UI.WebControls.TextBox txtProductName;
 
         /// <summary>
-        /// Controllo lblProductCategory.
+        /// Controllo Label1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProductCategory;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Controllo txtProductCategory.
+        /// Controllo txtIDCategory.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtProductCategory;
+        protected global::System.Web.UI.WebControls.DropDownList txtIDCategory;
 
         /// <summary>
         /// Controllo lblProductPrice.
@@ -103,15 +103,6 @@ namespace CoffeCommerce.BackOffice
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProductImage;
-
-        /// <summary>
-        /// Controllo txtIDCategory.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtIDCategory;
 
         /// <summary>
         /// Controllo btnUpdate.
