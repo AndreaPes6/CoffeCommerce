@@ -102,6 +102,25 @@ header {
     background-color: #eaeded;
 }
 
+@media screen and (min-width: 576px){
+    .querySize {
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .querySize {
+        width: 20rem
+    }
+
+    .card-title {
+        font-size: 2.2rem;
+    }
+    .card-text {
+        font-size: 1.7rem;
+    }
+}
+
 /*footer shop*/
 .bg-footer {
     background-color: whitesmoke;

@@ -6,13 +6,13 @@
         <div class="row">
             <asp:Repeater ID="CartRepeater" runat="server">
                 <ItemTemplate>
-                  
+
                     <div class="p-0 mb-4 row bg-light border border-solid rounded justify-content-between">
 
                         <div class="row col-10">
 
-                            <div class="col-3 p-0 me-2">
-                                <img src='<%# Eval("UrlImage") %>' class='img-fluid rounded-start w-100 h-auto border' alt='<%# Eval("Nome") %>'>
+                            <div class="col-2 p-0 me-2">
+                                <img src='<%# Eval("UrlImage") %>' class='img-fluid rounded-start border querySize' alt='<%# Eval("Nome") %>'>
                             </div>
 
                             <div class="col-8 p-0">
@@ -20,11 +20,11 @@
                                 <p class="card-text my-2">Prezzo: <%# Eval("Prezzo") %> €</p>
                                 <p class="card-text my-2">Quantità: <%# Eval("Quantità") %></p>
 
-                       
-                               </div>
-                           </div>
-                        <div class="col-1 p-0 mt-2 me-2 p-0" style="text-align:-webkit-right;">
-                            <asp:LinkButton runat="server" ID="RemoveFromCartButton" style="width:2.5rem;" CssClass="btn btn-danger bi bi-trash d-flex justify-content-center m-0 p-0 py-2" CommandName="RemoveFromCart" CommandArgument='<%# Container.ItemIndex %>' OnCommand="RemoveFromCartButton_Command">
+
+                            </div>
+                        </div>
+                        <div class="col-1 p-0 mt-2 me-2 p-0" style="text-align: -webkit-right;">
+                            <asp:LinkButton runat="server" ID="RemoveFromCartButton" Style="width: 2.5rem;" CssClass="btn btn-danger bi bi-trash d-flex justify-content-center m-0 p-0 py-2" CommandName="RemoveFromCart" CommandArgument='<%# Container.ItemIndex %>' OnCommand="RemoveFromCartButton_Command">
     <svg xmlns="http://www.w3.org/2000/svg" width="16
         " height="16" fill="currentColor" class="bi bi-trash align-self-center" viewBox="0 0 16 16">
         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
