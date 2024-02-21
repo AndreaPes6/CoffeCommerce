@@ -2,18 +2,24 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <header class="sticky-top">
+
         <nav class="navbar navbar-expand-sm" id="navbarNav">
-            <div class="logo">
-                <a class="navbar-brand" href="../BackOffice/HomeBO.aspx">
+
+            <div class="logo d-flex">
+                <a class="navbar-brand m-0" href="../BackOffice/HomeBO.aspx">
                     <img src="../Assets/Images/Logo.jpg" alt="Logo"/>
                 </a>
-                <a class="nav-link active text-white" href="../BackOffice/HomeBO.aspx">Home</a>
-                <ul class="nav-links">
+                
+                <ul class="nav-links d-flex align-items-center">
+                    <li><a class="nav-link active text-white" href="../BackOffice/HomeBO.aspx">Home</a></li>
                     <li><a class="nav-link active text-white" href="../BackOffice/AddProduct.aspx">Add Products</a></li>
                 </ul>
             </div>
+
         </nav>
+
         <div class="dropdown">
+
             <asp:Image ID="imgUserProfile" runat="server" CssClass="dropdown-toggle rounded-circle" Width="30" Height="30" data-bs-toggle="dropdown" aria-expanded="false" />
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -21,6 +27,7 @@
                 <li><a class="dropdown-item" href="../Profile/Logout.aspx">Logout</a></li>
             </ul>
         </div>
+
     </header>
     <div class="container h-100 w-100">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
