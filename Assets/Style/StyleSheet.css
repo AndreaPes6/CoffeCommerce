@@ -1,9 +1,12 @@
 ﻿/* Global Styles */
-body {
+﻿body {
     font-family: 'Arial', sans-serif;
     background-color: whitesmoke;
 }
 
+.spc-footer{
+    margin-bottom:150px;
+}
 .btn-card, .btn-add {
     background-color: #521A25;
     color: white;
@@ -21,6 +24,8 @@ body {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         transform: scale(1.03);
     }
+
+
 
 .dp-dw-cat {
     width: 200px !important;
@@ -88,3 +93,11 @@ header {
     overflow: hidden;
     cursor: pointer;
 }
+
+/*footer shop*/
+.bg-footer {
+    background-color: whitesmoke;
+}
+
+/*footer shop*/
+
