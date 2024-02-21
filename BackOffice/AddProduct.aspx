@@ -5,7 +5,7 @@
         <h2 class="fw-bold fw-light txt-lbladd">Add Products</h2>
         <div class="d-flex">
 
-            <div>
+            <div class="me-3">
                 <img src="../Assets/Images/AddProd.jpg" alt="imagine caffè" class="img-coffe img-fluid rounded shadow" />
             </div>
 
