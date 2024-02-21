@@ -1,22 +1,30 @@
-﻿using System.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using System;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
+using System.Web.UI;
 
 namespace CoffeCommerce.Templates
 {
     public partial class TemplateBackBO : System.Web.UI.MasterPage
     {
-        private readonly string connectionString = "server=DESKTOP-5MD1NN4\\SQLEXPRESS; Initial Catalog=ECommerceBW; Integrated Security=true";
+        private readonly string connectionString = ConfigurationManager.ConnectionStrings["DbEcommConnectionString"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string userProfileImageURL = GetUserProfileImageURL();
-            imgUserProfile.ImageUrl = userProfileImageURL;
+            if (!IsPostBack && Session["UserId"] != null)
+            {
+                bool isAdmin = Convert.ToBoolean(Session["IsAdmin"]);
+                if (!isAdmin)
+                {
+                    Response.Redirect("../ContentShop/HomeShop.aspx");
+                }
+                else
+                {
+                    string userProfileImageURL = GetUserProfileImageURL();
+                    imgUserProfile.ImageUrl = userProfileImageURL;
+                }
+            }
         }
 
         private string GetUserProfileImageURL()
@@ -28,7 +36,7 @@ namespace CoffeCommerce.Templates
 
         private int GetUserId()
         {
-           int IDUser = int.Parse(Session["UserId"].ToString());
+            int IDUser = int.Parse(Session["UserId"].ToString());
             return IDUser;
         }
 
@@ -38,21 +46,22 @@ namespace CoffeCommerce.Templates
 
             try
             {
-                DBConn.conn.Open();
-
-                string query = "SELECT FotoProfilo FROM [ECommerceBW].[dbo].[User] WHERE ID = @UserID";
-
-                using (SqlCommand command = new SqlCommand(query, DBConn.conn))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UserID", userId);
+                    connection.Open();
+                    string query = "SELECT FotoProfilo FROM [User] WHERE ID = @UserID";
 
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        if (reader.HasRows)
-                        {
-                            reader.Read();
-                            imgUserProfile.ImageUrl = reader["FotoProfilo"].ToString();
+                        command.Parameters.AddWithValue("@UserID", userId);
 
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                reader.Read();
+                                userProfileImageURL = reader["FotoProfilo"].ToString();
+                            }
                         }
                     }
                 }
@@ -60,13 +69,6 @@ namespace CoffeCommerce.Templates
             catch (Exception ex)
             {
                 Response.Write(ex.Message);
-            }
-            finally
-            {
-                if (DBConn.conn.State == ConnectionState.Open)
-                {
-                    DBConn.conn.Close();
-                }
             }
 
             return userProfileImageURL;
