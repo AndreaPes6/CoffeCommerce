@@ -7,23 +7,23 @@
             <asp:Repeater ID="CartRepeater" runat="server">
                 <ItemTemplate>
 
-                    <div class="p-0 mb-4 row bg-light border border-solid rounded justify-content-between">
+                    <div class="w-75 p-0 mb-4 row bg-light border border-solid rounded justify-content-between">
 
-                        <div class="row col-10">
+                        <div class="row col-9">
 
-                            <div class="col-2 p-0 me-2">
+                            <div class=" col-3 p-0 me-2">
                                 <img src='<%# Eval("UrlImage") %>' class='img-fluid rounded-start border querySize' alt='<%# Eval("Nome") %>'>
                             </div>
 
                             <div class="col-8 p-0">
-                                <h3 class="card-title mt-1"><%# Eval("Nome") %></h3>
-                                <p class="card-text my-2">Prezzo: <%# Eval("Prezzo") %> €</p>
-                                <p class="card-text my-2">Quantità: <%# Eval("Quantità") %></p>
+                                <h3 class="card-title"><%# Eval("Nome") %></h3>
+                                <p class="card-text">Prezzo: <%# Eval("Prezzo") %> €</p>
+                                <p class="card-text m-0">Quantità: <%# Eval("Quantità") %></p>
 
 
                             </div>
                         </div>
-                        <div class="col-1 p-0 mt-2 me-2 p-0" style="text-align: -webkit-right;">
+                        <div class="col-2 p-0 mt-2 me-2 p-0" style="text-align: -webkit-right;">
                             <asp:LinkButton runat="server" ID="RemoveFromCartButton" Style="width: 2.5rem;" CssClass="btn btn-danger bi bi-trash d-flex justify-content-center m-0 p-0 py-2" CommandName="RemoveFromCart" CommandArgument='<%# Container.ItemIndex %>' OnCommand="RemoveFromCartButton_Command">
     <svg xmlns="http://www.w3.org/2000/svg" width="16
         " height="16" fill="currentColor" class="bi bi-trash align-self-center" viewBox="0 0 16 16">
