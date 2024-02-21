@@ -26,6 +26,14 @@
         transform: scale(1.03);
     }
 
+.h-btn-cart {
+    background-color: #198754!important;
+}
+
+.h-btn-cart:hover {
+    background-color: #146c43!important;
+}
+
 
 
 .dp-dw-cat {
