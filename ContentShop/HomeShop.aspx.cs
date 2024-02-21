@@ -78,48 +78,59 @@ namespace CoffeCommerce.ContentShop
     }
 }
 
-        protected void btnAddToCart_Click(object sender, EventArgs e)
+        protected void btnAddToCart_Command(object sender, CommandEventArgs e)
         {
-            LinkButton btnAddToCart = (LinkButton)sender;
-            string productId = btnAddToCart.CommandArgument;
+            string productId = e.CommandArgument.ToString();
+
             if (!string.IsNullOrEmpty(productId))
             {
                 if (int.TryParse(productId, out int ProdID))
                 {
-                    int quantity = 1;
+                    RepeaterItem item = (RepeaterItem)((LinkButton)sender).NamingContainer;
+                    DropDownList ddlQuantity = (DropDownList)item.FindControl("ddlQuantity");
 
-                    CartItem item = new CartItem(ProdID, quantity);
-
-                    List<CartItem> products;
-                    if (Session["Carrello"] == null)
+                    if (ddlQuantity != null)
                     {
-                        // Se la sessione non esiste, crea una nuova lista
-                        products = new List<CartItem>();
+                        int quantity = Convert.ToInt32(ddlQuantity.SelectedValue);
+
+                        CartItem cartItem = new CartItem(ProdID, quantity);
+
+                        List<CartItem> products;
+                        if (Session["Carrello"] == null)
+                        {
+                            // Se la sessione non esiste, crea una nuova lista
+                            products = new List<CartItem>();
+                        }
+                        else
+                        {
+                            // Se la sessione esiste, recupera la lista esistente
+                            products = (List<CartItem>)Session["Carrello"];
+                        }
+
+                        // Aggiungi il nuovo elemento alla lista
+                        products.Add(cartItem);
+
+                        // Aggiorna la sessione con la lista aggiornata
+                        Session["Carrello"] = products;
+
                     }
                     else
                     {
-                        // Se la sessione esiste, recupera la lista esistente
-                        products = (List<CartItem>)Session["Carrello"];
+                        Response.Write("<p class='text-danger'>Quantità non valida</p>");
                     }
-
-                    // Aggiungi il nuovo elemento alla lista
-                    products.Add(item);
-
-                    // Aggiorna la sessione con la lista aggiornata
-                    Session["Carrello"] = products;
-
-                    ScriptManager.RegisterStartupScript(this, GetType(), "addToCartItem", "alert('Articolo aggiunto con successo al carrello!');", true);
                 }
                 else
                 {
-                    Response.Write("<p class='text-danger'>Invalid product ID format</p>");
+                    Response.Write("<p class='text-danger'>Formato ID prodotto non valido</p>");
                 }
             }
             else
             {
-                Response.Write("<p class='text-danger'>Product ID is null or empty</p>");
+                Response.Write("<p class='text-danger'>ID prodotto nullo o vuoto</p>");
             }
         }
+
+
 
 
     }
