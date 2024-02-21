@@ -28,13 +28,13 @@ namespace CoffeCommerce.Templates
 
         private int GetUserId()
         {
-            int userId = Session["Userid"];
- 
+           int IDUser = int.Parse(Session["UserId"].ToString());
+            return IDUser;
         }
 
         private string GetUserProfileImageFromDatabase(int userId)
         {
-            string userProfileImageURL = "";
+            string userProfileImageURL = "imgUserProfile";
 
             try
             {
@@ -48,9 +48,11 @@ namespace CoffeCommerce.Templates
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.Read())
+                        if (reader.HasRows)
                         {
-                            userProfileImageURL = reader["FotoProfilo"].ToString();
+                            reader.Read();
+                            imgUserProfile.ImageUrl = reader["FotoProfilo"].ToString();
+
                         }
                     }
                 }

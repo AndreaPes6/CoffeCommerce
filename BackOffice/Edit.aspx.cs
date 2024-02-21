@@ -39,7 +39,7 @@ namespace CoffeCommerce.BackOffice
                             txtProductName.Text = reader["ProductName"].ToString();
                             txtProductDescription.Text = reader["ProductDescription"].ToString();
                             txtProductPrice.Text = reader["ProductPrice"].ToString();
-                            txtProductImage.Text = reader["ProductImage"].ToString(); 
+                            txtProductImage.Text = reader["ProductImage"].ToString();
                         }
                     }
                 }

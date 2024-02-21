@@ -113,6 +113,7 @@
     <Compile Include="BackOffice\HomeBO.aspx.designer.cs">
       <DependentUpon>HomeBO.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CartItem.cs" />
     <Compile Include="ContentShop\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
