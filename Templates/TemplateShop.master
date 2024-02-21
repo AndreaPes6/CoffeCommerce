@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="d-flex flex-column min-vh-100">
     <header class="sticky-top">
         <nav class="navbar navbar-expand-sm" id="navbarNav">
             <a class="navbar-brand col" href="../ContentShop/HomeShop.aspx">
@@ -19,9 +20,13 @@
         </nav>
         <a class="nav-link text-white" href="../ContentShop/Login.aspx">Login</a>
     </header>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
-    <footer class="text-dark mt-5 text-center ">
+    <div class="flex-grow-1">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+    <footer class="text-dark mt-5 text-center py-3 bg-light flex-shrink-0 bg-footer">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-1">
@@ -71,5 +76,5 @@
             </div>
         </div>
     </footer>
-
+</div>
 </asp:Content>
