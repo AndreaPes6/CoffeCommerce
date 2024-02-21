@@ -11,12 +11,19 @@ namespace CoffeCommerce.Templates
 {
     public partial class TemplateBackBO : System.Web.UI.MasterPage
     {
-        private readonly string connectionString = "server=DESKTOP-5MD1NN4\\SQLEXPRESS; Initial Catalog=ECommerceBW; Integrated Security=true";
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
             string userProfileImageURL = GetUserProfileImageURL();
             imgUserProfile.ImageUrl = userProfileImageURL;
+            }
+            catch(Exception ex)
+            {
+                Response.Write("Errore" + ex.Message);
+            }
+            
         }
 
         private string GetUserProfileImageURL()
@@ -51,8 +58,7 @@ namespace CoffeCommerce.Templates
                         if (reader.HasRows)
                         {
                             reader.Read();
-                            imgUserProfile.ImageUrl = reader["FotoProfilo"].ToString();
-
+                            userProfileImageURL = reader["FotoProfilo"].ToString();
                         }
                     }
                 }
