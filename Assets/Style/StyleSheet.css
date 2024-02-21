@@ -4,9 +4,10 @@
     background-color: whitesmoke;
 }
 
-.spc-footer{
-    margin-bottom:150px;
+.spc-footer {
+    margin-bottom: 150px;
 }
+
 .btn-card, .btn-add {
     background-color: #521A25;
     color: white;
@@ -102,10 +103,11 @@ header {
     background-color: #eaeded;
 }
 
-@media screen and (min-width: 576px){
+@media screen and (min-width: 576px) {
     .querySize {
         width: 10rem;
     }
+
     .card-title {
         margin: 7px 0px 5px 0px;
     }
@@ -124,6 +126,7 @@ header {
         font-size: 2.2rem;
         margin: 8px 0px 7px 0px;
     }
+
     .card-text {
         font-size: 1.7rem;
         margin: 10px 0px 5px 0px;
@@ -135,5 +138,14 @@ header {
     background-color: whitesmoke;
 }
 
-/*footer shop*/
+/*HOMEPAGEBO*/
 
+.details-link {
+    color: #521A25;
+    text-decoration: none;
+}
+
+    .details-link:hover {
+        color: saddlebrown;
+        text-decoration: underline;
+    }
