@@ -6,6 +6,7 @@
         <div class="row">
             <asp:Repeater ID="CartRepeater" runat="server">
                 <ItemTemplate>
+                  
                     <div class="p-0 mb-4 row bg-light border border-solid rounded justify-content-between">
 
                         <div class="row col-10">
@@ -18,10 +19,10 @@
                                 <h3 class="card-title mt-1"><%# Eval("Nome") %></h3>
                                 <p class="card-text my-2">Prezzo: <%# Eval("Prezzo") %> €</p>
                                 <p class="card-text my-2">Quantità: <%# Eval("Quantità") %></p>
-                            </div>
 
-                        </div>
-
+                       
+                               </div>
+                           </div>
                         <div class="col-1 p-0 mt-2 me-2 p-0" style="text-align:-webkit-right;">
                             <asp:LinkButton runat="server" ID="RemoveFromCartButton" style="width:2.5rem;" CssClass="btn btn-danger bi bi-trash d-flex justify-content-center m-0 p-0 py-2" CommandName="RemoveFromCart" CommandArgument='<%# Container.ItemIndex %>' OnCommand="RemoveFromCartButton_Command">
     <svg xmlns="http://www.w3.org/2000/svg" width="16
