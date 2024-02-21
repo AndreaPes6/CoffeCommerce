@@ -6,7 +6,7 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-header" style="background-color: #0C141A;">
-                        <h2 class="card-title text-light fs-5 m-0">Login</h2>
+                        <h5 class="card-title text-light">Login</h5>
                     </div>
                     <div class="card-body">
                         <div class="mb-3">
@@ -19,7 +19,7 @@
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
                             <asp:Button ID="BtnLogin" runat="server" Text="Login" CssClass="btn btn-card rounded-pill" OnClick="BtnLogin_Click" />
-                            <asp:Button ID="BtnRegister" runat="server" Text="Sign In" CssClass="btn btn-card rounded-pill ms-3" OnClick="BtnRegister_Click" />
+                            <asp:Button ID="BtnRegister" runat="server" Text="Registrati" CssClass="btn btn-card rounded-pill ms-3" OnClick="BtnRegister_Click" />
                         </div>
 
                         <div class="mb-3 d-flex justify-content-center">
