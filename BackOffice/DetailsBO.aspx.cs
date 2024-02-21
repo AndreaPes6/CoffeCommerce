@@ -35,17 +35,15 @@ namespace CoffeCommerce.BackOffice
                     string productPrice = dataReader["Price"].ToString();
 
                     string productHtml = $@"
-                    <div class='container mt-5'>
+                    <div class='container m-0 p-0'>
                         <div class='row'>
                             <div class='col-md-4'>
-                                <img src='{productPhoto}' class='img-fluid rounded product-image w-75 border- border-solid-black' alt='{productName}' onclick='zoomImage(this)' style='cursor: pointer;'>
+                                <img src='{productPhoto}' class='img-fluid rounded product-image w-100 border border-solid-black' alt='{productName}' onclick='zoomImage(this)' style='cursor: pointer;'>
                             </div>
-                            <div class='col-md-6'>
-                                <h2 class='fw-bold text-uppercase mb-4'>{productName}</h2>
-                                <p class='fs-5 mb-4'>{productDescription}</p>
-                                <p class='fw-bold fs-4 mb-4'>Price: €{productPrice}</p>
-                                <asp:Button ID='btnEdit' runat='server' Text='Edit Product' CssClass='btn btn-primary' OnClick='btnEdit_Click' />
-                                <asp:Button ID='btnDelete' runat='server' Text='Delete Product' CssClass='btn btn-danger' OnClick='btnDelete_Click' />
+                            <div class='col-md-7'>
+                                <h2 class='fw-bold fw-light txt-lbladd text-uppercase mb-4'>{productName}</h2>
+                                <p class='fs-4 mb-4'>{productDescription}</p>
+                                <p class='fs-4 mb-3'>Price: €{productPrice}</p>                               
                             </div>
                         </div>
                     </div>";

@@ -12,8 +12,8 @@
                     </div>
                     <div class='col-md-7'>
                         <h2 class='fw-bold fw-light txt-lbladd text-uppercase mb-4' id="tltName" runat="server"></h2>
-                        <p class='fs-5 mb-4' id="txtDescription" runat="server"></p>
-                        <p class='fw-bold fs-4 mb-3' id="txtPrice" runat="server"></p>
+                        <p class='fs-4 mb-5' id="txtDescription" runat="server"></p>
+                        <p class='fs-4 mb-3' id="txtPrice" runat="server"></p>
                         <div class='form-group mb-4'>
                             <label for='quantity' class='fw-bold'>Quantity:</label>
                             <asp:DropDownList ID="dwdQuantity" runat="server" class='form-select form-select-lg'>
