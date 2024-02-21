@@ -28,7 +28,8 @@ namespace CoffeCommerce.Templates
 
         private int GetUserId()
         {
-            return 1; // Replace with your logic to obtain the current user's ID
+            int userId = Session["Userid"];
+ 
         }
 
         private string GetUserProfileImageFromDatabase(int userId)
