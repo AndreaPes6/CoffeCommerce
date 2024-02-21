@@ -1,12 +1,16 @@
-﻿using System;
+﻿
+using System;
+using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace CoffeCommerce.ContentShop
 {
-    public partial class Login : Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,46 +31,35 @@ namespace CoffeCommerce.ContentShop
             try
             {
                 conn.Open();
-                SqlCommand loginUser = new SqlCommand($"SELECT ID, Amministratore FROM [User] WHERE UserName='{username}' AND Password='{password}'", conn);
+                SqlCommand registerUser = new SqlCommand($"SELECT ID FROM [User] WHERE UserName='{username}' AND Password='{password}'", conn);
 
-                SqlDataReader reader = loginUser.ExecuteReader();
+                string UserId = registerUser.ExecuteScalar()?.ToString();
 
-                if (reader.Read())
+                if (UserId != null)
                 {
-                    string userId = reader["ID"].ToString();
-                    bool isAdmin = Convert.ToBoolean(reader["Amministratore"]);
-
-                    Session["UserId"] = userId;
-                    Session["IsAdmin"] = isAdmin;
-
-                    if (isAdmin)
-                    {
-                        Response.Redirect("../BackOffice/HomeBO.aspx");
-                    }
-                    else
-                    {
-                        Response.Redirect("HomeShop.aspx");
-                    }
+                    Session["UserId"] = UserId;
+                    Response.Redirect("../BackOffice/HomeBO.aspx");
                 }
                 else
                 {
-                    LblErrorMessage.Text = "<i class='bi bi-exclamation-triangle-fill'></i> Invalid credentials";
+                    LblErrorMessage.Text = "<i class='bi bi-exclamation-triangle-fill'></i> Credenziali non valide";
                     LblErrorMessage.Visible = true;
                 }
             }
             catch (Exception ex)
             {
-                Response.Write("An error occurred while logging in: " + ex.Message);
+                Response.Write("Si è verificato un errore durante il login: " + ex.Message);
             }
             finally
             {
                 conn.Close();
             }
         }
-
         protected void BtnRegister_Click(object sender, EventArgs e)
         {
             Response.Redirect("Registration.aspx");
         }
+
+
     }
 }

@@ -61,7 +61,7 @@ namespace CoffeCommerce.ContentShop
                 registerUser.Parameters.AddWithValue("@Email", email);
                 registerUser.Parameters.AddWithValue("@Password", password);
                 registerUser.Parameters.AddWithValue("@ProfilePictureUrl", profilePictureUrl);
-                registerUser.Parameters.AddWithValue("@IsAdmin", 0);
+                registerUser.Parameters.AddWithValue("@IsAdmin", 1);
 
                 int rowsAffected = registerUser.ExecuteNonQuery();
 
