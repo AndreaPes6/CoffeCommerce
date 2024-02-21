@@ -1,66 +1,36 @@
-﻿body {
+﻿/* Global Styles */
+body {
     font-family: 'Arial', sans-serif;
     background-color: whitesmoke;
 }
 
-/*HOME STYLE RAMO*/
-
-.btn-card {
+.btn-card, .btn-add {
     background-color: #521A25;
     color: white;
-    font-size: 0.7em
 }
 
-.btn-card:hover {
+    .btn-card:hover, .btn-add:hover {
         background-color: saddlebrown;
-        color: white;
     }
 
-.c-card {
+.c-card, .container img {
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
-    .c-card:hover {
+    .c-card:hover, .container img:hover {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         transform: scale(1.03);
-        cursor:pointer;
     }
 
 .dp-dw-cat {
     width: 200px !important;
 }
 
-/*HOME STYLE RAMO*/
-
-/*ADD PRODUCT RAMO*/
-
-.img-coffe {
-    width:90%;
-    height:auto;
-}
-
-.btn-add {
-    background-color: #521A25;
-    color: white;
-}
-
 .txt-lbladd {
     color: #521A25;
 }
-/*ADD PRODUCT RAMO*/
 
-/*HOME BACK OFFICE RAMO*/
-
-.details-link {
-    color: #521A25;
-}
-    .details-link:hover {
-        color: saddlebrown;
-    }
-
-
-/* DETAILS PES */
-/*Home style Marco navbar BO*/
+/* Navbar Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -69,16 +39,13 @@ header {
     background-color: #0C141A;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+.logo img, .profile-dropdown img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
-
-.logo img {
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
-    }
 
 .nav-links {
     list-style: none;
@@ -86,70 +53,38 @@ header {
     padding: 0;
 }
 
-.nav-links li {
+    .nav-links li {
         margin-right: 20px;
     }
 
-.profile-dropdown {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.profile-dropdown img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-        cursor: pointer;
-}
-
 .profile-dropdown .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        top: 60px;
-        right: 0;
-}
-
-.profile-dropdown .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 60px;
+    right: 0;
 }
 
 .profile-dropdown:hover .dropdown-content {
-        display: block;
+    display: block;
 }
 
-.profile-dropdown .dropdown-content a:hover {
+.profile-dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+    .profile-dropdown .dropdown-content a:hover {
         background-color: #f1f1f1;
-}
+    }
 
-navbarNav {
-    background-color: #0C141A;
-}
-
-/* DETAILS PES */
+/* Product Image Container */
 
 .product-image-container {
     overflow: hidden;
     cursor: pointer;
-}
-
-.container img {
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.container img:hover {
-        transform: scale(1.01);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        transform: scale(1.03)
-    }
-
-footer {
-    background-color: #0C141A;
 }
