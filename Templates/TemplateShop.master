@@ -3,73 +3,56 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-sm" id="navbarNav">
-            <a class="navbar-brand col" href="../ContentShop/HomeShop.aspx">
-                <img src="../Assets/Images/Logo.jpg" alt="Logo" width="35" class="d-inline-block align-text-top" />
-            </a>
-            <ul class="navbar-nav d-flex">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="../ContentShop/HomeShop.aspx">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="../ContentShop/Cart.aspx">Cart</a>
-                </li>
-            </ul>
-        </nav>
-        <a class="nav-link text-white" href="../ContentShop/Login.aspx">Login</a>
-    </header>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
-    <footer class="text-dark mt-5 text-center ">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Informazioni</a>
-                </div>
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Accessibilitá</a>
-                </div>
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Centro assistenza</a>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Privacy e condizioni</a>
-                </div>
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Annunci pubblicitari</a>
-                </div>
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Pubblicitá</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Servizi alle aziende</a>
-                </div>
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Le Nostre Offerte</a>
-                </div>
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Altro</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Prodotti in Promozione</a>
-                </div>
-                <div class="col-md-4 mb-1">
-                    <a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Altro</a>
-                </div>
-                <div class="col-md-4 mb-1">
-                    <p class="text-secondary">
-                        Guerrieri Corporation &copy; 2024
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div class="d-flex flex-column min-vh-100">
 
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-sm" id="navbarNav">
+                <a class="navbar-brand col" href="../ContentShop/HomeShop.aspx">
+                    <img src="../Assets/Images/Logo.jpg" alt="Logo" width="35" class="d-inline-block align-text-top" />
+                </a>
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="../ContentShop/HomeShop.aspx">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../ContentShop/Cart.aspx">Cart</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="nav-link text-white" href="../ContentShop/Login.aspx">Login</a>
+        </header>
+
+        <div class="flex-grow-1">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <footer class="text-dark mt-5 text-center py-3 bg-light flex-shrink-0 bg-footer">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Informazioni</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Accessibilitá</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Centro assistenza</a> </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Privacy e condizioni</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Annunci pubblicitari</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Pubblicitá</a> </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Servizi alle aziende</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Le Nostre Offerte</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Altro</a> </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Prodotti in Promozione</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Altro</a> </div>
+                    <div class="col-md-4 mb-1">
+                        <p class="text-secondary">Guerrieri Corporation &copy; 2024 </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </asp:Content>
