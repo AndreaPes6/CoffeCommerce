@@ -19,6 +19,16 @@
                     </li>
                 </ul>
             </nav>
+
+            <!--aggiunto button switch mode-->
+            <div id="toggle">
+                <i class="button">
+                    <a>Light<br /><h6>Mode</h6></a>
+                    <span>Dark<br /><h6>Mode</h6></span>
+                </i>
+            </div>
+
+
             <!--aggiunto icona carrello con condizione// cambia se la sessione carrello non è vuota -->
             <div class="d-flex justify-content-center">
                 <a class="nav-link text-white" href="../ContentShop/Cart.aspx">
