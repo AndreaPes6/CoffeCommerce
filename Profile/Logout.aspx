@@ -13,6 +13,7 @@
                             <p class="card-text">Sei sicuro di voler effettuare il logout?</p>
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
+                             <a href="../BackOffice/HomeBO.aspx" class="btn btn-secondary me-3">Torna alla Home</a>
                             <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-danger" OnClick="btnLogout_Click" />
                         </div>
                     </div>

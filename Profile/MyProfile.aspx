@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="text-center">
-                    <asp:Image ID="imgProfile" runat="server" CssClass="img-fluid rounded-circle" style="max-width: 300px; max-height: auto" />
+                    <asp:Image ID="imgProfile" runat="server" CssClass="img-fluid rounded-circle" />
                 </div>
             </div>
             <div class="col-md-6">

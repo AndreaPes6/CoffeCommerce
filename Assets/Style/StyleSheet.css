@@ -27,12 +27,12 @@
     }
 
 .h-btn-cart {
-    background-color: #198754!important;
+    color: #3A2417;
 }
 
-.h-btn-cart:hover {
-    background-color: #146c43!important;
-}
+    .h-btn-cart:hover {
+        color: saddlebrown;
+    }
 
 
 
@@ -50,8 +50,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #0C141A;
-}
+    background-color: #3A2417!important;
+}https://fontmeme.com/fonts/static/305545/qwigley-font-preview.png
 
 .logo img, .profile-dropdown img {
     width: 40px;
@@ -59,6 +59,10 @@ header {
     margin-right: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.tlt-nav {
+    font-family: 'Great Vibes', cursive;
 }
 
 .nav-links {
