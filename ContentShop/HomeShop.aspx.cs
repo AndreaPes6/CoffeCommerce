@@ -16,6 +16,7 @@ namespace CoffeCommerce.ContentShop
         {
             if (!IsPostBack)
             {
+                BindCarouselData();
                 BindData();
                 
             }
@@ -25,8 +26,8 @@ namespace CoffeCommerce.ContentShop
         {
             try
             {
-                DBConn.conn.Open();            
-                string query =  "SELECT * FROM Products";
+                DBConn.conn.Open();
+                string query = "SELECT * FROM Products";
 
                 SqlCommand cmd = new SqlCommand(query, DBConn.conn);
                 SqlDataReader dataReader = cmd.ExecuteReader();
@@ -37,7 +38,7 @@ namespace CoffeCommerce.ContentShop
                     ProductRepeater.DataBind();
                 }
 
-                tltCategory.InnerText =  "All Categories";
+                tltCategory.InnerText = "All Categories";
             }
             catch (Exception ex)
             {
@@ -84,7 +85,6 @@ namespace CoffeCommerce.ContentShop
                 }
             }
         }
-
         protected void btnAddToCart_Command(object sender, CommandEventArgs e)
         {
             string productId = e.CommandArgument.ToString();
@@ -138,6 +138,15 @@ namespace CoffeCommerce.ContentShop
                 Response.Write("<p class='text-danger'>ID prodotto nullo o vuoto</p>");
             }
         }
+        private void BindCarouselData()
+        {
+            try
+            {
+                DBConn.conn.Open();
+                string query = "SELECT TOP 5 * FROM Products ORDER BY NEWID()";
+
+                SqlCommand cmd = new SqlCommand(query, DBConn.conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
 
 
         protected void UpdateCartIconQuantity()
@@ -174,10 +183,24 @@ namespace CoffeCommerce.ContentShop
         }
 
 
-
-
-
-
+                if (dataReader.HasRows)
+                {
+                    RepeaterCarousel.DataSource = dataReader;
+                    RepeaterCarousel.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
+            finally
+            {
+                if (DBConn.conn.State == System.Data.ConnectionState.Open)
+                {
+                    DBConn.conn.Close();
+                }
+            }
+        }
 
     }
 }

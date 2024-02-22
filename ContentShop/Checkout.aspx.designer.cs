@@ -11,52 +11,34 @@ namespace CoffeCommerce.ContentShop
 {
 
 
-    public partial class Cart
+    public partial class Checkout
     {
 
         /// <summary>
-        /// Controllo CartRepeater.
+        /// Controllo Form1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater CartRepeater;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
 
         /// <summary>
-        /// Controllo totalAmountLabel.
+        /// Controllo Div1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totalAmountLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
 
         /// <summary>
-        /// Controllo emptyCartMessage.
+        /// Controllo SubmitButton.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label emptyCartMessage;
-
-        /// <summary>
-        /// Controllo EmptyCartButton.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EmptyCartButton;
-
-        /// <summary>
-        /// Controllo ProceedToPaymentButton.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ProceedToPaymentButton;
+        protected global::System.Web.UI.WebControls.Button SubmitButton;
     }
 }
