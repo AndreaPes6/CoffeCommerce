@@ -84,6 +84,7 @@ namespace CoffeCommerce.ContentShop
         {
             Session.Remove("Carrello");
             PopolaCarrello();
+            Response.Redirect(Request.RawUrl);
         }
 
         protected void RemoveFromCartButton_Command(object sender, CommandEventArgs e)
