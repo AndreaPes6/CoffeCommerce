@@ -123,7 +123,7 @@ namespace CoffeCommerce.ContentShop
                         Session["Carrello"] = products;
 
                         // Aggiorna la quantità nell'icona del carrello
-                        UpdateCartIconQuantity();
+                        
                     }
                     else
                     {
@@ -142,38 +142,7 @@ namespace CoffeCommerce.ContentShop
         }
 
 
-        protected void UpdateCartIconQuantity()
-        {
-            int totQuantity = 0;
-
-            // Check if Session["Carrello"] is not null and is of the correct type
-            if (Session["Carrello"] != null && Session["Carrello"] is List<CartItem> products)
-            {
-                foreach (CartItem item in products)
-                {
-                    // Use int.TryParse to handle cases where Quantity is not a valid integer
-                    if (int.TryParse(item.Quantity.ToString(), out int quantity))
-                    {
-                        totQuantity += quantity;
-                    }
-                    // Handle cases where Quantity is not a valid integer (log or handle as appropriate)
-                    else
-                    {
-                        // Log or handle the error, e.g., by setting a default quantity
-                        // totQuantity += 1; // Default quantity
-                    }
-                }
-            }
-
-            // Ottieni il riferimento all'etichetta Label1 nel tuo file .aspx
-            Label labelQuantity = (Label)base.Master.FindControl("Label1");
-
-            if (labelQuantity != null)
-            {
-                // Aggiorna il testo della Label con la quantità
-                labelQuantity.Text = totQuantity.ToString();
-            }
-        }
+       
 
 
         private void BindCarouselData()
