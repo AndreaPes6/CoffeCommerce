@@ -5,27 +5,30 @@
     <div class="carousel-inner">
         <asp:Repeater ID="RepeaterCarousel" runat="server">
             <ItemTemplate>
-<div class="carousel-item<%# Container.ItemIndex == 0 ? " active" : "" %> text-black">
-    <div class="d-flex align-items-end">
-        <img src='<%# Eval("FotoProduct") %>' class="d-block mx-auto my-4" alt='<%# Eval("Name") %>' style="max-width: 150px; height: auto;" />
-        <div class="carousel-caption text-right mt-3">
-            <h6 class="text-black"><%# Eval("Name") %></h6>
-            <p class="text-secondary text-black" style="font-size: 0.8em;"><%# Eval("Description") %></p>
-        </div>
-    </div>
-</div>
+                <div class="carousel-item<%# Container.ItemIndex == 0 ? " active" : "" %> text-black">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <img src='<%# Eval("FotoProduct") %>' class="d-block mx-2 my-4" alt='<%# Eval("Name") %>' style="max-width: 75px; height: auto;" />
+                      
+                    </div>
+                    <div class="text-center mt-3">
+                        <h6 class="text-black"><%# Eval("Name") %></h6>
+                        <p class="text-secondary text-black" style="font-size: 0.8em;"><%# Eval("Description") %></p>
+                    </div>
+                </div>
             </ItemTemplate>
         </asp:Repeater>
     </div>
     <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only text-black">Previous</span>
     </a>
     <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only text-black">Next</span>
     </a>
 </div>
+
+
 
 
     <div class="container-lg w-75 m-auto my-5">
