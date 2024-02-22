@@ -42,13 +42,13 @@ namespace CoffeCommerce.ContentShop
                 }
                 else
                 {
-                    LblErrorMessage.Text = "<i class='bi bi-exclamation-triangle-fill'></i> Credenziali non valide";
+                    LblErrorMessage.Text = "<i class='bi bi-exclamation-triangle-fill'></i> invalid credentials";
                     LblErrorMessage.Visible = true;
                 }
             }
             catch (Exception ex)
             {
-                Response.Write("Si è verificato un errore durante il login: " + ex.Message);
+                Response.Write("An error occurred while logging in: " + ex.Message);
             }
             finally
             {
