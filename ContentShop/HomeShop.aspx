@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/TemplateShop.master" AutoEventWireup="true" CodeBehind="HomeShop.aspx.cs" Inherits="CoffeCommerce.ContentShop.HomeShop" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
 <div id="productCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <asp:Repeater ID="RepeaterCarousel" runat="server">
@@ -25,6 +26,7 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
 
     <div class="container-lg w-75 m-auto my-5">
         <div class="d-flex justify-content-between align-items-center mb-5">
@@ -54,7 +56,7 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-baseline p-3">
                                     <div>
-                                        
+
                                         <asp:DropDownList ID="ddlQuantity" runat="server">
                                             <asp:ListItem Text="1" Value="1" />
                                             <asp:ListItem Text="2" Value="2" />
@@ -68,7 +70,7 @@
                                             <asp:ListItem Text="10" Value="10" />
                                         </asp:DropDownList>
                                     </div>
-                                    
+
                                     <div class="d-flex justify-content-end align-items-center p-3 ">
                                         <asp:LinkButton ID="LinkButton1" runat="server" OnCommand="btnAddToCart_Command" CommandArgument='<%# Eval("ID") %>' CommandName="AddToCart" CssClass="me-1">
                                            <div class="d-flex justify-content-center text-white rounded-circle p-2 h-btn-cart">

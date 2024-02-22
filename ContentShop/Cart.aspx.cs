@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
+using Stripe;
 
 namespace CoffeCommerce.ContentShop
 {
     public partial class Cart : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -109,6 +111,11 @@ namespace CoffeCommerce.ContentShop
             }
         }
 
-        
+        // Evento per procedere al pagamento con Stripe
+        protected void ProceedToCheckoutButton_Click(object sender, EventArgs e)
+        {
+            // Reindirizza l'utente alla pagina di checkout personalizzata
+            Response.Redirect("Checkout.aspx");
+        }
     }
 }
