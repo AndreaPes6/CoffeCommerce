@@ -87,7 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Images\Logo.jpg" />
+    <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Scripts\JavaScript.js" />
     <Content Include="Assets\Images\AddProd.jpg" />
     <Content Include="Assets\Style\StyleSheet.css" />
