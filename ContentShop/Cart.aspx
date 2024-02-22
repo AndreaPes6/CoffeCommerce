@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/TemplateShop.master" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="CoffeCommerce.ContentShop.Cart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="cart-page">
         <h2 class="mb-4">Il tuo Carrello</h2>
         <div class="row">

@@ -1,6 +1,4 @@
-﻿<!-- Checkout.aspx -->
-
-<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="CoffeCommerce.ContentShop.Checkout" %>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="CoffeCommerce.ContentShop.Checkout" %>
 
 <!DOCTYPE html>
 
@@ -18,9 +16,9 @@
                 <a href="Cart.aspx" class="btn btn-secondary align-self-center">Torna al Carrello</a>
             </div>
 
-            <!-- Indirizzo di consegna -->
+            <!-- Dati di consegna -->
             <div class="mb-4">
-                <h2>Delivery Information</h2>
+                <h2>Delivery Address</h2>
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="Enter your first name"></asp:TextBox>
@@ -30,12 +28,16 @@
                     <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" placeholder="Enter your last name"></asp:TextBox>
                 </div>
                 <div class="form-group">
+                    <label for="email">Email</label>
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter your email"></asp:TextBox>
+                </div>
+                <div class="form-group">
                     <label for="address">Address</label>
                     <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Enter your address"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label for="postalCode">Postal Code (CAP)</label>
-                    <asp:TextBox ID="txtPostalCode" runat="server" CssClass="form-control" placeholder="Enter your postal code"></asp:TextBox>
+                    <label for="zip">ZIP Code</label>
+                    <asp:TextBox ID="txtZip" runat="server" CssClass="form-control" placeholder="Enter your ZIP code"></asp:TextBox>
                 </div>
             </div>
 
@@ -46,22 +48,9 @@
                     <label for="card-element">Card Details</label>
                     <div id="card-element" class="form-control"></div>
                 </div>
+
             </div>
 
-            <div class="mb-4">
-                <h2>Coupon</h2>
-                <div class="form-group">
-                    <label for="couponCode">Coupon Code</label>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Coupon"></asp:TextBox>
-
-                </div>
-                <!-- Aggiungi altri dettagli sul coupon, se necessario -->
-            </div>
-
-            <!-- Etichetta per visualizzare messaggi di errore -->
-            <asp:Label ID="ErrorMessageLabel" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
-
-            <!-- Pulsante per inviare il pagamento -->
             <asp:Button ID="SubmitButton" runat="server" Text="Submit Payment" CssClass="btn btn-primary" OnClick="SubmitButton_Click" />
 
         </div>
