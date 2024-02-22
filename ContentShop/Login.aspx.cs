@@ -42,7 +42,7 @@ namespace CoffeCommerce.ContentShop
                 }
                 else
                 {
-                    LblErrorMessage.Text = "<i class='bi bi-exclamation-triangle-fill'></i> invalid credentials";
+                    LblErrorMessage.Text = "<i class='bi bi-exclamation-triangle-fill'></i> Credenziali errate";
                     LblErrorMessage.Visible = true;
                 }
             }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace CoffeCommerce.ContentShop
@@ -18,10 +19,8 @@ namespace CoffeCommerce.ContentShop
 
         private void PopolaCarrello()
         {
-            // Assicurati che il carrello sia stato inizializzato
             if (Session["Carrello"] != null)
             {
-                // Ottieni il carrello dalla sessione
                 List<CartItem> carrello = (List<CartItem>)Session["Carrello"];
 
                 DataTable dt = new DataTable();
@@ -76,39 +75,44 @@ namespace CoffeCommerce.ContentShop
             }
             else
             {
-                // Se il carrello è vuoto, mostra un messaggio appropriato
                 emptyCartMessage.Visible = true;
                 totalAmountLabel.InnerText = "0.00";
             }
         }
 
-        // Evento per svuotare il carrello
         protected void EmptyCartButton_Click(object sender, EventArgs e)
         {
             Session.Remove("Carrello");
             PopolaCarrello();
+            Response.Redirect(Request.RawUrl);
         }
 
-        // Evento per rimuovere un articolo dal carrello
         protected void RemoveFromCartButton_Command(object sender, CommandEventArgs e)
         {
             if (Session["Carrello"] != null)
             {
-                // Ottieni l'indice dell'articolo da rimuovere
                 int index = Convert.ToInt32(e.CommandArgument);
 
                 List<CartItem> carrello = (List<CartItem>)Session["Carrello"];
 
-                // Rimuovi l'articolo dal carrello
                 carrello.RemoveAt(index);
 
                 Session["Carrello"] = carrello;
 
-                // Aggiorna il repeater e il totale del carrello
                 PopolaCarrello();
             }
         }
 
-        
+        protected void ProceedToCheckoutButton_Click(object sender, EventArgs e)
+        {
+            if (Session["Carrello"] != null && ((List<CartItem>)Session["Carrello"]).Count > 0)
+            {
+                Response.Redirect("Checkout.aspx");
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "EmptyCartAlert", "alert('Il carrello è vuoto.');", true);
+            }
+        }
     }
 }

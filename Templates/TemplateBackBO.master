@@ -7,9 +7,9 @@
 
             <div class="logo d-flex">
                 <a class="navbar-brand m-0" href="../BackOffice/HomeBO.aspx">
-                    <img src="../Assets/Images/Logo.jpg" alt="Logo"/>
+                    <img src="../Assets/Images/Logo.jpg" alt="Logo" />
                 </a>
-                
+
                 <ul class="nav-links d-flex align-items-center">
                     <li><a class="nav-link active text-white" href="../BackOffice/HomeBO.aspx">Home</a></li>
                     <li><a class="nav-link active text-white" href="../BackOffice/AddProduct.aspx">Add Products</a></li>
@@ -22,7 +22,7 @@
 
             <asp:Image ID="imgUserProfile" runat="server" CssClass="dropdown-toggle rounded-circle" Width="30" Height="30" data-bs-toggle="dropdown" aria-expanded="false" />
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="../Profile/MyProfile.aspx">Profile</a></li>
                 <li><a class="dropdown-item" href="../BackOffice/HomeBO.aspx">Setting </a></li>
                 <li><a class="dropdown-item" href="../Profile/Logout.aspx">Logout</a></li>
             </ul>
@@ -33,7 +33,7 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
-    
+
     <footer>
         <div class="d-flex justify-content-center">
             <p class="text-secondary">

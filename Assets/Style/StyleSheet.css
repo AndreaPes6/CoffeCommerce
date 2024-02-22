@@ -28,12 +28,12 @@
     }
 
 .h-btn-cart {
-    background-color: #198754!important;
+    color: #3A2417;
 }
 
-.h-btn-cart:hover {
-    background-color: #146c43!important;
-}
+    .h-btn-cart:hover {
+        color: saddlebrown;
+    }
 
 
 
@@ -61,6 +61,10 @@ header {
     margin-right: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.tlt-nav {
+    font-family: 'Great Vibes', cursive;
 }
 
 .nav-links {

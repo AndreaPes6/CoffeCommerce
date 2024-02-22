@@ -1,6 +1,24 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/TemplateShop.master" AutoEventWireup="true" CodeBehind="HomeShop.aspx.cs" Inherits="CoffeCommerce.ContentShop.HomeShop" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<div id="productCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <asp:Repeater ID="RepeaterCarousel" runat="server">
+            <ItemTemplate>
+               <div class="carousel-item<%# Container.ItemIndex == 0 ? " active" : "" %> text-black">
+    <div class="d-flex justify-content-around align-items-center">
+        <img src='<%# Eval("FotoProductRandom") %>' class="d-block mx-2 my-4" alt='<%# Eval("Name") %>' style="max-width: 75px; height: auto;" />
+    </div>
+    <div class="text-center mt-3">
+        <h6 class="text-black"><%# Eval("Name") %></h6>
+        <p class="text-secondary text-black" style="font-size: 0.8em;"><%# Eval("Description") %></p>
+    </div>
+</div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+
     <div class="container-lg w-75 m-auto my-5">
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h5 id="tltCategory" runat="server">All Products</h5>
@@ -29,7 +47,7 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-baseline p-3">
                                     <div>
-                                        
+
                                         <asp:DropDownList ID="ddlQuantity" runat="server">
                                             <asp:ListItem Text="1" Value="1" />
                                             <asp:ListItem Text="2" Value="2" />
@@ -43,11 +61,11 @@
                                             <asp:ListItem Text="10" Value="10" />
                                         </asp:DropDownList>
                                     </div>
-                                    
+
                                     <div class="d-flex justify-content-end align-items-center p-3 ">
                                         <asp:LinkButton ID="LinkButton1" runat="server" OnCommand="btnAddToCart_Command" CommandArgument='<%# Eval("ID") %>' CommandName="AddToCart" CssClass="me-1">
-                                           <div class="d-flex justify-content-center text-white rounded-circle p-2 h-btn-cart">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" >
+                                           <div class="d-flex justify-content-center p-2 h-btn-cart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" >
                                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
                                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
                                         </svg>

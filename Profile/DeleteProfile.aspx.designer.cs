@@ -7,29 +7,20 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace CoffeCommerce.Templates
+namespace CoffeCommerce.Profile
 {
 
 
-    public partial class TemplateShop
+    public partial class DeleteProfile
     {
 
         /// <summary>
-        /// Controllo Label1.
+        /// Controllo btnDelete.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// Controllo ContentPlaceHolder1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
     }
 }

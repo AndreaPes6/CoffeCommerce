@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace CoffeCommerce.ContentShop
@@ -15,7 +17,9 @@ namespace CoffeCommerce.ContentShop
         {
             if (!IsPostBack)
             {
+                BindCarouselData();
                 BindData();
+
             }
         }
 
@@ -82,6 +86,7 @@ namespace CoffeCommerce.ContentShop
                 }
             }
         }
+
         protected void btnAddToCart_Command(object sender, CommandEventArgs e)
         {
             string productId = e.CommandArgument.ToString();
@@ -117,6 +122,8 @@ namespace CoffeCommerce.ContentShop
                         // Aggiorna la sessione con la lista aggiornata
                         Session["Carrello"] = products;
 
+                        // Aggiorna la quantità nell'icona del carrello
+
                     }
                     else
                     {
@@ -133,5 +140,73 @@ namespace CoffeCommerce.ContentShop
                 Response.Write("<p class='text-danger'>ID prodotto nullo o vuoto</p>");
             }
         }
+
+
+
+
+
+        private void BindCarouselData()
+        {
+            try
+            {
+                DBConn.conn.Open();
+                string query = "SELECT TOP 5 * FROM Products ORDER BY NEWID()";
+
+                SqlCommand cmd = new SqlCommand(query, DBConn.conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+
+                if (dataReader.HasRows)
+                {
+                    DataTable dt = new DataTable();
+                    dt.Load(dataReader);
+
+                    DataColumn productIdColumn = new DataColumn("ProductID", typeof(int));
+                    dt.Columns.Add(productIdColumn);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        // Aggiungi l'ID del prodotto come colonna al DataTable
+                        row["ProductID"] = row["ID"];
+                        row["FotoProductRandom"] = GetRandomImageFromRow(row);
+                    }
+
+                    RepeaterCarousel.DataSource = dt;
+                    RepeaterCarousel.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
+            finally
+            {
+                if (DBConn.conn.State == System.Data.ConnectionState.Open)
+                {
+                    DBConn.conn.Close();
+                }
+            }
+        }
+
+        private string GetRandomImageFromRow(DataRow row)
+        {
+            List<string> imageList = new List<string>();
+            foreach (DataColumn column in row.Table.Columns)
+            {
+                if (column.ColumnName.StartsWith("FotoProduct") && row[column] != DBNull.Value)
+                {
+                    imageList.Add(row[column].ToString());
+                }
+            }
+
+            if (imageList.Count == 0)
+            {
+                return "";
+            }
+
+            Random random = new Random();
+            int randomIndex = random.Next(imageList.Count);
+            return imageList[randomIndex];
+        }
+
     }
 }
