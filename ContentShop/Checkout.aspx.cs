@@ -7,12 +7,6 @@ namespace CoffeCommerce.ContentShop
 {
     public partial class Checkout : System.Web.UI.Page
     {
-        protected void ReturnToCartButton_Click(object sender, EventArgs e)
-        {
-            // Reindirizza l'utente alla pagina del carrello
-            Response.Redirect("Cart.aspx");
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,8 +21,20 @@ namespace CoffeCommerce.ContentShop
             var card = elements.create('card');
             card.mount('#card-element');
 
-            var form = document.getElementById('payment-form');
+            var form = document.getElementById('Form1');
             form.addEventListener('submit', function (event) {
+                var firstName = document.getElementById('" + txtFirstName.ClientID + @"').value;
+                var lastName = document.getElementById('" + txtLastName.ClientID + @"').value;
+                var email = document.getElementById('" + txtEmail.ClientID + @"').value;
+                var address = document.getElementById('" + txtAddress.ClientID + @"').value;
+                var zip = document.getElementById('" + txtZip.ClientID + @"').value;
+                
+                if (!firstName || !lastName || !email || !address || !zip) {
+                    event.preventDefault();
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
                 event.preventDefault();
                 stripe.createPaymentMethod({
                     type: 'card',
@@ -37,11 +43,18 @@ namespace CoffeCommerce.ContentShop
                     if (result.error) {
                         console.log(result.error.message);
                         // Mostra un alert di errore
-                        alert('Si è verificato un errore durante il pagamento.');
+                        alert('An error occurred during payment. Please try again.');
                     } else {
                         // Invia il token al server
                         // Esegui il postback per elaborare il pagamento lato server
-                        __doPostBack('" + SubmitButton.UniqueID + @"', JSON.stringify({ paymentMethodId: result.paymentMethod.id }));
+                        __doPostBack('" + SubmitButton.UniqueID + @"', JSON.stringify({ 
+                            paymentMethodId: result.paymentMethod.id,
+                            firstName: firstName,
+                            lastName: lastName,
+                            email: email,
+                            address: address,
+                            zip: zip
+                        }));
                     }
                 });
             });";
@@ -51,24 +64,18 @@ namespace CoffeCommerce.ContentShop
             }
         }
 
-        // Funzione per popolare la sezione "Products" con i prodotti nel carrello
-
-
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            string address = txtAddress.Text;
 
+            bool paymentSuccessful = true;
 
-            try
+            if (paymentSuccessful)
             {
-
-                Response.Redirect("PaymentConfirmation.aspx");
+                ScriptManager.RegisterStartupScript(this, GetType(), "PaymentSuccess", "alert('Payment successful.'); window.location.href = 'Home.aspx';", true);
             }
-            catch (Exception ex)
+            else
             {
-
-                ErrorMessageLabel.Text = "Si è verificato un errore durante il pagamento. Si prega di riprovare più tardi.";
-                ErrorMessageLabel.Visible = true;
+                ScriptManager.RegisterStartupScript(this, GetType(), "PaymentFailure", "alert('Payment failed. Please try again.');", true);
             }
         }
     }
