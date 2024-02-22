@@ -6,7 +6,7 @@
             <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-header" style="background-color: #0C141A;">
-                        <h5 class="card-title text-light">Login</h5>
+                        <h2 class="card-title text-light fs-4 m-0">Login</h2>
                     </div>
                     <div class="card-body">
                         <div class="mb-3">
