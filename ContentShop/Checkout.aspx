@@ -1,4 +1,6 @@
-﻿<%--<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="CoffeCommerce.ContentShop.Checkout" %>
+﻿<!-- Checkout.aspx -->
+
+<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="CoffeCommerce.ContentShop.Checkout" %>
 
 <!DOCTYPE html>
 
@@ -17,24 +19,8 @@
             </div>
 
             <!-- Prodotti -->
-            <div class="mb-4">
-                <h2>Products</h2>
-                <asp:Repeater ID="ProductRepeater" runat="server">
-                    <ItemTemplate>
-                        <div id="ProductsPlaceholder" class="w-75 p-0 mb-4 row bg-light border border-solid rounded justify-content-between">
-                            <div class="row col-9">
-                                <div class="col-3 p-0 me-2">
-                                    <img src='<%# Eval("UrlImage") %>' class='img-fluid rounded-start border querySize' alt='<%# Eval("Nome") %>'>
-                                </div>
-                                <div class="col-8 p-0">
-                                    <h3 class="card-title"><%# Eval("Nome") %></h3>
-                                    <p class="card-text">Prezzo: <%# Eval("Prezzo") %> €</p>
-                                    <p class="card-text m-0">Quantità: <%# Eval("Quantità") %></p>
-                                </div>
-                            </div>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
+            <div id="ProductsPlaceholder" class="mb-4">
+                <!-- Qui verranno visualizzati dinamicamente i prodotti -->
             </div>
 
             <!-- Indirizzo di consegna -->
@@ -64,10 +50,13 @@
                 <!-- Altri dettagli sul coupon, se necessario -->
             </div>
 
+            <!-- Etichetta per visualizzare messaggi di errore -->
+            <asp:Label ID="ErrorMessageLabel" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
+
             <!-- Pulsante per inviare il pagamento -->
             <asp:Button ID="SubmitButton" runat="server" Text="Submit Payment" CssClass="btn btn-primary" OnClick="SubmitButton_Click" />
 
         </div>
     </form>
 </body>
-</html>--%>
+</html>
