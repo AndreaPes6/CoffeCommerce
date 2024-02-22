@@ -85,7 +85,6 @@ namespace CoffeCommerce.ContentShop
                 }
             }
         }
-
         protected void btnAddToCart_Command(object sender, CommandEventArgs e)
         {
             string productId = e.CommandArgument.ToString();
