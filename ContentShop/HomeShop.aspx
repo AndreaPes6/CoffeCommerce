@@ -1,6 +1,32 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/TemplateShop.master" AutoEventWireup="true" CodeBehind="HomeShop.aspx.cs" Inherits="CoffeCommerce.ContentShop.HomeShop" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<div id="productCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <asp:Repeater ID="RepeaterCarousel" runat="server">
+            <ItemTemplate>
+<div class="carousel-item<%# Container.ItemIndex == 0 ? " active" : "" %> text-black">
+    <div class="d-flex align-items-end">
+        <img src='<%# Eval("FotoProduct") %>' class="d-block mx-auto my-4" alt='<%# Eval("Name") %>' style="max-width: 150px; height: auto;" />
+        <div class="carousel-caption text-right mt-3">
+            <h6 class="text-black"><%# Eval("Name") %></h6>
+            <p class="text-secondary text-black" style="font-size: 0.8em;"><%# Eval("Description") %></p>
+        </div>
+    </div>
+</div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+    <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
 
     <div class="container-lg w-75 m-auto my-5">
         <div class="d-flex justify-content-between align-items-center mb-5">
