@@ -24,6 +24,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <a class="btn btn-primary rounded-pill" href="../Profile/EditProfile.aspx">Modifica profilo</a>
+                <a class="btn btn-danger rounded-pill" href="../Profile/DeleteProfile.aspx">Elimina profilo</a>
             </div>
         </div>
     </div>
