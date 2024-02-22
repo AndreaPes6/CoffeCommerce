@@ -18,19 +18,25 @@
                 <a href="Cart.aspx" class="btn btn-secondary align-self-center">Torna al Carrello</a>
             </div>
 
-            <!-- Prodotti -->
-            <div id="ProductsPlaceholder" class="mb-4">
-                <!-- Qui verranno visualizzati dinamicamente i prodotti -->
-            </div>
-
             <!-- Indirizzo di consegna -->
             <div class="mb-4">
-                <h2>Delivery Address</h2>
+                <h2>Delivery Information</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="Enter your first name"></asp:TextBox>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" placeholder="Enter your last name"></asp:TextBox>
+                </div>
                 <div class="form-group">
                     <label for="address">Address</label>
                     <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Enter your address"></asp:TextBox>
                 </div>
-                <!-- Altre informazioni sull'indirizzo di consegna, se necessario -->
+                <div class="form-group">
+                    <label for="postalCode">Postal Code (CAP)</label>
+                    <asp:TextBox ID="txtPostalCode" runat="server" CssClass="form-control" placeholder="Enter your postal code"></asp:TextBox>
+                </div>
             </div>
 
             <!-- Metodo di pagamento -->
@@ -40,14 +46,16 @@
                     <label for="card-element">Card Details</label>
                     <div id="card-element" class="form-control"></div>
                 </div>
-                <!-- Altre informazioni sul metodo di pagamento, se necessario -->
             </div>
 
-            <!-- Coupon -->
             <div class="mb-4">
                 <h2>Coupon</h2>
-                <!-- Form per inserire il coupon -->
-                <!-- Altri dettagli sul coupon, se necessario -->
+                <div class="form-group">
+                    <label for="couponCode">Coupon Code</label>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Coupon"></asp:TextBox>
+
+                </div>
+                <!-- Aggiungi altri dettagli sul coupon, se necessario -->
             </div>
 
             <!-- Etichetta per visualizzare messaggi di errore -->
