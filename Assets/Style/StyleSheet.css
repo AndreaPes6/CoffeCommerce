@@ -51,9 +51,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #0C141A;
+    background-color: #3A2417!important;
 }
-    
 
 .logo img, .profile-dropdown img {
     width: 40px;
