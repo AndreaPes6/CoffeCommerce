@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace CoffeCommerce.ContentShop
@@ -33,56 +35,62 @@ namespace CoffeCommerce.ContentShop
 
                 foreach (var articolo in carrello)
                 {
-                    string productId = articolo.ProductID.ToString();
+                    int productId = articolo.ProductID;
                     decimal quantity = articolo.Quantity;
 
-                    try
+                    DataRow existingRow = dt.AsEnumerable().FirstOrDefault(r => r.Field<int>("ID") == productId);
+
+                    if (existingRow != null)
                     {
-                        DBConn.conn.Open();
-
-                        using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Products WHERE ID = {productId}", DBConn.conn))
+                        // If the product is already in the DataTable, update the quantity
+                        existingRow["Quantità"] = Convert.ToInt32(existingRow["Quantità"]) + (int)quantity;
+                    }
+                    else
+                    {
+                        try
                         {
-                            SqlDataReader reader = cmd.ExecuteReader();
+                            DBConn.conn.Open();
 
-                            if (reader.HasRows)
+                            using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Products WHERE ID = {productId}", DBConn.conn))
                             {
-                                reader.Read();
-                                dt.Rows.Add(reader["ID"], reader["Name"], reader["Price"], quantity, reader["FotoProduct"]);
+                                SqlDataReader reader = cmd.ExecuteReader();
 
-                                decimal unitPrice = Convert.ToDecimal(reader["Price"]);
-                                totale += quantity * unitPrice;
+                                if (reader.HasRows)
+                                {
+                                    reader.Read();
+                                    dt.Rows.Add(reader["ID"], reader["Name"], reader["Price"], quantity, reader["FotoProduct"]);
+
+                                    decimal unitPrice = Convert.ToDecimal(reader["Price"]);
+                                    totale += quantity * unitPrice;
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Response.Write($"<p class='text-danger'>Error: {ex.Message}</p>");
+                        }
+                        finally
+                        {
+                            if (DBConn.conn.State == System.Data.ConnectionState.Open)
+                            {
+                                DBConn.conn.Close();
                             }
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        Response.Write($"<p class='text-danger'>Error: {ex.Message}</p>");
-                    }
-                    finally
-                    {
-                        if (DBConn.conn.State == System.Data.ConnectionState.Open)
-                        {
-                            DBConn.conn.Close();
-                        }
-                    }
-
                 }
 
                 totalAmountLabel.InnerText = totale.ToString("0.00");
                 CartRepeater.DataSource = dt;
                 CartRepeater.DataBind();
             }
-            else
-            {
-                emptyCartMessage.Visible = true;
-                totalAmountLabel.InnerText = "0.00";
-            }
         }
+
 
         protected void EmptyCartButton_Click(object sender, EventArgs e)
         {
             Session.Remove("Carrello");
             PopolaCarrello();
+            Response.Redirect(Request.RawUrl);
         }
 
         protected void RemoveFromCartButton_Command(object sender, CommandEventArgs e)
@@ -103,7 +111,14 @@ namespace CoffeCommerce.ContentShop
 
         protected void ProceedToCheckoutButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Checkout.aspx");
+            if (Session["Carrello"] != null && ((List<CartItem>)Session["Carrello"]).Count > 0)
+            {
+                Response.Redirect("Checkout.aspx");
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "EmptyCartAlert", "alert('Il carrello è vuoto.');", true);
+            }
         }
     }
 }

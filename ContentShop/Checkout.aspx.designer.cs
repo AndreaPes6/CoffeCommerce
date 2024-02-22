@@ -42,6 +42,15 @@ namespace CoffeCommerce.ContentShop
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
 
         /// <summary>
+        /// Controllo txtEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+
+        /// <summary>
         /// Controllo txtAddress.
         /// </summary>
         /// <remarks>
@@ -51,31 +60,40 @@ namespace CoffeCommerce.ContentShop
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
 
         /// <summary>
-        /// Controllo txtPostalCode.
+        /// Controllo txtZip.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPostalCode;
+        protected global::System.Web.UI.WebControls.TextBox txtZip;
 
         /// <summary>
-        /// Controllo TextBox1.
+        /// Controllo txtCardNumber.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtCardNumber;
 
         /// <summary>
-        /// Controllo ErrorMessageLabel.
+        /// Controllo txtExpiryDate.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorMessageLabel;
+        protected global::System.Web.UI.WebControls.TextBox txtExpiryDate;
+
+        /// <summary>
+        /// Controllo txtCVV.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCVV;
 
         /// <summary>
         /// Controllo SubmitButton.

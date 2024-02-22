@@ -2,6 +2,7 @@
 ﻿body {
     font-family: 'Arial', sans-serif;
     background-color: whitesmoke;
+    transition: 0.5s;
 }
 
 .spc-footer {
@@ -27,12 +28,12 @@
     }
 
 .h-btn-cart {
-    background-color: #198754!important;
+    color: #3A2417;
 }
 
-.h-btn-cart:hover {
-    background-color: #146c43!important;
-}
+    .h-btn-cart:hover {
+        color: saddlebrown;
+    }
 
 
 
@@ -52,6 +53,7 @@ header {
     padding: 10px;
     background-color: #0C141A;
 }
+    
 
 .logo img, .profile-dropdown img {
     width: 40px;
@@ -59,6 +61,10 @@ header {
     margin-right: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.tlt-nav {
+    font-family: 'Great Vibes', cursive;
 }
 
 .nav-links {
@@ -96,8 +102,55 @@ header {
         background-color: #f1f1f1;
     }
 
-/* Product Image Container */
+/* switch mode button */
+#toggle {
+    position: relative;
+    display: flex;
+    width: 90px;
+    height: 33px;
+    border-radius: 50px;
+    background-color: orange;
+    font-size: 0.6rem;
+}
+    h6{
+        font-size: 0.6rem;
+    }
 
+    #toggle .button{
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        bottom: 2px;
+        width: 56px;
+        height: 28px;
+        background: white;
+        border-radius: 50px;
+        transition: 0.5s;
+        cursor: pointer;
+        box-shadow: -2px 3px 20px red;
+    }
+        #toggle .button a {
+            position: relative;
+            justify-content: center;
+            display: flex;
+            font-size: 12px;
+            font-weight: 700;
+            color: red;
+            font-family: Century;
+            margin-top: 15%;
+        }
+           #toggle .button a h6 {
+               font-size: 6px;
+               margin-left: 3px;
+           }
+        #toggle .button span {
+            display:none;
+        }
+    #toggle.active .button {
+        left: 32px;
+    }
+
+/* Product Image Container */
 .product-image-container {
     overflow: hidden;
     cursor: pointer;

@@ -142,7 +142,6 @@ namespace CoffeCommerce.ContentShop
                 Response.Write("<p class='text-danger'>ID prodotto nullo o vuoto</p>");
             }
         }
-
         private void BindCarouselData()
         {
             try

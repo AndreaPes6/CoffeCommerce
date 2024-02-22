@@ -87,7 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Images\Logo.jpg" />
+    <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Scripts\JavaScript.js" />
     <Content Include="Assets\Images\AddProd.jpg" />
     <Content Include="Assets\Style\StyleSheet.css" />
@@ -102,6 +102,7 @@
     <Content Include="ContentShop\Registration.aspx" />
     <Content Include="ContentShop\Checkout.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Profile\DeleteProfile.aspx" />
     <Content Include="Profile\EditProfile.aspx" />
     <Content Include="Profile\Logout.aspx" />
     <Content Include="Profile\MyProfile.aspx" />
@@ -182,6 +183,13 @@
     <Compile Include="DBConn.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\DeleteProfile.aspx.cs">
+      <DependentUpon>DeleteProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\DeleteProfile.aspx.designer.cs">
+      <DependentUpon>DeleteProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profile\EditProfile.aspx.cs">
       <DependentUpon>EditProfile.aspx</DependentUpon>

@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="text-center">
-                    <asp:Image ID="imgProfile" runat="server" CssClass="img-fluid rounded-circle" style="max-width: 300px; max-height: auto" />
+                    <asp:Image ID="imgProfile" runat="server" CssClass="img-fluid rounded-circle" />
                 </div>
             </div>
             <div class="col-md-6">
@@ -24,6 +24,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <a class="btn btn-primary rounded-pill" href="../Profile/EditProfile.aspx">Modifica profilo</a>
+                <a class="btn btn-danger rounded-pill" href="../Profile/DeleteProfile.aspx">Elimina profilo</a>
             </div>
         </div>
     </div>

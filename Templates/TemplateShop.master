@@ -3,22 +3,37 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <div class="d-flex flex-column min-vh-100">
 
         <header class="sticky-top">
             <nav class="navbar navbar-expand-sm" id="navbarNav">
-                <a class="navbar-brand col" href="../ContentShop/HomeShop.aspx">
-                    <img src="../Assets/Images/Logo.jpg" alt="Logo" width="35" class="d-inline-block align-text-top" />
-                </a>
-                <ul class="navbar-nav d-flex align-items-center">
+                <ul class="navbar-nav d-flex align-items-baseline">
+                    <li>
+                        <a class="navbar-brand pb-2" href="../ContentShop/HomeShop.aspx">
+                            <img src="../Assets/Images/logo.png" alt="Logo" width="45"  />
+                        </a>
+                    </li>
+                    <li>
+                        <h6 class="text-white">CaffèShop</h6>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link active text-white" aria-current="page" href="../ContentShop/HomeShop.aspx">Home</a>
                     </li>
-                    <li class="nav-item">
-                        
-                    </li>
                 </ul>
             </nav>
+
+            <!--aggiunto button switch mode-->
+            <div id="toggle">
+                <i class="button">
+                    <a>Light<br /><h6>Mode</h6></a>
+                    <span>Dark<br /><h6>Mode</h6></span>
+                </i>
+            </div>
+
+
             <!--aggiunto icona carrello con condizione// cambia se la sessione carrello non è vuota -->
             <div class="d-flex justify-content-center">
                 <a class="nav-link text-white" href="../ContentShop/Cart.aspx">
@@ -32,8 +47,8 @@
                         </a>
                     </div>
                     <% }
-                    else
-                    { %>
+                        else
+                        { %>
                     <div class="nav-item">
                         <a class="nav-link text-white" href="../ContentShop/Cart.aspx">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-check-fill text-white" viewBox="0 0 16 16">
@@ -49,7 +64,7 @@
                 <a class="nav-link text-white ms-4" href="../ContentShop/Login.aspx">Login</a>
 
             </div>
-            
+
         </header>
 
         <div class="flex-grow-1">
@@ -57,16 +72,14 @@
             <div class="row">
 
                 <div class="Col-2">
-                   
                 </div>
 
                 <div class="Col-8">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
                 </div>
 
                 <div class="Col-2">
-                    
                 </div>
 
             </div>

@@ -1,6 +1,4 @@
-﻿<!-- Checkout.aspx -->
-
-<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="CoffeCommerce.ContentShop.Checkout" %>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="CoffeCommerce.ContentShop.Checkout" %>
 
 <!DOCTYPE html>
 
@@ -8,19 +6,21 @@
 <head runat="server">
     <title>Checkout</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 <body>
     <form id="Form1" runat="server">
-        <div class="container">
+        <div class="container mt-3">
             <div class="d-flex justify-content-between">
                 <h1>Checkout</h1>
-                <a href="Cart.aspx" class="btn btn-secondary align-self-center">Torna al Carrello</a>
+                <a href="Cart.aspx" class="btn btn-secondary align-self-center">return to Cart</a>
             </div>
 
-            <!-- Indirizzo di consegna -->
             <div class="mb-4">
-                <h2>Delivery Information</h2>
+                <h4 class="fs-5">Delivery Address</h4>
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="Enter your first name"></asp:TextBox>
@@ -30,41 +30,47 @@
                     <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" placeholder="Enter your last name"></asp:TextBox>
                 </div>
                 <div class="form-group">
+                    <label for="email">Email</label>
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter your email"></asp:TextBox>
+                </div>
+                <div class="form-group">
                     <label for="address">Address</label>
                     <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Enter your address"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label for="postalCode">Postal Code (CAP)</label>
-                    <asp:TextBox ID="txtPostalCode" runat="server" CssClass="form-control" placeholder="Enter your postal code"></asp:TextBox>
-                </div>
-            </div>
-
-            <!-- Metodo di pagamento -->
-            <div class="mb-4">
-                <h2>Payment Method</h2>
-                <div class="form-group">
-                    <label for="card-element">Card Details</label>
-                    <div id="card-element" class="form-control"></div>
+                    <label for="zip">ZIP Code</label>
+                    <asp:TextBox ID="txtZip" runat="server" CssClass="form-control" placeholder="Enter your ZIP code"></asp:TextBox>
                 </div>
             </div>
 
             <div class="mb-4">
-                <h2>Coupon</h2>
-                <div class="form-group">
-                    <label for="couponCode">Coupon Code</label>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Coupon"></asp:TextBox>
-
+                <h4>Payment Method</h4>
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <asp:TextBox ID="txtCardNumber" runat="server" CssClass="form-control" placeholder="Enter card number" MaxLength="16"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date (MM/YYYY)</label>
+                            <asp:TextBox ID="txtExpiryDate" runat="server" CssClass="form-control" placeholder="MM/YYYY"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <asp:TextBox ID="txtCVV" runat="server" CssClass="form-control" placeholder="CVV" MaxLength="3"></asp:TextBox>
+                        </div>
+                    </div>
                 </div>
-                <!-- Aggiungi altri dettagli sul coupon, se necessario -->
             </div>
 
-            <!-- Etichetta per visualizzare messaggi di errore -->
-            <asp:Label ID="ErrorMessageLabel" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
-
-            <!-- Pulsante per inviare il pagamento -->
-            <asp:Button ID="SubmitButton" runat="server" Text="Submit Payment" CssClass="btn btn-primary" OnClick="SubmitButton_Click" />
+            <asp:Button ID="SubmitButton" runat="server" Text="Submit Payment" CssClass="btn btn-success" OnClick="SubmitButton_Click" />
 
         </div>
     </form>
+
 </body>
 </html>
