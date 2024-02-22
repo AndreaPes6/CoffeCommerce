@@ -7,29 +7,38 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace CoffeCommerce.Templates
+namespace CoffeCommerce.Profile
 {
 
 
-    public partial class TemplateShop
+    public partial class MyProfile
     {
 
         /// <summary>
-        /// Controllo Label1.
+        /// Controllo imgProfile.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Image imgProfile;
 
         /// <summary>
-        /// Controllo ContentPlaceHolder1.
+        /// Controllo lblName.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label lblName;
+
+        /// <summary>
+        /// Controllo lblEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmail;
     }
 }
