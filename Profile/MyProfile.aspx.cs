@@ -63,7 +63,5 @@ namespace CoffeCommerce.Profile
             int IDUser = int.Parse(Session["UserId"].ToString());
             return IDUser;
         }
-
-
     }
 }

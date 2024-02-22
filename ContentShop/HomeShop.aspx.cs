@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
@@ -156,7 +157,20 @@ namespace CoffeCommerce.ContentShop
 
                 if (dataReader.HasRows)
                 {
-                    RepeaterCarousel.DataSource = dataReader;
+                    DataTable dt = new DataTable();
+                    dt.Load(dataReader);
+
+                    DataColumn fotoProductRandomColumn = new DataColumn("FotoProductRandom", typeof(string));
+                    dt.Columns.Add(fotoProductRandomColumn);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        row["FotoProductRandom"] = GetRandomImageFromRow(row);
+                    }
+
+                    dt.Columns.Remove(fotoProductRandomColumn);
+
+                    RepeaterCarousel.DataSource = dt;
                     RepeaterCarousel.DataBind();
                 }
             }
@@ -171,6 +185,27 @@ namespace CoffeCommerce.ContentShop
                     DBConn.conn.Close();
                 }
             }
+        }
+
+        private string GetRandomImageFromRow(DataRow row)
+        {
+            List<string> imageList = new List<string>();
+            foreach (DataColumn column in row.Table.Columns)
+            {
+                if (column.ColumnName.StartsWith("FotoProduct") && row[column] != DBNull.Value)
+                {
+                    imageList.Add(row[column].ToString());
+                }
+            }
+
+            if (imageList.Count == 0)
+            {
+                return "";
+            }
+
+            Random random = new Random();
+            int randomIndex = random.Next(imageList.Count);
+            return imageList[randomIndex];
         }
 
     }
