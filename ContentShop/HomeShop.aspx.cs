@@ -13,6 +13,8 @@ namespace CoffeCommerce.ContentShop
 {
     public partial class HomeShop : System.Web.UI.Page
     {
+        private DataTable dt = new DataTable();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -123,7 +125,7 @@ namespace CoffeCommerce.ContentShop
                         Session["Carrello"] = products;
 
                         // Aggiorna la quantità nell'icona del carrello
-                        
+
                     }
                     else
                     {
@@ -141,10 +143,6 @@ namespace CoffeCommerce.ContentShop
             }
         }
 
-
-       
-
-
         private void BindCarouselData()
         {
             try
@@ -160,15 +158,15 @@ namespace CoffeCommerce.ContentShop
                     DataTable dt = new DataTable();
                     dt.Load(dataReader);
 
-                    DataColumn productIdColumn = new DataColumn("ProductID", typeof(int));
-                    dt.Columns.Add(productIdColumn);
+                    DataColumn fotoProductRandomColumn = new DataColumn("FotoProductRandom", typeof(string));
+                    dt.Columns.Add(fotoProductRandomColumn);
 
                     foreach (DataRow row in dt.Rows)
                     {
-                        // Aggiungi l'ID del prodotto come colonna al DataTable
-                        row["ProductID"] = row["ID"];
                         row["FotoProductRandom"] = GetRandomImageFromRow(row);
                     }
+
+                    dt.Columns.Remove(fotoProductRandomColumn);
 
                     RepeaterCarousel.DataSource = dt;
                     RepeaterCarousel.DataBind();
