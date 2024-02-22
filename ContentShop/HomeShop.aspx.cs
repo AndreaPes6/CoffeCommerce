@@ -54,36 +54,36 @@ namespace CoffeCommerce.ContentShop
 
         //mostra in base alla categoria selezionata dalla dropdownlist
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-{
-    try
-    {
-        DBConn.conn.Open();
-        int IDSelected = int.Parse(DropDownList1.SelectedValue);
-        string query = (IDSelected == 0) ? "SELECT * FROM Products" : $"SELECT * FROM Products WHERE IDCategory = {IDSelected}";
-
-        SqlCommand cmd = new SqlCommand(query, DBConn.conn);
-        SqlDataReader dataReader = cmd.ExecuteReader();
-
-        if (dataReader.HasRows)
         {
-            ProductRepeater.DataSource = dataReader;
-            ProductRepeater.DataBind();
-        }
+            try
+            {
+                DBConn.conn.Open();
+                int IDSelected = int.Parse(DropDownList1.SelectedValue);
+                string query = (IDSelected == 0) ? "SELECT * FROM Products" : $"SELECT * FROM Products WHERE IDCategory = {IDSelected}";
 
-        tltCategory.InnerText = (IDSelected == 0) ? "All Categories" : DropDownList1.SelectedItem.Text;
-    }
-    catch (Exception ex)
-    {
-        Response.Write(ex.ToString());
-    }
-    finally
-    {
-        if (DBConn.conn.State == System.Data.ConnectionState.Open)
-        {
-            DBConn.conn.Close();
+                SqlCommand cmd = new SqlCommand(query, DBConn.conn);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+
+                if (dataReader.HasRows)
+                {
+                    ProductRepeater.DataSource = dataReader;
+                    ProductRepeater.DataBind();
+                }
+
+                tltCategory.InnerText = (IDSelected == 0) ? "All Categories" : DropDownList1.SelectedItem.Text;
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
+            finally
+            {
+                if (DBConn.conn.State == System.Data.ConnectionState.Open)
+                {
+                    DBConn.conn.Close();
+                }
+            }
         }
-    }
-}
 
         protected void btnAddToCart_Command(object sender, CommandEventArgs e)
         {
