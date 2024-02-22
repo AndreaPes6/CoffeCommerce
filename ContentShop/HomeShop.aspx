@@ -5,16 +5,15 @@
     <div class="carousel-inner">
         <asp:Repeater ID="RepeaterCarousel" runat="server">
             <ItemTemplate>
-                <div class="carousel-item<%# Container.ItemIndex == 0 ? " active" : "" %> text-black">
-                    <div class="d-flex justify-content-around align-items-center">
-                        <img src='<%# Eval("FotoProduct") %>' class="d-block mx-2 my-4" alt='<%# Eval("Name") %>' style="max-width: 75px; height: auto;" />
-                      
-                    </div>
-                    <div class="text-center mt-3">
-                        <h6 class="text-black"><%# Eval("Name") %></h6>
-                        <p class="text-secondary text-black" style="font-size: 0.8em;"><%# Eval("Description") %></p>
-                    </div>
-                </div>
+               <div class="carousel-item<%# Container.ItemIndex == 0 ? " active" : "" %> text-black">
+    <div class="d-flex justify-content-around align-items-center">
+        <img src='<%# Eval("FotoProductRandom") %>' class="d-block mx-2 my-4" alt='<%# Eval("Name") %>' style="max-width: 75px; height: auto;" />
+    </div>
+    <div class="text-center mt-3">
+        <h6 class="text-black"><%# Eval("Name") %></h6>
+        <p class="text-secondary text-black" style="font-size: 0.8em;"><%# Eval("Description") %></p>
+    </div>
+</div>
             </ItemTemplate>
         </asp:Repeater>
     </div>
