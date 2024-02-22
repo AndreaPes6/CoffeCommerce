@@ -10,7 +10,7 @@
                 <h3 class="mt-3">Informazioni utente</h3>
                 <p><strong>Nome Utente:</strong> <asp:Label ID="lblName" runat="server" Text=""></asp:Label></p>
                 <p><strong>Email:</strong> <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label></p>
-                
+                <!-- commento-->
             </div>
         </div>
     </div>
