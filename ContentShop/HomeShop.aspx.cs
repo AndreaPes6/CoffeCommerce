@@ -123,7 +123,7 @@ namespace CoffeCommerce.ContentShop
                         Session["Carrello"] = products;
 
                         // Aggiorna la quantità nell'icona del carrello
-                        
+
                     }
                     else
                     {
@@ -142,7 +142,7 @@ namespace CoffeCommerce.ContentShop
         }
 
 
-       
+
 
 
         private void BindCarouselData()

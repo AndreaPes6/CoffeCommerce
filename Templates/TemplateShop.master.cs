@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stripe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,7 @@ namespace CoffeCommerce.Templates
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-             UpdateCartIconQuantity();
+            UpdateCartIconQuantity();
         }
 
         protected void UpdateCartIconQuantity()
@@ -28,6 +28,8 @@ namespace CoffeCommerce.Templates
                     if (int.TryParse(item.Quantity.ToString(), out int quantity))
                     {
                         totQuantity += quantity;
+
+
                     }
                     // Handle cases where Quantity is not a valid integer (log or handle as appropriate)
                     else
@@ -36,8 +38,8 @@ namespace CoffeCommerce.Templates
                         // totQuantity += 1; // Default quantity
                     }
                 }
-            }          
-            Label1.Text=totQuantity.ToString();
+            }
+            Label1.Text = totQuantity.ToString();
         }
     }
 }
