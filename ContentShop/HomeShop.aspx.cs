@@ -23,8 +23,8 @@ namespace CoffeCommerce.ContentShop
         {
             try
             {
-                DBConn.conn.Open();            
-                string query =  "SELECT * FROM Products";
+                DBConn.conn.Open();
+                string query = "SELECT * FROM Products";
 
                 SqlCommand cmd = new SqlCommand(query, DBConn.conn);
                 SqlDataReader dataReader = cmd.ExecuteReader();
@@ -35,7 +35,7 @@ namespace CoffeCommerce.ContentShop
                     ProductRepeater.DataBind();
                 }
 
-                tltCategory.InnerText =  "All Categories";
+                tltCategory.InnerText = "All Categories";
             }
             catch (Exception ex)
             {
@@ -82,7 +82,6 @@ namespace CoffeCommerce.ContentShop
                 }
             }
         }
-
         protected void btnAddToCart_Command(object sender, CommandEventArgs e)
         {
             string productId = e.CommandArgument.ToString();
@@ -134,6 +133,5 @@ namespace CoffeCommerce.ContentShop
                 Response.Write("<p class='text-danger'>ID prodotto nullo o vuoto</p>");
             }
         }
-
-
+    }
 }
