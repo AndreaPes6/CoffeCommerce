@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stripe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,7 @@ namespace CoffeCommerce.Templates
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-             UpdateCartIconQuantity();
+            UpdateCartIconQuantity();
         }
 
         protected void UpdateCartIconQuantity()
@@ -27,6 +27,7 @@ namespace CoffeCommerce.Templates
 
                 foreach (CartItem item in products)
                 {
+                    // Use int.TryParse to handle cases where Quantity is not a valid integer
                     // Add a null check for item to ensure safety
                     if (item != null)
                     {

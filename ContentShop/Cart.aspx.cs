@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace CoffeCommerce.ContentShop
@@ -89,6 +90,7 @@ namespace CoffeCommerce.ContentShop
         {
             Session.Remove("Carrello");
             PopolaCarrello();
+            Response.Redirect(Request.RawUrl);
         }
 
         protected void RemoveFromCartButton_Command(object sender, CommandEventArgs e)
@@ -109,7 +111,14 @@ namespace CoffeCommerce.ContentShop
 
         protected void ProceedToCheckoutButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Checkout.aspx");
+            if (Session["Carrello"] != null && ((List<CartItem>)Session["Carrello"]).Count > 0)
+            {
+                Response.Redirect("Checkout.aspx");
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "EmptyCartAlert", "alert('Il carrello è vuoto.');", true);
+            }
         }
     }
 }

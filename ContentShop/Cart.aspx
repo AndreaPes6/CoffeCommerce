@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/TemplateShop.master" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="CoffeCommerce.ContentShop.Cart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="cart-page">
         <h2 class="mb-4">Il tuo Carrello</h2>
         <div class="row">
@@ -14,13 +15,10 @@
                             <div class=" col-3 p-0 me-2">
                                 <img src='<%# Eval("UrlImage") %>' class='img-fluid rounded-start border querySize' alt='<%# Eval("Nome") %>'>
                             </div>
-
                             <div class="col-8 p-0">
                                 <h3 class="card-title"><%# Eval("Nome") %></h3>
                                 <p class="card-text">Prezzo: <%# Eval("Prezzo") %> €</p>
                                 <p class="card-text m-0">Quantità: <%# Eval("Quantità") %></p>
-
-
                             </div>
                         </div>
                         <div class="col-2 p-0 mt-2 me-2 p-0" style="text-align: -webkit-right;">
@@ -43,6 +41,6 @@
         <h4 class="text-danger">Totale: <span runat="server" id="totalAmountLabel"></span>€</h4>
         <asp:Label runat="server" ID="emptyCartMessage" Visible="false" Text="Il carrello è vuoto." CssClass="text-danger"></asp:Label>
         <asp:Button runat="server" ID="EmptyCartButton" Text="Svuota Carrello" CssClass="btn btn-danger" OnClick="EmptyCartButton_Click" />
-        <asp:Button runat="server" ID="ProceedToPaymentButton" Text="Procedi al pagamento" CssClass="btn btn-primary" OnClick="ProceedToCheckoutButton_Click" />
+        <asp:Button runat="server" ID="ProceedToPaymentButton" Text="Procedi al pagamento" CssClass="btn btn-success" OnClick="ProceedToCheckoutButton_Click" />
     </div>
 </asp:Content>
