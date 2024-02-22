@@ -103,6 +103,7 @@
     <Content Include="ContentShop\Checkout.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Profile\Logout.aspx" />
+    <Content Include="Profile\MyProfile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +188,13 @@
     </Compile>
     <Compile Include="Profile\Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Templates\Template1.Master.cs">
