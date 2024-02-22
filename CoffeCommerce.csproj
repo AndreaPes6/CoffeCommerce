@@ -102,6 +102,7 @@
     <Content Include="ContentShop\Registration.aspx" />
     <Content Include="ContentShop\Checkout.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Profile\EditProfile.aspx" />
     <Content Include="Profile\Logout.aspx" />
     <Content Include="Profile\MyProfile.aspx" />
     <Content Include="Web.config" />
@@ -179,6 +180,13 @@
     <Compile Include="DBConn.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profile\Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
