@@ -14,7 +14,7 @@ namespace CoffeCommerce.ContentShop
                 StripeConfiguration.ApiKey = "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"; // Inserisci la tua chiave API segreta
 
                 // Imposta il controllo card-element come elemento di input Stripe
-                cardElement.Attributes["id"] = cardElement.ClientID;
+                //cardElement.Attributes["id"] = cardElement.ClientID;
             }
         }
 
