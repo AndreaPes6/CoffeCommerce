@@ -10,6 +10,11 @@ namespace CoffeCommerce.ContentShop
             bool isValidPayment = IsValidPaymentDetails();
             bool paymentSuccessful = isValidPayment && SimulatePayment();
 
+            if (paymentSuccessful)
+            {
+                ClearCart();
+            }
+
             string script = paymentSuccessful ?
                 "alert('Payment successful.'); window.location.href = 'HomeShop.aspx';" :
                 "alert('Payment failed. Please try again.');";
@@ -42,6 +47,7 @@ namespace CoffeCommerce.ContentShop
                 return false;
 
             int currentYear = DateTime.Now.Year % 100;
+
             return month >= 1 && month <= 12 && year >= currentYear;
         }
 
@@ -57,7 +63,13 @@ namespace CoffeCommerce.ContentShop
 
         private bool SimulatePayment()
         {
+
             return true;
+        }
+
+        private void ClearCart()
+        {
+            Session.Remove("Carrello");
         }
     }
 }
