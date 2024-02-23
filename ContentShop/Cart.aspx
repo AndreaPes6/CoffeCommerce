@@ -40,7 +40,7 @@
     <div class="text-right cart-page">
         <h4 >Total: <span runat="server" id="totalAmountLabel"></span>€</h4>
         <asp:Label runat="server" ID="emptyCartMessage" Visible="false" Text="Il carrello è vuoto." CssClass="text-danger"></asp:Label>
-        <asp:Button runat="server" ID="EmptyCartButton" Text="empty your cart" CssClass="btn btn-danger" OnClick="EmptyCartButton_Click" />
+        <asp:Button runat="server" ID="EmptyCartButton" Text="Empty your cart" CssClass="btn btn-danger" OnClick="EmptyCartButton_Click" />
         <asp:Button runat="server" ID="ProceedToPaymentButton" Text="Proceed to payment" CssClass="btn btn-success" OnClick="ProceedToCheckoutButton_Click" />
     </div>
 </asp:Content>

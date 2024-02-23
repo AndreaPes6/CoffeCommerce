@@ -42,8 +42,8 @@
 
         <div class="row mt-4">
             <div class="col-md-12">
-                <asp:Button ID="btnConfirm" runat="server" Text="Confirm" OnClick="btnConfirm_Click" CssClass="btn btn-success mr-2 rounded-pill" />
-                <asp:Button ID="btnDiscard" runat="server" Text="Discard Changes" OnClick="btnDiscard_Click" CssClass="btn btn-danger rounded-pill" />
+                <asp:Button ID="btnConfirm" runat="server" Text="Confirm" OnClick="btnConfirm_Click" CssClass="btn  mr-2 rounded btn-add" />
+                <asp:Button ID="btnDiscard" runat="server" Text="Discard Changes" OnClick="btnDiscard_Click" CssClass="btn  rounded btn-add" />
             </div>
         </div>
     </div>

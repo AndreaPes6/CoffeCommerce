@@ -29,7 +29,7 @@
                                 <asp:ListItem Value="10">10</asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                          <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" CssClass="btn btn-md mt-2 rounded-pill btn-card" OnClick="btnAddToCart_Click" />
+                          <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" CssClass="btn btn-md mt-2 rounded btn-card" OnClick="btnAddToCart_Click" />
 
                     </div>
                 </div>
