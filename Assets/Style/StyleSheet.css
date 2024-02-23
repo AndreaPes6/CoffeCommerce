@@ -141,7 +141,7 @@ h6 {
     font-size: 0.6rem;
 }
 
-.btn-discard{
+.btn-discard {
     white-space: nowrap;
 }
 
@@ -248,6 +248,10 @@ h6 {
     background-color: whitesmoke;
 }
 
+.bg-footerSwitch {
+    background-color: #161616;
+}
+
 /*HOMEPAGEBO*/
 
 .details-link {
@@ -264,6 +268,11 @@ h6 {
 /*Pubblicitá*/
 .promotion {
     background-color: whitesmoke !important;
+}
+
+.promotion-switch {
+    background-color: #161616 !important;
+    color: whitesmoke !important;
 }
 
 
@@ -294,6 +303,17 @@ h6 {
         margin: auto
     }
 }
+
 .animation {
     font-size: 1.6rem;
 }
+
+.btn-discovery {
+    background-color: #521A25 !important;
+    border: none;
+    color: whitesmoke !important;
+}
+
+    .btn-discovery:hover {
+        background-color: saddlebrown !important;
+    }

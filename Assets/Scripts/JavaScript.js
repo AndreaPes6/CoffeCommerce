@@ -1,6 +1,8 @@
 ﻿console.log("ci sono")
 const body = document.querySelector('body');
 const toggle = document.getElementById('toggle');
+const footer = document.querySelector('.bg-footer');
+const publicita = document.querySelector('.contenitoreProdottoPromosso');
 
 //toggle.onclick = function () {
 //    toggle.classList.add('active')
@@ -15,6 +17,9 @@ const toggle = document.getElementById('toggle');
 toggle.onclick = function () {
     toggle.classList.toggle('active')
     body.classList.toggle('active')
+    footer.classList.toggle('bg-footerSwitch')
+    publicita.classList.toggle('promotion-switch')
+
 }
 
 /*WELCOME PAGE*/
