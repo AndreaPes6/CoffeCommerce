@@ -26,8 +26,8 @@
                             <asp:TextBox ID="TxtProfilePicture" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
-                            <asp:Button ID="BtnRegister" runat="server" Text="Sign in" CssClass="btn btn-card rounded-pill me-3" OnClick="BtnRegister_Click" />
-                            <asp:Button ID="BtnBackToLogin" runat="server" Text="Return to Login" CssClass="btn btn-card rounded-pill" OnClick="BtnBackToLogin_Click" />
+                            <asp:Button ID="BtnRegister" runat="server" Text="Sign in" CssClass="btn btn-card me-3" OnClick="BtnRegister_Click" />
+                            <asp:Button ID="BtnBackToLogin" runat="server" Text="Return to Login" CssClass="btn btn-card" OnClick="BtnBackToLogin_Click" />
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
                             <asp:Label ID="LblErrorMessage" runat="server" CssClass="alert alert-danger" Visible="false"></asp:Label>

@@ -283,6 +283,10 @@ h6 {
     border: none;
 }
 
+.btn-discovery:hover {
+    background-color: saddlebrown !important;
+}
+
 @media screen and (min-width: 1600px) {
     .contenitoreProdottoPromosso {
         width: 65%;
