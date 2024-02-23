@@ -173,6 +173,19 @@ header {
 
 #toggle.active .button {
     left: 20px;
+    background: black;
+    border-radius: 50px;
+}
+
+#toggle.active .button a {
+    display: none;
+}
+
+#toggle.active .button span {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    color: red;
 }
 
 /* HOMEPAGE SHOP */
