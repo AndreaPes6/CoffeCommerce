@@ -56,20 +56,22 @@
                 <ItemTemplate>
                     <div class="col">
                         <div class="c-card card h-100 d-flex flex-column justify-content-between">
-                            <div class="p-2 d-flex justify-content-center">
-                                <a href='<%# "DetailsShop.aspx?product=" + Eval("ID") %>'>
-                                <img src='<%# Eval("FotoProduct") %>' class="card-img-top rounded" alt='<%# Eval("Name") %>' style="width: 150px; height: auto;" />
-                                </a>
-                            </div>
+                            <a href='<%# "DetailsShop.aspx?product=" + Eval("ID") %>'>
+                                <div class="p-2 d-flex justify-content-center">
+
+                                    <img src='<%# Eval("FotoProduct") %>' class="card-img-top rounded" alt='<%# Eval("Name") %>' style="width: 150px; height: auto;" />
+
+                                </div>
+                            </a>
                             <div>
                                 <div class="card-body text-center">
-                                    <a href='<%# "DetailsShop.aspx?product=" + Eval("ID") %>' style="text-decoration:none;color:black">
+                                    <a href='<%# "DetailsShop.aspx?product=" + Eval("ID") %>' style="text-decoration: none; color: black">
                                         <h2 class="card-title fs-6 dettagliScritte"><%# Eval("Name") %></h2>
                                     </a>
                                     <p class="card-text text-secondary" style="font-size: 0.8em;"><%# Eval("Description") %></p>
                                     <p class="card-text me-2 fs-5">€ <%# Eval("Price") %></p>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-baseline p-3">
+                                <div class="d-flex justify-content-between align-items-center p-3">
                                     <div>
 
                                         <asp:DropDownList ID="ddlQuantity" runat="server">
