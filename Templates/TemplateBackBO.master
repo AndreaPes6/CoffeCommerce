@@ -1,19 +1,23 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Templates/Template1.Master" AutoEventWireup="true" CodeBehind="TemplateBackBO.master.cs" Inherits="CoffeCommerce.Templates.TemplateBackBO" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header class="sticky-top">
 
+     <div class="d-flex flex-column min-vh-100">
+    <header class="sticky-top">
         <nav class="navbar navbar-expand-sm" id="navbarNav">
 
             <div class="logo d-flex">
-                <a class="navbar-brand m-0" href="../BackOffice/HomeBO.aspx">
-                    <img src="../Assets/Images/Logo.jpg" alt="Logo" />
-                </a>
-
-                <ul class="nav-links d-flex align-items-center">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li>
+                        <a class="navbar-brand d-flex align-items-center" href="../BackOffice/HomeBO.aspx">
+                            <img src="../Assets/Images/logo.png" alt="Logo" width="45" />
+                            <h6 class="text-white brand-tlt">CaffèShop</h6>
+                        </a>
+                    </li>
                     <li><a class="nav-link active text-white" href="../BackOffice/HomeBO.aspx">Home</a></li>
                     <li><a class="nav-link active text-white" href="../BackOffice/AddProduct.aspx">Add Products</a></li>
                 </ul>
+
             </div>
 
         </nav>
@@ -29,16 +33,21 @@
         </div>
 
     </header>
-    <div class="container h-100 w-100">
+         <div class="flex-grow-1"> 
+             <div class="container h-100 w-100">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
 
-    <footer>
+         </div>
+   
+
+    <footer class="flex-shrink-0">
         <div class="d-flex justify-content-center">
             <p class="text-secondary">
                 Guerrieri Corporation &copy; 2024
             </p>
         </div>
     </footer>
+         </div>
 </asp:Content>
