@@ -1,70 +1,295 @@
+﻿@font-face {
+    font-family: 'Dancing Script';
+    src: url('percorso/del/tuo/font/DancingScript-Regular.ttf') format('truetype');
+    /* Aggiungi altri formati e stili del font se necessario */
+}
+/* Global Styles */
 ﻿body {
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+    transition: 0.5s;
 }
-
-
-/*HOME STYLE RAMO*/
-
-.btn-card {
-    background-color: #521A25;
-    color: white;
-    font-size: 0.7em
-}
-
-    .btn-card:hover {
-        background-color: saddlebrown;
-        color: white;
+    body.active {
+        background-color: #161616;
+        color: whitesmoke;
     }
 
-.c-card {
+.spc-footer {
+    margin-bottom: 150px;
+}
+
+.btn-card, .btn-add {
+    background-color: #521A25;
+    color: white;
+}
+
+    .btn-card:hover, .btn-add:hover {
+        background-color: saddlebrown;
+    }
+
+.h-btn-cart {
+    color: #3A2417;
+}
+
+    .h-btn-cart:hover {
+        color: saddlebrown;
+    }
+
+
+
+.dp-dw-cat {
+    width: 200px !important;
+}
+
+.txt-lbladd {
+    color: #521A25;
+}
+
+.cursorePuntatore {
+    cursor: pointer;
+}
+
+.dettagliScritte:hover {
+    text-decoration: underline
+}
+
+
+/* Navbar Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #3A2417 !important;
+}
+
+.brand-tlt {
+    font-size: 1.4rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 0px;
+}
+
+
+.logo img, .profile-dropdown img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tlt-nav {
+    font-family: 'Great Vibes', cursive;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+    .nav-links li {
+        margin-right: 20px;
+    }
+
+.profile-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 60px;
+    right: 0;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.profile-dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+    .profile-dropdown .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+/* switch mode button */
+#toggle {
+    position: relative;
+    display: flex;
+    width: 90px;
+    height: 33px;
+    border-radius: 50px;
+    background-color: orange;
+    font-size: 0.6rem;
+}
+
+h6 {
+    font-size: 0.6rem;
+}
+
+#toggle .button {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    bottom: 2px;
+    width: 56px;
+    height: 28px;
+    background: white;
+    border-radius: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: -2px 3px 20px red;
+}
+
+    #toggle .button a {
+        position: relative;
+        justify-content: center;
+        display: flex;
+        font-size: 12px;
+        font-weight: 700;
+        color: red;
+        font-family: Century;
+        margin-top: 15%;
+    }
+
+        #toggle .button a h6 {
+            font-size: 6px;
+            margin-left: 3px;
+        }
+
+    #toggle .button span {
+        display: none;
+    }
+
+#toggle.active .button {
+    left: 32px;
+}
+
+/* HOMEPAGE SHOP */
+.c-card, .container img {
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
-    .c-card:hover {
+    .c-card:hover, .container img:hover {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        transform: scale(1.05);
-    }
+        transform: scale(1.015);
+    }s
 
-.dp-dw-cat{
-   width: 200px!important;
-    
-}
-
-/*HOME STYLE RAMO*/
-
-/* DETAILS PES */
-
-.product-image {
-    max-height: 400px;
-    border: 5px solid #521A25;
-    border-radius: 10px;
-}
-
-.btn-primary {
-    background-color: #521A25;
-    border-color: #521A25;
-}
-
-    .btn-primary:hover {
-        background-color: #6c757d;
-        border-color: #6c757d;
-    }
-
+/* Product Image Container */
 .product-image-container {
-    border: 2px solid #ccc;
-    border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
-    transition: border-color 0.3s;
 }
 
-    .product-image-container:hover {
-        border-color: #666;
-    }
-
-.container img {
-    transition: transform 0.3s ease;
+.dailyPromotion {
+    transition: transform 0.3s;
 }
 
-    .container img:hover {
-        transform: scale(1.01);
+.dailyPromotion:hover {
+    transform: scale(1.015);
+}
+
+
+/* CART PAGE */
+
+.cart-page {
+    padding: 50px;
+    background-color: #eaeded;
+}
+
+@media screen and (min-width: 576px) {
+    .querySize {
+        width: 10rem;
     }
+
+    .card-title {
+        margin: 7px 0px 5px 0px;
+    }
+
+    .card-text {
+        margin: 8px 0px 0px 0px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .querySize {
+        width: 10rem;
+    }
+
+    .card-title {
+        margin: 7px 0px 5px 0px;
+    }
+
+    .card-text {
+        margin: 8px 0px 0px 0px;
+    }
+}
+
+/*footer shop*/
+.bg-footer {
+    background-color: whitesmoke;
+}
+
+/*HOMEPAGEBO*/
+
+.details-link {
+    color: #521A25;
+    text-decoration: none;
+}
+
+    .details-link:hover {
+        color: saddlebrown;
+        text-decoration: underline;
+    }
+    /*Pubblicitá*/
+
+
+.promotion {
+    background-color: whitesmoke !important;
+
+}
+
+
+/*WELCOME PAGE*/
+.text-transition
+{
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#welcomeTitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+}
+
+.btn-discovery {
+    background-color: #521A25 !important;
+    color: whitesmoke !important; 
+    border: none;
+}
+
+.btn-discovery:hover {
+    background-color: saddlebrown !important;
+}
+
+@media screen and (min-width: 1600px) {
+    .contenitoreProdottoPromosso {
+        width: 65%;
+        margin:auto
+    }
+}

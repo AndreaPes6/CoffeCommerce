@@ -7,56 +7,47 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace CoffeCommerce.ContentShop
+namespace CoffeCommerce.Profile
 {
 
 
-    public partial class Cart
+    public partial class MyProfile
     {
 
         /// <summary>
-        /// Controllo CartRepeater.
+        /// Controllo imgProfile.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater CartRepeater;
+        protected global::System.Web.UI.WebControls.Image imgProfile;
 
         /// <summary>
-        /// Controllo totalAmountLabel.
+        /// Controllo lblName.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totalAmountLabel;
+        protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// Controllo emptyCartMessage.
+        /// Controllo lblEmail.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label emptyCartMessage;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// Controllo EmptyCartButton.
+        /// Controllo Label1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EmptyCartButton;
-
-        /// <summary>
-        /// Controllo ProceedToPaymentButton.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ProceedToPaymentButton;
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

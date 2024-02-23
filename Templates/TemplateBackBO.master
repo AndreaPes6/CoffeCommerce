@@ -1,10 +1,53 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Templates/Template1.Master" AutoEventWireup="true" CodeBehind="TemplateBackBO.master.cs" Inherits="CoffeCommerce.Templates.TemplateBackBO" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header>Navbar BO</header>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
-    <footer>Footer</footer>
+
+     <div class="d-flex flex-column min-vh-100">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm" id="navbarNav">
+
+            <div class="logo d-flex">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li>
+                        <a class="navbar-brand d-flex align-items-center" href="../BackOffice/HomeBO.aspx">
+                            <img src="../Assets/Images/logo.png" alt="Logo" width="45" />
+                            <h6 class="text-white brand-tlt">CaffèShop</h6>
+                        </a>
+                    </li>
+                    <li><a class="nav-link active text-white" href="../BackOffice/HomeBO.aspx">Home</a></li>
+                    <li><a class="nav-link active text-white" href="../BackOffice/AddProduct.aspx">Add Products</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <div class="dropdown">
+
+            <asp:Image ID="imgUserProfile" runat="server" CssClass="dropdown-toggle rounded-circle" Width="30" Height="30" data-bs-toggle="dropdown" aria-expanded="false" />
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../Profile/MyProfile.aspx">Profile</a></li>
+                <li><a class="dropdown-item" href="../BackOffice/HomeBO.aspx">Setting </a></li>
+                <li><a class="dropdown-item" href="../Profile/Logout.aspx">Logout</a></li>
+            </ul>
+        </div>
+
+    </header>
+         <div class="flex-grow-1"> 
+             <div class="container h-100 w-100">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+         </div>
+   
+
+    <footer class="flex-shrink-0">
+        <div class="d-flex justify-content-center">
+            <p class="text-secondary">
+                Guerrieri Corporation &copy; 2024
+            </p>
+        </div>
+    </footer>
+         </div>
 </asp:Content>

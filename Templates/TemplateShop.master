@@ -3,10 +3,114 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    </header>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
-    <footer>Footer</footer>
+    <div class="d-flex flex-column min-vh-100">
+
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-sm" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li>
+                        <a class="navbar-brand d-flex align-items-center" href="../ContentShop/HomeShop.aspx">
+                            <img src="../Assets/Images/logo.png" alt="Logo" width="45" />
+                            <h6 class="text-white brand-tlt">CaffèShop</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="../ContentShop/HomeShop.aspx">Home</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--aggiunto button switch mode-->
+            <div id="toggle">
+                <i class="button">
+                    <a>Light<br />
+                        <h6>Mode</h6>
+                    </a>
+                    <span>Dark<br />
+                        <h6>Mode</h6>
+                    </span>
+                </i>
+            </div>
+
+
+            <!--aggiunto icona carrello con condizione// cambia se la sessione carrello non è vuota -->
+            <div class="d-flex justify-content-center">
+                <a class="nav-link text-white" href="../ContentShop/Cart.aspx">
+                    <% if (Session["Carrello"] == null)
+                        { %>
+                    <div class="nav-item">
+                        <a class="nav-link text-white" href="../ContentShop/Cart.aspx">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3 text-white" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                            </svg>
+                        </a>
+                    </div>
+                    <% }
+                        else
+                        { %>
+                    <div class="nav-item">
+                        <a class="nav-link text-white" href="../ContentShop/Cart.aspx">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-check-fill text-white" viewBox="0 0 16 16">
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                            </svg>
+
+                        </a>
+                    </div>
+                    <% } %>
+                </a>
+                <a class="nav-link text-white ms-4" href="../ContentShop/Login.aspx">Login</a>
+
+            </div>
+
+        </header>
+
+        <div class="flex-grow-1">
+
+            <div class="row">
+
+                <div class="Col-2">
+                </div>
+
+                <div class="Col-8">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div class="Col-2">
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer class="text-dark mt-5 text-center py-3 bg-light flex-shrink-0 bg-footer">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Information</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Accessibility</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Help Center</a> </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Privacy and Terms</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Advertising</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Advertisement</a> </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Business Services</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Our Offers</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">More</a> </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Promotional Products</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">More</a> </div>
+                    <div class="col-md-4 mb-1">
+                        <p class="text-secondary">Guerrieri Corporation &copy; 2024 </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
 </asp:Content>

@@ -11,52 +11,70 @@ namespace CoffeCommerce.ContentShop
 {
 
 
-    public partial class Cart
+    public partial class Registration
     {
 
         /// <summary>
-        /// Controllo CartRepeater.
+        /// Controllo TxtUserName.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater CartRepeater;
+        protected global::System.Web.UI.WebControls.TextBox TxtUserName;
 
         /// <summary>
-        /// Controllo totalAmountLabel.
+        /// Controllo TxtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totalAmountLabel;
+        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
-        /// Controllo emptyCartMessage.
+        /// Controllo TxtPassword.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label emptyCartMessage;
+        protected global::System.Web.UI.WebControls.TextBox TxtPassword;
 
         /// <summary>
-        /// Controllo EmptyCartButton.
+        /// Controllo TxtProfilePicture.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EmptyCartButton;
+        protected global::System.Web.UI.WebControls.TextBox TxtProfilePicture;
 
         /// <summary>
-        /// Controllo ProceedToPaymentButton.
+        /// Controllo BtnRegister.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ProceedToPaymentButton;
+        protected global::System.Web.UI.WebControls.Button BtnRegister;
+
+        /// <summary>
+        /// Controllo BtnBackToLogin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnBackToLogin;
+
+        /// <summary>
+        /// Controllo LblErrorMessage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblErrorMessage;
     }
 }
