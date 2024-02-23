@@ -76,11 +76,12 @@ namespace CoffeCommerce.BackOffice
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        Response.Write("<script>alert('Product deleted successfully')</script>");
+                        // Mostra un messaggio di conferma utilizzando JavaScript e reindirizza immediatamente
+                        ScriptManager.RegisterStartupScript(this, GetType(), "DeleteSuccess", "alert('Prodotto eliminato con successo'); window.location.href = 'HomeBO.aspx';", true);
                     }
                     else
                     {
-                        Response.Write("<script>alert('Failed to delete product')</script>");
+                        Response.Write("<script>alert('Impossibile eliminare il prodotto')</script>");
                     }
                 }
                 catch (Exception ex)
@@ -96,5 +97,7 @@ namespace CoffeCommerce.BackOffice
                 }
             }
         }
+
+
     }
 }
