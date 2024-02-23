@@ -42,8 +42,11 @@ namespace CoffeCommerce.ContentShop
 
                     if (existingRow != null)
                     {
-                        // If the product is already in the DataTable, update the quantity
+                        // If the product is already in the DataTable, update the quantity and total
                         existingRow["Quantità"] = Convert.ToInt32(existingRow["Quantità"]) + (int)quantity;
+
+                        decimal unitPrice = Convert.ToDecimal(existingRow["Prezzo"]);
+                        totale += quantity * unitPrice;
                     }
                     else
                     {
