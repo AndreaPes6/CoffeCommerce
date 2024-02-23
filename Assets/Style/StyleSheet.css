@@ -56,13 +56,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #3A2417!important;
+    background-color: #3A2417 !important;
 }
 
 .brand-tlt {
     font-size: 1.4rem;
     font-family: 'Dancing Script', cursive;
-    margin-bottom:0px;
+    margin-bottom: 0px;
 }
 
 
@@ -123,43 +123,48 @@ header {
     background-color: orange;
     font-size: 0.6rem;
 }
-    h6{
-        font-size: 0.6rem;
+
+h6 {
+    font-size: 0.6rem;
+}
+
+#toggle .button {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    bottom: 2px;
+    width: 56px;
+    height: 28px;
+    background: white;
+    border-radius: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: -2px 3px 20px red;
+}
+
+    #toggle .button a {
+        position: relative;
+        justify-content: center;
+        display: flex;
+        font-size: 12px;
+        font-weight: 700;
+        color: red;
+        font-family: Century;
+        margin-top: 15%;
     }
 
-    #toggle .button{
-        position: absolute;
-        top: 2px;
-        left: 1px;
-        bottom: 2px;
-        width: 56px;
-        height: 28px;
-        background: white;
-        border-radius: 50px;
-        transition: 0.5s;
-        cursor: pointer;
-        box-shadow: -2px 3px 20px red;
-    }
-        #toggle .button a {
-            position: relative;
-            justify-content: center;
-            display: flex;
-            font-size: 12px;
-            font-weight: 700;
-            color: red;
-            font-family: Century;
-            margin-top: 15%;
+        #toggle .button a h6 {
+            font-size: 6px;
+            margin-left: 3px;
         }
-           #toggle .button a h6 {
-               font-size: 6px;
-               margin-left: 3px;
-           }
-        #toggle .button span {
-            display:none;
-        }
-    #toggle.active .button {
-        left: 32px;
+
+    #toggle .button span {
+        display: none;
     }
+
+#toggle.active .button {
+    left: 32px;
+}
 
 /* Product Image Container */
 .product-image-container {
@@ -221,3 +226,8 @@ header {
         color: saddlebrown;
         text-decoration: underline;
     }
+    /*Pubblicitá*/
+
+.img1 {
+    background-image: src(../Images/_0dcf1b95-f8d5-47bf-8ce9-b0cff474d5c1.jpg);
+}
