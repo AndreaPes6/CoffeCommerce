@@ -19,7 +19,6 @@ namespace CoffeCommerce.ContentShop
         {
             if (!IsPostBack)
             {
-                BindCarouselData();
                 BindData();
 
             }
@@ -142,68 +141,5 @@ namespace CoffeCommerce.ContentShop
                 Response.Write("<p class='text-danger'>ID prodotto nullo o vuoto</p>");
             }
         }
-        private void BindCarouselData()
-        {
-            try
-            {
-                DBConn.conn.Open();
-                string query = "SELECT TOP 5 * FROM Products ORDER BY NEWID()";
-
-                SqlCommand cmd = new SqlCommand(query, DBConn.conn);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-
-                if (dataReader.HasRows)
-                {
-                    DataTable dt = new DataTable();
-                    dt.Load(dataReader);
-
-                    DataColumn fotoProductRandomColumn = new DataColumn("FotoProductRandom", typeof(string));
-                    dt.Columns.Add(fotoProductRandomColumn);
-
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        row["FotoProductRandom"] = GetRandomImageFromRow(row);
-                    }
-
-                    dt.Columns.Remove(fotoProductRandomColumn);
-
-                    RepeaterCarousel.DataSource = dt;
-                    RepeaterCarousel.DataBind();
-                }
-            }
-            catch (Exception ex)
-            {
-                Response.Write(ex.ToString());
-            }
-            finally
-            {
-                if (DBConn.conn.State == System.Data.ConnectionState.Open)
-                {
-                    DBConn.conn.Close();
-                }
-            }
-        }
-
-        private string GetRandomImageFromRow(DataRow row)
-        {
-            List<string> imageList = new List<string>();
-            foreach (DataColumn column in row.Table.Columns)
-            {
-                if (column.ColumnName.StartsWith("FotoProduct") && row[column] != DBNull.Value)
-                {
-                    imageList.Add(row[column].ToString());
-                }
-            }
-
-            if (imageList.Count == 0)
-            {
-                return "";
-            }
-
-            Random random = new Random();
-            int randomIndex = random.Next(imageList.Count);
-            return imageList[randomIndex];
-        }
-
     }
 }
