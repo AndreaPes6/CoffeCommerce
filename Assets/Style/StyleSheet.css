@@ -232,12 +232,29 @@ h6 {
     }
     /*Pubblicitá*/
 
-.img1 {
-    
-    background-image: src(../Images/AddProd.jpg);
-}
 
 .promotion {
     background-color: whitesmoke !important
         ;
+
+
+/*WELCOME PAGE*/
+.text-transition {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.welcomeTitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
 }
