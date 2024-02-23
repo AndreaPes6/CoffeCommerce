@@ -1,31 +1,41 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/TemplateShop.master" AutoEventWireup="true" CodeBehind="HomeShop.aspx.cs" Inherits="CoffeCommerce.ContentShop.HomeShop" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-lg w-75 m-auto my-5">
-        <div id="productCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
 
-                    <ItemTemplate>
-                        <div class="Containter"> 
-                            <div class="d-flex justify-content-around align-items-center">
-                                <div class="border border-solid d-flex">
-                                    <img src="https://www.nespresso.com/ecom/medias/sys_master/public/15191094689822/Desktop-PDP-6272x2432-1.jpg?impolicy=productPdpSafeZone&imwidth=1238" style="width: 300px; height: 150px" />
-                                </div>
-                            <div class="border border-solid">
-                                <img src="https://immagini.trovaprezzi.it/magazine/2020/02/Didiesse_Frog.jpg?tr=w-690,h-345" style="width: 300px; height: 150px;" />
-                            </div>
-                            <div class="border border-solid">
-                                <img src="https://www.liomaticsardegna.it/shop//wp-content/uploads/2020/10/Header-macchine-A_modo_mio_D.jpg" style="width: 300px; height: 150px;" />
-                            </div>
-                            </div>
-                            <div class="text-center mt-3">
-                                <h6 class="text-black">OFFERTE DEL GIORNO</h6> 
-                            </div>
-                        </div>
-                    </ItemTemplate>
+
+
+
+    <itemtemplate>
+        <div class="Containter promotion py-2 contenitoreProdottoPromosso">
+            <div class="d-flex justify-content-around align-items-center pt-4">
+
+                <div class="border border-solid d-flex mx-2 ">
+                    <a href="https://www.amazon.it/DeLonghi-Nespresso-Inissia-Macchina-Espresso/dp/B00G5YOVZA/ref=sxin_12_recs_zoco_stores_brand_identity_bs?content-id=amzn1.sym.7a47eb51-9f80-473c-bdc3-32cdb004d631%3Aamzn1.sym.7a47eb51-9f80-473c-bdc3-32cdb004d631&crid=1A3HYNLK0ABYE&cv_ct_cx=nespresso%2Bmacchina%2Bcaffè&dib=eyJ2IjoiMSJ9.t0N5qMLA52ckiyIehviI1BGzA8GlXFmaMeqXADKkTagOfluDlKCTNJ3Wu0DAO4-EfrilPb1UbHZ2Rx7L8HeiI-S02NOkp2t4GLFFy5z5zuPrQ_FTrmMpLZVhmvuSVg3m.15B7XQBucisqifc1HM8ewSPzEpc7EO_wqm2Qpn1EJ50&dib_tag=se&keywords=nespresso%2Bmacchina%2Bcaffè&pd_rd_i=B00G5YOVZA&pd_rd_r=d31c5aa3-360d-4e3f-82e6-65bff3094277&pd_rd_w=nZsYR&pd_rd_wg=P8A3G&pf_rd_p=7a47eb51-9f80-473c-bdc3-32cdb004d631&pf_rd_r=AAEB78MBVGJA5RP48JEP&qid=1708688115&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=nespresso%2B%2Caps%2C207&sr=1-1-0723f66e-ff99-43ba-a202-1be1089a8603&th=1">
+                        <img src="https://www.nespresso.com/ecom/medias/sys_master/public/15191094689822/Desktop-PDP-6272x2432-1.jpg?impolicy=productPdpSafeZone&imwidth=1238" style="width: 300px; height: 150px" />
+                    </a>
+                </div>
+
+                <div class="border border-solid mx-2 ">
+                    <a href="https://www.amazon.it/Didiesse-Collection-Macchina-Caffè-Cialde/dp/B07B38K95Q/ref=sr_1_9?crid=13ZIQMXUOCFPT&dib=eyJ2IjoiMSJ9.3VI1TiN1mVSLVqOyVJ8YFoGXRMxcLscHc53FhFUXiHTWf_1uufRZdZH1ehtA_lnxqE0BtFH6GfRMS_iyXBB-o9rXqma8uZ52WU20-DVZR4453c1Z440KBT3jq1g_u_wcDJZtBNbaPYDYbcYq05ZIUekk4eTG3fP7g5OAbFhe9ZqCVFT_h33rWODN85TfwWk9gwq4liKxfd-5hl3u6uRG32QGJnBO9ENm4rPAQjj_563FZ-oxTiZn_ToEXDhTZV0EKUeRtQNUIhazzeo31rvKFQafhplhaUJE-MGoTcwodQw.CFkY9EYFC4U3x7-5j02eYUJAMo8qYdghaWIBXOxz11U&dib_tag=se&keywords=didiesse+frog+macchina+caffe&qid=1708688153&s=kitchen&sprefix=didiesse%2Ckitchen%2C178&sr=1-9&ufe=app_do%3Aamzn1.fos.9d4f9b77-768c-4a4e-94ad-33674c20ab35
+">
+                        <img src="https://immagini.trovaprezzi.it/magazine/2020/02/Didiesse_Frog.jpg?tr=w-690,h-345" style="width: 300px; height: 150px;" />
+                    </a>
+                </div>
+
+                <div class="border border-solid mx-2 ">
+                    <a href="https://www.amazon.it/Lavazza-Jolie-Macchina-Espresso-Design/dp/B086WX76FV/ref=sr_1_8?crid=2RA2T7P9NYKMG&dib=eyJ2IjoiMSJ9.R-TSGY382BXanKP9D9eFLdPGvIFm-MkMZY897RpGUW9oH2igW-ZABYN8AJFcxhodYbKkwq87qWLJ_Q1niwaWpwcXJp4OOptYc6GnpWymUki0lSNutoUqd_LHg0ep_FN9kv3n8KR2SOCLWC6vB-Jjq8tCL6Yak9T8EOlYSBqOI5FjWvoD5izZxp8R7AEDekgn33iECsIWK5vvqyUBLlfTVu6Aalfp23oKCEso5B6yWR_lw8KFkrar5jjudANAPpL-uSZHRHKWTUFizpKgKxZF5EiA0amnlmQ8DjF6U_QMRWg.4_heiJP9FOXUM__NdN0X0mSG0QWvocPZhCXboYPcp10&dib_tag=se&keywords=a+modo+mio+macchina+caffe&qid=1708688185&sprefix=a+modo+mio+%2Caps%2C185&sr=8-8">
+                        <img src="https://www.liomaticsardegna.it/shop//wp-content/uploads/2020/10/Header-macchine-A_modo_mio_D.jpg" style="width: 300px; height: 150px;" />
+                    </a>
+                </div>
+
+            </div>
+            <div class="text-center my-2">
+                <h2 class="text-black fs-6">OFFERTE DEL GIORNO</h2>
             </div>
         </div>
+    </itemtemplate>
 
+    <div class="container-lg w-75 m-auto my-5">
 
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h5 id="tltCategory" runat="server">All Products</h5>

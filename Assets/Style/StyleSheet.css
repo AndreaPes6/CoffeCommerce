@@ -198,19 +198,17 @@ h6 {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 576px) {
     .querySize {
-        width: 15rem
+        width: 10rem;
     }
 
     .card-title {
-        font-size: 2.2rem;
-        margin: 8px 0px 7px 0px;
+        margin: 7px 0px 5px 0px;
     }
 
     .card-text {
-        font-size: 1.7rem;
-        margin: 10px 0px 5px 0px;
+        margin: 8px 0px 0px 0px;
     }
 }
 
@@ -234,8 +232,7 @@ h6 {
 
 
 .promotion {
-    background-color: whitesmoke !important
-        ;
+    background-color: whitesmoke !important;
 
 
 /*WELCOME PAGE*/
@@ -257,4 +254,10 @@ h6 {
 .welcomeTitle {
     font-family: 'Dancing Script', cursive;
     font-size: 4em;
+}
+
+@media screen and (min-width: 1600px) {
+    .contenitoreProdottoPromosso {
+        width: 100vh;
+    }
 }
