@@ -55,7 +55,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-check-fill text-white" viewBox="0 0 16 16">
                                 <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
                             </svg>
-                           
+
                         </a>
                     </div>
                     <% } %>
@@ -88,28 +88,29 @@
         <footer class="text-dark mt-5 text-center py-3 bg-light flex-shrink-0 bg-footer">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Informazioni</a> </div>
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Accessibilitá</a> </div>
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Centro assistenza</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Information</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Accessibility</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Help Center</a> </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Privacy e condizioni</a> </div>
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Annunci pubblicitari</a> </div>
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Pubblicitá</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Privacy and Terms</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Advertising</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Advertisement</a> </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Servizi alle aziende</a> </div>
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Le Nostre Offerte</a> </div>
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Altro</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Business Services</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Our Offers</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">More</a> </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Prodotti in Promozione</a> </div>
-                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Altro</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Promotional Products</a> </div>
+                    <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">More</a> </div>
                     <div class="col-md-4 mb-1">
                         <p class="text-secondary">Guerrieri Corporation &copy; 2024 </p>
                     </div>
                 </div>
             </div>
+
         </footer>
     </div>
 </asp:Content>
