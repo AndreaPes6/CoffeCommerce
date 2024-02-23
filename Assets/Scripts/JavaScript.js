@@ -1,6 +1,7 @@
 ﻿console.log("ci sono")
 const body = document.querySelector('body');
 const toggle = document.getElementById('toggle');
+const footer = document.querySelector('footer');
 
 //toggle.onclick = function () {
 //    toggle.classList.add('active')
@@ -15,6 +16,8 @@ const toggle = document.getElementById('toggle');
 toggle.onclick = function () {
     toggle.classList.toggle('active')
     body.classList.toggle('active')
+    footer.classList.toggle('text-light bg-dark')
+    //aggiunta dello sfondo su altre pagine
 }
 
 /*WELCOME PAGE*/
