@@ -1,4 +1,9 @@
-﻿/* Global Styles */
+﻿@font-face {
+    font-family: 'Dancing Script';
+    src: url('percorso/del/tuo/font/DancingScript-Regular.ttf') format('truetype');
+    /* Aggiungi altri formati e stili del font se necessario */
+}
+/* Global Styles */
 ﻿body {
     font-family: 'Arial', sans-serif;
     background-color: whitesmoke;
@@ -53,6 +58,13 @@ header {
     padding: 10px;
     background-color: #3A2417!important;
 }
+
+.brand-tlt {
+    font-size: 1.4rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom:0px;
+}
+
 
 .logo img, .profile-dropdown img {
     width: 40px;
