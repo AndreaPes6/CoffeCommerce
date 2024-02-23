@@ -32,7 +32,7 @@
 
                 </div>
                 <div class="text-center my-2">
-                    <h2 class="animation fs-6">OFFERTE DEL GIORNO</h2>
+                    <h2 class="animation ">OFFERTE DEL GIORNO</h2>
                 </div>
             </div>
         </div>
