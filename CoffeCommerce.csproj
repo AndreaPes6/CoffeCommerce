@@ -103,6 +103,7 @@
     <Content Include="ContentShop\Login.aspx" />
     <Content Include="ContentShop\Registration.aspx" />
     <Content Include="ContentShop\Checkout.aspx" />
+    <Content Include="ContentShop\WelcomePage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Profile\DeleteProfile.aspx" />
     <Content Include="Profile\EditProfile.aspx" />
@@ -181,6 +182,13 @@
     </Compile>
     <Compile Include="ContentShop\Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentShop\WelcomePage.aspx.cs">
+      <DependentUpon>WelcomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentShop\WelcomePage.aspx.designer.cs">
+      <DependentUpon>WelcomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBConn.cs" />
     <Compile Include="Global.asax.cs">
