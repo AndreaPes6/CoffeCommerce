@@ -15,6 +15,15 @@ namespace CoffeCommerce.BackOffice
     {
 
         /// <summary>
+        /// Controllo productDetails.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productDetails;
+
+        /// <summary>
         /// Controllo btnEdit.
         /// </summary>
         /// <remarks>
@@ -31,14 +40,5 @@ namespace CoffeCommerce.BackOffice
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDelete;
-
-        /// <summary>
-        /// Controllo productDetails.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productDetails;
     }
 }
