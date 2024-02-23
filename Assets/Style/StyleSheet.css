@@ -132,6 +132,10 @@ h6 {
     font-size: 0.6rem;
 }
 
+.btn-discard{
+    white-space: nowrap;
+}
+
 #toggle .button {
     position: absolute;
     top: 2px;
@@ -301,4 +305,7 @@ h6 {
         width: 65%;
         margin:auto
     }
+}
+.animation {
+    font-size: 1.6rem;
 }
