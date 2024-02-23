@@ -88,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\logo.png" />
+    <Content Include="Assets\Images\_0dcf1b95-f8d5-47bf-8ce9-b0cff474d5c1.jpg" />
+    <Content Include="Assets\Images\_7f031e5b-c673-4674-b850-ce17d9a1f011.jpg" />
     <Content Include="Assets\Scripts\JavaScript.js" />
     <Content Include="Assets\Images\AddProd.jpg" />
     <Content Include="Assets\Style\StyleSheet.css" />

@@ -1,15 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/TemplateShop.master" AutoEventWireup="true" CodeBehind="HomeShop.aspx.cs" Inherits="CoffeCommerce.ContentShop.HomeShop" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+<div class="container-lg w-75 m-auto my-5">
 <div id="productCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
   <asp:Repeater ID="RepeaterCarousel" runat="server">
                 <ItemTemplate>
                     <div class="carousel-item<%# Container.ItemIndex == 0 ? " active" : "" %> text-black">
                         <div class="d-flex justify-content-around align-items-center">
-                            <img src='<%# Eval("FotoProduct") %>' class="d-block mx-2 my-4" alt='<%# Eval("Name") %>' style="max-width: 75px; height: auto;" />
-
+                            <div class="img1"></div>
+                       <%--  <img src="https://www.nespresso.com/ecom/medias/sys_master/public/15191094689822/Desktop-PDP-6272x2432-1.jpg?impolicy=productPdpSafeZone&imwidth=1238" style="width: 300px; height: 150px" />
+                            <img src="https://immagini.trovaprezzi.it/magazine/2020/02/Didiesse_Frog.jpg?tr=w-690,h-345" style="width: 300px; height: 150px;" />
+                            <img src="https://www.liomaticsardegna.it/shop//wp-content/uploads/2020/10/Header-macchine-A_modo_mio_D.jpg" style="width: 300px; height: 150px;" />--%>
                         </div>
                         <div class="text-center mt-3">
                             <h6 class="text-black"><%# Eval("Name") %></h6>
@@ -22,7 +24,7 @@
 
 </div>
 
-    <div class="container-lg w-75 m-auto my-5">
+    
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h5 id="tltCategory" runat="server">All Products</h5>
 
