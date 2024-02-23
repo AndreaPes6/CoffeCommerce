@@ -235,6 +235,10 @@ h6 {
     background-color: whitesmoke;
 }
 
+.bg-footerSwitch {
+    background-color: #161616;
+}
+
 /*HOMEPAGEBO*/
 
 .details-link {
@@ -252,6 +256,11 @@ h6 {
 .promotion {
     background-color: whitesmoke !important;
 
+}
+
+.promotion-switch {
+    background-color: #161616 !important;
+    color: whitesmoke !important;
 }
 
 
