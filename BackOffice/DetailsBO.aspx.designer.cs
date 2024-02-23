@@ -24,6 +24,42 @@ namespace CoffeCommerce.BackOffice
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl productDetails;
 
         /// <summary>
+        /// Controllo urlImg.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage urlImg;
+
+        /// <summary>
+        /// Controllo txtsName.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtsName;
+
+        /// <summary>
+        /// Controllo txtDescription.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtDescription;
+
+        /// <summary>
+        /// Controllo txtPrice.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtPrice;
+
+        /// <summary>
         /// Controllo btnEdit.
         /// </summary>
         /// <remarks>
