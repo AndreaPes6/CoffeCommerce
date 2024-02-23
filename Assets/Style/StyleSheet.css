@@ -9,6 +9,10 @@
     background-color: whitesmoke;
     transition: 0.5s;
 }
+    body.active {
+        background-color: #161616;
+        color: whitesmoke;
+    }
 
 .spc-footer {
     margin-bottom: 150px;
