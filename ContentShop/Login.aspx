@@ -18,8 +18,8 @@
                             <asp:TextBox ID="TxtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
-                            <asp:Button ID="BtnLogin" runat="server" Text="Login" CssClass="btn btn-card rounded-pill" OnClick="BtnLogin_Click" />
-                            <asp:Button ID="BtnRegister" runat="server" Text="Sign In" CssClass="btn btn-card rounded-pill ms-3" OnClick="BtnRegister_Click" />
+                            <asp:Button ID="BtnLogin" runat="server" Text="Login" CssClass="btn btn-card" OnClick="BtnLogin_Click" />
+                            <asp:Button ID="BtnRegister" runat="server" Text="Sign In" CssClass="btn btn-card ms-3" OnClick="BtnRegister_Click" />
                         </div>
 
                         <div class="mb-3 d-flex justify-content-center">
