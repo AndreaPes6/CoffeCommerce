@@ -10,7 +10,9 @@
                 <div class='container m-0 p-0' id="productDetails" runat="server">
                     <div class='row'>
                         <div class='col-md-4 me-3'>
-                            <img id="urlImg" runat="server" class='img-fluid rounded product-image w-100 border border-solid-black shadow' alt='' onclick='zoomImage(this)' style='cursor: pointer;'>
+                            <a href="Edit.aspx">
+                                <img id="urlImg" runat="server" class='img-fluid rounded product-image w-100 border border-solid-black shadow' alt='' onclick='zoomImage(this)' style='cursor: pointer;'>
+                            </a>
                         </div>
                         <div class='col-md-7'>
                             <h4 class=' fw-light txt-lbladd text-uppercase mb-4' id="txtsName" runat="server"></h4>
@@ -27,5 +29,5 @@
 
 
 
-    </div>
+        </div>
 </asp:Content>
