@@ -25,8 +25,6 @@
                     </ItemTemplate>
             </div>
         </div>
-
-
         <div class="d-flex justify-content-between align-items-center mb-5">
             <h5 id="tltCategory" runat="server">All Products</h5>
 
