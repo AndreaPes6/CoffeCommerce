@@ -14,8 +14,8 @@
                             <h6 class="text-white brand-tlt">CaffèShop</h6>
                         </a>
                     </li>
-                    <li><a class="nav-link active text-white" href="../BackOffice/HomeBO.aspx">Home</a></li>
-                    <li><a class="nav-link active text-white" href="../BackOffice/AddProduct.aspx">Add Products</a></li>
+                    <li><a class="nav-link  navLinkStile" href="../BackOffice/HomeBO.aspx">Home</a></li>
+                    <li><a class="nav-link  navLinkStile" href="../BackOffice/AddProduct.aspx">Add Products</a></li>
                 </ul>
 
             </div>
