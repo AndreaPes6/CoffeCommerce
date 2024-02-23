@@ -27,15 +27,6 @@
         background-color: saddlebrown;
     }
 
-.c-card, .container img {
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-    .c-card:hover, .container img:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        transform: scale(1.03);
-    }
-
 .h-btn-cart {
     color: #3A2417;
 }
@@ -170,10 +161,28 @@ h6 {
     left: 32px;
 }
 
+/* HOMEPAGE SHOP */
+.c-card, .container img {
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+    .c-card:hover, .container img:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transform: scale(1.015);
+    }s
+
 /* Product Image Container */
 .product-image-container {
     overflow: hidden;
     cursor: pointer;
+}
+
+.dailyPromotion {
+    transition: transform 0.3s;
+}
+
+.dailyPromotion:hover {
+    transform: scale(1.015);
 }
 
 
@@ -270,4 +279,12 @@ h6 {
         width: 65%;
         margin:auto
     }
+}
+
+.cursorePuntatore {
+    cursor:pointer;
+}
+
+.dettagliScritte:hover {
+    text-decoration:underline
 }
