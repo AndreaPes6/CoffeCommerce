@@ -74,5 +74,11 @@ namespace CoffeCommerce.BackOffice
 
             Response.Redirect("HomeBO.aspx");
         }
+
+        protected void btnRedDet_Click(object sender, EventArgs e)
+        {
+            string productId = Request.QueryString["product"];
+            Response.Redirect($"DetailsBO.aspx?product={productId}");
+        }
     }
 }
