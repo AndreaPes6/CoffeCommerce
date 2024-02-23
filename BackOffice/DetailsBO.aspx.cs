@@ -29,26 +29,11 @@ namespace CoffeCommerce.BackOffice
 
                 if (dataReader.Read())
                 {
-                    string productPhoto = dataReader["FotoProduct"].ToString();
-                    string productName = dataReader["Name"].ToString();
-                    string productDescription = dataReader["Description"].ToString();
-                    string productPrice = dataReader["Price"].ToString();
-
-                    string productHtml = $@"
-                    <div class='container m-0 p-0'>
-                        <div class='row'>
-                            <div class='col-md-4'>
-                                <img src='{productPhoto}' class='img-fluid rounded product-image w-100 border border-solid-black' alt='{productName}' onclick='zoomImage(this)' style='cursor: pointer;'>
-                            </div>
-                            <div class='col-md-7'>
-                                <h2 class='fw-bold fw-light txt-lbladd text-uppercase mb-4'>{productName}</h2>
-                                <p class='fs-4 mb-4'>{productDescription}</p>
-                                <p class='fs-4 mb-3'>Price: €{productPrice}</p>                               
-                            </div>
-                        </div>
-                    </div>";
-
-                    productDetails.InnerHtml = productHtml;
+                    urlImg.Src = dataReader["FotoProduct"].ToString();
+                    txtsName.InnerText = dataReader["Name"].ToString();
+                    txtDescription.InnerText = dataReader["Description"].ToString();
+                    txtPrice.InnerText = $"Price: {dataReader["Price"]}€";
+                  
                 }
                 else
                 {
