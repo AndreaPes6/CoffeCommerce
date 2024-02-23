@@ -130,15 +130,12 @@ header {
 #toggle {
     position: relative;
     display: flex;
-    width: 90px;
-    height: 33px;
+    width: 55px;
+    height: 24px;
     border-radius: 50px;
     background-color: orange;
     font-size: 0.6rem;
-}
-
-h6 {
-    font-size: 0.6rem;
+    margin-left: 20px;
 }
 
 .btn-discard {
@@ -148,10 +145,10 @@ h6 {
 #toggle .button {
     position: absolute;
     top: 2px;
-    left: 1px;
+    left: 3px;
     bottom: 2px;
-    width: 56px;
-    height: 28px;
+    width: 30px;
+    height: 20px;
     background: white;
     border-radius: 50px;
     transition: 0.5s;
@@ -163,24 +160,19 @@ h6 {
         position: relative;
         justify-content: center;
         display: flex;
-        font-size: 12px;
-        font-weight: 700;
+        font-size: 10px;
         color: red;
         font-family: Century;
-        margin-top: 15%;
+        margin-top: 7%;
     }
 
-        #toggle .button a h6 {
-            font-size: 6px;
-            margin-left: 3px;
-        }
 
     #toggle .button span {
         display: none;
     }
 
 #toggle.active .button {
-    left: 32px;
+    left: 20px;
 }
 
 /* HOMEPAGE SHOP */
