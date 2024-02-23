@@ -19,7 +19,7 @@
                             </div>
                             </div>
                             <div class="text-center mt-3">
-                                <h6 class="text-black">OFFERTE DEL GIORNO</h6> 
+                                <h6 class="text-black animation">OFFERTE DEL GIORNO</h6> 
                             </div>
                         </div>
                     </ItemTemplate>

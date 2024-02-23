@@ -258,3 +258,16 @@ h6 {
     font-family: 'Dancing Script', cursive;
     font-size: 4em;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
