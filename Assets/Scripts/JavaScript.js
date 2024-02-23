@@ -16,3 +16,11 @@ toggle.onclick = function () {
     toggle.classList.toggle('active')
     body.classList.toggle('active')
 }
+
+/*WELCOME PAGE*/
+window.addEventListener("DOMContentLoaded", function () {
+    const textElements = document.querySelectorAll(".text-transition");
+    textElements.forEach(function (element) {
+        element.classList.add("show"); // Aggiungi la classe "show" per attivare l'animazione
+    });
+});
