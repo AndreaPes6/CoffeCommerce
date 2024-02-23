@@ -10,10 +10,10 @@
                     </div>
                     <div class="card-body">
                         <div class="mb-3">
-                            <p class="card-text">Sei sicuro di voler effettuare il logout?</p>
+                            <p class="card-text">Are you sure you want to log out?</p>
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
-                             <a href="../BackOffice/HomeBO.aspx" class="btn btn-secondary me-3">Torna alla Home</a>
+                             <a href="../BackOffice/HomeBO.aspx" class="btn btn-secondary me-3">Return to Home</a>
                             <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-danger" OnClick="btnLogout_Click" />
                         </div>
                     </div>

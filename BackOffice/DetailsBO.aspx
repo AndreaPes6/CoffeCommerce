@@ -19,8 +19,8 @@
                             <p class='fs-6 mb-4' id="txtDescription" runat="server"></p>
                             <p class='fs-6 mb-3' id="txtPrice" runat="server"></p>
                             <div class="d-flex mt-3">
-                                <asp:Button ID="btnEdit" runat="server" Text="Edit Product" CssClass="btn btn-secondary rounded-pill me-3" OnClick="btnEdit_Click" />
-                                <asp:Button ID="btnDelete" runat="server" Text="Delete Product" CssClass="btn btn-danger rounded-pill" OnClick="btnDelete_Click" />
+                                <asp:Button ID="btnEdit" runat="server" Text="Edit Product" CssClass="btn btn-secondary rounded me-3" OnClick="btnEdit_Click" />
+                                <asp:Button ID="btnDelete" runat="server" Text="Delete Product" CssClass="btn btn-danger rounded" OnClick="btnDelete_Click" />
                             </div>
                         </div>
                     </div>

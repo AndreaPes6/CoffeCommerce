@@ -31,8 +31,8 @@
                 </div>
             </div>
             <div class="mt-5">
-                <a class="btn btn-secondary rounded-pill" href="../Profile/EditProfile.aspx">Edit Profile</a>
-                <a class="btn btn-danger rounded-pill" href="../Profile/DeleteProfile.aspx">Delete Profile</a>
+                <a class="btn btn-secondary rounded" href="../Profile/EditProfile.aspx">Edit Profile</a>
+                <a class="btn btn-danger rounded" href="../Profile/DeleteProfile.aspx">Delete Profile</a>
             </div>
         </div>
     </div>

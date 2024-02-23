@@ -49,8 +49,8 @@
 
                     <div class="row mt-3">
                         <div class="col-md-12 d-flex">
-                            <asp:Button ID="btnUpdate" runat="server" Text="Update Product" OnClick="btnUpdate_Click" CssClass="btn btn-add rounded-pill me-3" />
-                            <asp:Button ID="btnRedDet" runat="server" Text="Discard Changes" OnClick="btnRedDet_Click" CssClass="btn btn-add rounded-pill btn-discard"/>
+                            <asp:Button ID="btnUpdate" runat="server" Text="Update Product" OnClick="btnUpdate_Click" CssClass="btn btn-add rounded me-3" />
+                            <asp:Button ID="btnRedDet" runat="server" Text="Discard Changes" OnClick="btnRedDet_Click" CssClass="btn btn-add rounded btn-discard"/>
                         </div>
                     </div>
                 </div>
