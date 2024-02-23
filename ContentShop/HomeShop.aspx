@@ -4,6 +4,7 @@
     <div class="container-lg w-75 m-auto my-5">
         <div id="productCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
+
                     <ItemTemplate>
                         <div class="Containter"> 
                             <div class="d-flex justify-content-around align-items-center">

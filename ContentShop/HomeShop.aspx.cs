@@ -20,7 +20,6 @@ namespace CoffeCommerce.ContentShop
             if (!IsPostBack)
             {
                 BindData();
-
             }
         }
 
@@ -141,5 +140,6 @@ namespace CoffeCommerce.ContentShop
                 Response.Write("<p class='text-danger'>ID prodotto nullo o vuoto</p>");
             }
         }
+
     }
 }
