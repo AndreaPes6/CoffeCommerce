@@ -85,7 +85,7 @@
         </div>
 
 
-        <footer class="text-dark mt-5 text-center py-3 bg-light flex-shrink-0 bg-footer">
+        <footer class="text-dark mt-5 text-center py-3 flex-shrink-0 bg-footer">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-4 mb-1"><a class="text-secondary text-decoration-none" href="#" target="_blank" rel="noopener noreferrer">Information</a> </div>
