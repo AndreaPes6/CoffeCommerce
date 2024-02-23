@@ -19,7 +19,6 @@ toggle.onclick = function () {
     body.classList.toggle('active')
     footer.classList.toggle('bg-footerSwitch')
     publicita.classList.toggle('promotion-switch')
-    //aggiunta commento
 }
 
 /*WELCOME PAGE*/

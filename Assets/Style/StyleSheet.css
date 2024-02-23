@@ -9,10 +9,11 @@
     background-color: whitesmoke;
     transition: 0.5s;
 }
-    body.active {
-        background-color: #161616;
-        color: whitesmoke;
-    }
+
+body.active {
+    background-color: #161616;
+    color: whitesmoke;
+}
 
 .spc-footer {
     margin-bottom: 150px;
@@ -117,6 +118,14 @@ header {
         background-color: #f1f1f1;
     }
 
+.navLinkStile {
+    color: white
+}
+
+    .navLinkStile:hover {
+        color: antiquewhite !important;
+    }
+
 /* switch mode button */
 #toggle {
     position: relative;
@@ -132,7 +141,7 @@ h6 {
     font-size: 0.6rem;
 }
 
-.btn-discard{
+.btn-discard {
     white-space: nowrap;
 }
 
@@ -182,7 +191,7 @@ h6 {
     .c-card:hover, .container img:hover {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         transform: scale(1.015);
-    }s
+    }
 
 /* Product Image Container */
 .product-image-container {
@@ -194,9 +203,9 @@ h6 {
     transition: transform 0.3s;
 }
 
-.dailyPromotion:hover {
-    transform: scale(1.015);
-}
+    .dailyPromotion:hover {
+        transform: scale(1.015);
+    }
 
 
 /* CART PAGE */
@@ -254,12 +263,16 @@ h6 {
         color: saddlebrown;
         text-decoration: underline;
     }
-    /*Pubblicitá*/
 
 
+/*Pubblicitá*/
 .promotion {
     background-color: whitesmoke !important;
+}
 
+.promotion-switch {
+    background-color: #161616 !important;
+    color: whitesmoke !important;
 }
 
 .promotion-switch {
@@ -269,8 +282,7 @@ h6 {
 
 
 /*WELCOME PAGE*/
-.text-transition
-{
+.text-transition {
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
 }
@@ -290,22 +302,23 @@ h6 {
     font-size: 4em;
 }
 
-.btn-discovery {
-    background-color: #521A25 !important;
-    color: whitesmoke !important; 
-    border: none;
-}
-
-.btn-discovery:hover {
-    background-color: saddlebrown !important;
-}
-
 @media screen and (min-width: 1600px) {
     .contenitoreProdottoPromosso {
         width: 65%;
-        margin:auto
+        margin: auto
     }
 }
+
 .animation {
     font-size: 1.6rem;
 }
+
+.btn-discovery {
+    background-color: #521A25 !important;
+    border: none;
+    color: whitesmoke !important;
+}
+
+    .btn-discovery:hover {
+        background-color: saddlebrown !important;
+    }

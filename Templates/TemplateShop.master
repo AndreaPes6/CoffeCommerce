@@ -17,7 +17,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="../ContentShop/HomeShop.aspx">Home</a>
+                        <a class="nav-link navLinkStile" aria-current="page" href="../ContentShop/HomeShop.aspx">Home</a>
                     </li>
                 </ul>
             </nav>
@@ -60,7 +60,7 @@
                     </div>
                     <% } %>
                 </a>
-                <a class="nav-link text-white ms-4" href="../ContentShop/Login.aspx">Login</a>
+                <a class="nav-link ms-4 navLinkStile" href="../ContentShop/Login.aspx">Login</a>
 
             </div>
 
