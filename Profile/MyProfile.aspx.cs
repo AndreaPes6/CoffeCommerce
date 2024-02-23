@@ -9,7 +9,7 @@ namespace CoffeCommerce.Profile
         {
             if (!IsPostBack)
             {
-                int userId = GetUserId(); 
+                int userId = GetUserId();
 
                 try
                 {
@@ -60,8 +60,21 @@ namespace CoffeCommerce.Profile
 
         private int GetUserId()
         {
-            int IDUser = int.Parse(Session["UserId"].ToString());
-            return IDUser;
+            // Verifica se la sessione esiste e contiene un valore per l'ID utente
+            if (Session["UserId"] != null && !string.IsNullOrEmpty(Session["UserId"].ToString()))
+            {
+                // Tenta di convertire il valore della sessione in un intero
+                if (int.TryParse(Session["UserId"].ToString(), out int IDUser))
+                {
+                    // Restituisci l'ID utente convertito
+                    return IDUser;
+                }
+            }
+
+            // Se la sessione non contiene un valore per l'ID utente, restituisci un valore predefinito o gestisci l'errore come preferisci
+            // Qui puoi scegliere di restituire un valore predefinito, lanciare un'eccezione o gestire l'errore in un altro modo
+            // Ad esempio, potresti restituire -1 per indicare che l'ID utente non è stato trovato
+            return -1;
         }
     }
 }
