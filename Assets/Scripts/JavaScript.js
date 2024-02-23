@@ -21,6 +21,6 @@ toggle.onclick = function () {
 window.addEventListener("DOMContentLoaded", function () {
     const textElements = document.querySelectorAll(".text-transition");
     textElements.forEach(function (element) {
-        element.classList.add("show"); // Aggiungi la classe "show" per attivare l'animazione
+        element.classList.add("show"); 
     });
 });

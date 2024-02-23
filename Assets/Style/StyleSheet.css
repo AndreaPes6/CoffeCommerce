@@ -234,14 +234,14 @@ h6 {
 
 
 .promotion {
-    background-color: whitesmoke !important
-        ;
-
+    background-color: whitesmoke !important;
+}
 
 /*WELCOME PAGE*/
-.text-transition {
+.text-transition
+{
     opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards; 
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -254,7 +254,7 @@ h6 {
     }
 }
 
-.welcomeTitle {
+#welcomeTitle {
     font-family: 'Dancing Script', cursive;
     font-size: 4em;
 }
